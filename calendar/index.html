@@ -27,7 +27,8 @@
 			
 			loading: function(bool) {
 				$('#loading').toggle(bool);
-			}
+			},
+
 			eventRender: function(event, element, view) {
 				var ntoday = new Date().getTime();
 				var eventEnd = moment( event.end ).valueOf();
