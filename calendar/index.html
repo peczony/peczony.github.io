@@ -32,6 +32,15 @@
 				var ntoday = new Date().getTime();
 				var eventEnd = moment( event.end ).valueOf();
 				var eventStart = moment( event.start ).valueOf();
+				if (event.title.indexOf("Россия") > -1){
+					element.addClass("russia");
+				}
+				if (event.title.indexOf("Беларусь") > -1){
+					element.addClass("belarus");
+				}
+				if (event.title.indexOf("Синхрон") > -1){
+					element.addClass("synch");
+				}
 				if (!event.end){
 				if (eventStart < ntoday){
 				element.addClass("past-event");
@@ -73,6 +82,19 @@
 		max-width: 900px;
 		margin: 0 auto;
 	}
+
+	.past-event {opacity: 0.7;}
+
+	.belarus {	background-color: #cc0000;
+			border-color: #cc0000;}
+
+	.russia {	background-color: #0000cc;
+			border-color: #0000cc;}
+
+	.synch {	background-color: #00cc00;
+			border-color: #00cc00;}
+
+
 
 </style>
 </head>
