@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Misc on  </title>
+      <title>Misc on П Е Ч Е Н Ы Й </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
     <link>https://pecheny.me/blog/categories/misc/index.xml/</link>
     
-    
+    <author>Александр Печеный</author>
     
     <updated>Tue, 17 Feb 2015 00:00:00 UTC</updated>
     
@@ -13,7 +13,7 @@
       <title>Привет</title>
       <link>https://pecheny.me/blog/hi/</link>
       <pubDate>Tue, 17 Feb 2015 00:00:00 UTC</pubDate>
-      
+      <author>Александр Печеный</author>
       <guid>https://pecheny.me/blog/hi/</guid>
       <description>&lt;p&gt;Переезжаю сюда из &lt;a href=&#34;http://pecheny.livejournal.com&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;жж&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
