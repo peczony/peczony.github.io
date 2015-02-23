@@ -1,56 +1,59 @@
-<!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta charset='utf-8' />
-<title>П Е Ч Е Н Ы Й</title>
-<style>
 
-#main {max-width: 600px; margin: 2em auto 0 auto; font-family: 'Khartiya';}
+  
+  <meta charset="utf-8">
+  <title>П Е Ч Е Н Ы Й</title>
+  <meta name="author" content="Александр Печеный">
 
-@font-face {
-  font-family: 'Khartiya';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Khartiya'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Regular.woff) format('woff'), local('Lato'), local('OpenSans'), url(http://pecheny.me/fonts/Lato-Regular.woff) format('woff');
-}
-@font-face {
-  font-family: 'Khartiya';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Khartiya Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Bold.woff) format('woff'), local('Lato Semibold'), local('OpenSans-Semibold'), url(http://pecheny.me/fonts/Lato-Semibold.woff) format('woff');
-}
-@font-face {
-  font-family: 'Khartiya';
-  font-style: italic;
-  font-weight: normal;
-  src: local('Khartiya Bold'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Italic.woff) format('woff'), local('Lato Italic'), local('OpenSans-Italic'), url(http://pecheny.me/fonts/Lato-Italic.woff) format('woff');
-}
-@font-face {
-  font-family: 'Khartiya';
-  font-style: italic;
-  font-weight: bold;
-  src: local('Khartiya Bold Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-BoldItalic.woff) format('woff'), local('Lato Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://pecheny.me/fonts/Lato-SemiboldItalic.woff) format('woff');
-}
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.scaps {
-    letter-spacing: 0.1em;
-    font-variant-caps: small-caps;
-    -moz-font-feature-settings: "smcp";
-    -ms-font-feature-settings: "smcp";
-    -webkit-font-feature-settings: "smcp";
-    -o-font-feature-settings: "smcp";
-    font-feature-settings: "smcp";}
-
-</style>
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="img/newcat.png">
+  <link rel="stylesheet" href="https://pecheny.me/blog/css/fonts.css">
+  <link rel="stylesheet" href="https://pecheny.me/blog/css/normalize.css">
+  <link rel="stylesheet" href="https://pecheny.me/blog/css/skeleton.css">
+  <link rel="stylesheet" href="https://pecheny.me/blog/css/custom.css">
 </head>
 <body>
 
-	<div id="main"><center>
-		
-    <img src="img/etoya.png"/><br/><br/>
-		<a href="http://pecheny.me/blog/">blog</a> · <a href="http://last.fm/user/aflosev">last.fm</a> · <a href="http://rateyourmusic.com/~aflosev">rym</a> · <a href="https://twitter.com/pecheny">twitter</a> · <a href="https://vk.com/pecheny">vk</a>
-    <br/>
-	</center></div>
+<div class="container post-wrapper">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	  	  <div class="post">
+		<img style="max-width: 100%;" src="img/etoya.png"/>
+		<p style="text-align: center;"><a href="http://pecheny.me/blog/">blog</a> · <a href="http://last.fm/user/aflosev">last.fm</a> · <a href="http://rateyourmusic.com/~aflosev">rym</a> · <a href="https://twitter.com/pecheny">twitter</a> · <a href="https://vk.com/pecheny">vk</a></p>
+		<p>Меня зовут Саша Печеный. Я занимаюсь лингвистикой, читаю и пишу тексты, музыку и код на Питоне <a href="https://bitbucket.org/pecheny">как дебил</a>.</p>
+		<p>Я закончил <a href="https://ru.wikipedia.org/wiki/Отделение_теоретической_и_прикладной_лингвистики"><span class="scaps">от</span>и<span class="scaps">пл</span></a>, недолго работал (скорее стажировался) в <span class="scaps">abbyy</span>, потом в паре стартапов, а сейчас — в Яндексе.</p>
+		<p>Делаю полезное: музыканту — <a href="https://bitbucket.org/pecheny/other/src/tip/trackgen/trackgen.py">генератор сетлистов</a>, любителю интеллектуальных игр — <a href="https://bitbucket.org/pecheny/chgksuite">систему</a> для работы с пакетами, <a href="https://vk.com/schoolchgk">группу</a> и <a href="https://pecheny.me/calendar">календарь</a> про школьное <span class="scaps">чгк</span>.</p>
+		<p>Со мной можно <a href="https://telegram.me/pecheny">разными</a> <a href="https://vk.com/pecheny">способами</a> <a href="mailto:ap@pecheny.me">связаться</a>.</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<script src="https://pecheny.me/blog/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://pecheny.me/blog/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#menu").click(function(){
+    $(".brand").text("HOME");
+    $(".navbar ul li").removeClass("cate");
+    $(".navbar").toggle();
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".navbar").removeAttr("style");
+    }
+  });
+</script>
 
 </body>
 </html>
+
