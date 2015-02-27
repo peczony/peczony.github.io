@@ -8,13 +8,13 @@
   font-family: 'Khartiya';
   font-style: normal;
   font-weight: bold;
-  src: local('Khartiya Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Bold.woff) format('woff'), local('Lato Semibold'), local('OpenSans-Semibold'), url(http://pecheny.me/fonts/Lato-Semibold.woff) format('woff');
+  src: local('Khartiya Bold'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Bold.woff) format('woff'), local('Lato Semibold'), local('OpenSans-Semibold'), url(http://pecheny.me/fonts/Lato-Semibold.woff) format('woff');
 }
 @font-face {
   font-family: 'Khartiya';
   font-style: italic;
   font-weight: normal;
-  src: local('Khartiya Bold'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Italic.woff) format('woff'), local('Lato Italic'), local('OpenSans-Italic'), url(http://pecheny.me/fonts/Lato-Italic.woff) format('woff');
+  src: local('Khartiya Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-Italic.woff) format('woff'), local('Lato Italic'), local('OpenSans-Italic'), url(http://pecheny.me/fonts/Lato-Italic.woff) format('woff');
 }
 @font-face {
   font-family: 'Khartiya';
