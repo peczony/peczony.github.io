@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on П Е Ч Е Н Ы Й </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>https://pecheny.me/blog/index.xml/</link>
-    
-    <author>Александр Печеный</author>
-    
-    <updated>Fri, 27 Feb 2015 00:00:00 UTC</updated>
+    <title>Blog on П Е Ч Е Н Ы Й</title>
+    <link>https://pecheny.me/blog/</link>
+    <description>Recent content in Blog on П Е Ч Е Н Ы Й</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 27 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pecheny.me/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Сменить сову</title>
       <link>https://pecheny.me/blog/changetheowl/</link>
-      <pubDate>Fri, 27 Feb 2015 00:00:00 UTC</pubDate>
-      <author>Александр Печеный</author>
+      <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://pecheny.me/blog/changetheowl/</guid>
       <description>&lt;p&gt;&lt;i&gt;Дисклеймер: рисунки в посте лишь иллюстрируют идею. Для реального использования необходим человек с прямыми руками, который нарисует нормальный логотип, используя их как эскизы.&lt;/i&gt;&lt;/p&gt;
 
@@ -49,8 +48,8 @@
     <item>
       <title>Привет</title>
       <link>https://pecheny.me/blog/hi/</link>
-      <pubDate>Tue, 17 Feb 2015 00:00:00 UTC</pubDate>
-      <author>Александр Печеный</author>
+      <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
+      
       <guid>https://pecheny.me/blog/hi/</guid>
       <description>&lt;p&gt;Переезжаю сюда из &lt;a href=&#34;http://pecheny.livejournal.com&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;жж&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
