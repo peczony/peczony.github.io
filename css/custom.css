@@ -113,16 +113,6 @@ img {
     line-height:29px;
 }
 
-.post a {
-    color:#c05b4d;
-    text-decoration: none;
-}
-
-.post a:hover {
-    color:#a5473a;
-    text-decoration: underline;
-}
-
 .post h1 {
     font-size:27px;
     letter-spacing:normal;
