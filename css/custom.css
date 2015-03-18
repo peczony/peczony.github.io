@@ -81,6 +81,10 @@ img {
     margin-bottom:0;
 }
 
+.summary {
+    color: #555;
+}
+
 .footnote a {
     color: #888 !important
 }
