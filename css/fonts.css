@@ -20,7 +20,7 @@
   font-family: 'Khartiya';
   font-style: italic;
   font-weight: bold;
-  src: local('Khartiya Bold Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-BoldItalic.woff) format('woff'), local('Lato Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://pecheny.me/fonts/Lato-SemiboldItalic.woff) format('woff');
+  src: local('Khartiya Bold Italic'), url(https://dl.dropboxusercontent.com/u/24653887/fonts/kh/Khartiya-BoldItalic.woff) format('woff'), local('Lato Semibold Italic'), local('OpenSans-SemiboldItalic'), url(https://pecheny.me/fonts/Lato-SemiboldItalic.woff) format('woff');
 }
 
 
