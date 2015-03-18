@@ -404,7 +404,6 @@ a.pagination-item:hover{
 nav.pagination{
     width:100%;
     display:block;
-    margin:0 auto
 }
 
 nav.pagination .summary{
