@@ -8,6 +8,10 @@ html {
     position:relative;
 }
 
+abbr {
+    border: none;
+}
+
 body {
     background-color: rgb(249,249,249);
 }
@@ -126,11 +130,14 @@ img {
 .post h2 {
     font-size:26px;
     letter-spacing:normal;
+    font-weight: bold;
 }
 
 .post h3 {
     font-size:25px;
+    font-style: italic;
     letter-spacing:normal;
+    font-weight: normal;
 }
 
 .post h4 {
@@ -165,17 +172,20 @@ img {
 }
 .scaps{
     letter-spacing: 0.1em;
-    font-variant: small-caps;
     font-kerning: normal;
+    font-size: 0.84em;
+    text-transform: uppercase;
 }
 
 @supports(font-feature-settings: 'smcp')
 {
     .scaps {
     font-variant: normal;
+    font-size: 1em;
     font-feature-settings: "smcp";
     letter-spacing: 0.1em;
     font-kerning: normal;
+    text-transform: lowercase;
     }
 }
 
@@ -183,8 +193,10 @@ img {
 {
     .scaps {
     font-variant: normal;
+    font-size: 1em;
     -moz-font-feature-settings: "smcp";
     font-kerning: normal;
+    text-transform: lowercase;
     }
 }
 
@@ -192,8 +204,10 @@ img {
 {
     .scaps {
     font-variant: normal;
+    font-size: 1em;
     -ms-font-feature-settings: "smcp";
     font-kerning: normal;
+    text-transform: lowercase;
     }
 }
 
@@ -201,6 +215,8 @@ img {
 {
     .scaps {
     font-variant: normal;
+    font-size: 1em;
+    text-transform: lowercase;
     -webkit-font-feature-settings: "smcp";
     font-kerning: normal;
     }
@@ -210,6 +226,8 @@ img {
 {
     .scaps {
     font-variant: normal;
+    font-size: 1em;
+    text-transform: lowercase;
     -o-font-feature-settings: "smcp";
     font-kerning: normal;
     }
@@ -412,4 +430,65 @@ nav.pagination{
 
 nav.pagination .summary{
     font-size:.8rem
+}
+
+nav#TableOfContents {
+    color: #888;
+    font-family: 'Khartiya',arial,helvetica,sans-serif;
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: #dce5ed;
+    font-size: smaller;
+}
+
+nav#TableOfContents a {
+    text-decoration: none;
+}
+
+nav#TableOfContents ul {
+    margin: 0;
+    list-style: none;
+}
+
+nav#TableOfContents ul ul {
+    margin: 0 0 0 4em;
+    list-style: katakana;
+}
+
+nav#TableOfContents ul ul li {
+    padding: 0;
+    margin-top: 2px;
+}
+
+.bullshit {padding: 0.5em; margin: 1em 0; background-color: #e2651d; color: #8a3a0e;}
+@media screen
+{
+    .bullshit
+    {
+        color: #d9560e;
+    }
+}
+
+.example {padding: 0.5em; margin: 1em 0; background-color: #dce5ed; color: #888;}
+.inline-example { background-color: #dce5ed; border-radius: 4px; padding: 0.1em 0.3em; color: #888; box-decoration-break: clone;}
+.black {color: #101010;}
+
+abbr[title]:after
+{
+   content: " /" attr(title) "/";
+   border: 0px;
+}
+ 
+@media screen and (min-width: 1025px)
+{
+   abbr[title]
+   {
+      border-bottom: 1px dashed #ADADAD;
+      cursor:help;
+   }
+ 
+   abbr[title]:after
+   {
+      content: "";
+   }
 }
