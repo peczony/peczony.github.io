@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>П Е Ч Е Н Ы Й</title>
+    <title>ПЕЧЕНЫЙ</title>
     <link>https://pecheny.me/</link>
-    <description>Recent content on П Е Ч Е Н Ы Й</description>
+    <description>Recent content on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 22 May 2015 10:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pecheny.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Музыка</title>
+      <link>https://pecheny.me/music/</link>
+      <pubDate>Wed, 27 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://pecheny.me/music/</guid>
+      <description>
+
+&lt;p&gt;На этой странице собрана информация о музыкальных проектах, к которым я имел косвенное или прямое отношение.&lt;/p&gt;
+
+&lt;h1 id=&#34;дружелюбная-мясорубка-fg&#34;&gt;&lt;a href=&#34;fg&#34;&gt;Дружелюбная мясорубка&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Акустический фолк.&lt;/p&gt;
+
+&lt;p&gt;Состав:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Сет – вокал, гитара&lt;/li&gt;
+&lt;li&gt;Пикси – баян&lt;/li&gt;
+&lt;li&gt;Хис – виолончель&lt;/li&gt;
+&lt;li&gt;Штых, Птица – скрипка&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Породила некоторое количество спин-оффов, например, &lt;a href=&#34;http://www.youtube.com/watch?v=I4XBMGDSk60&#34;&gt;Full Shalanda&lt;/a&gt; и My Ground Friend.&lt;/p&gt;
+
+&lt;h1 id=&#34;панама-panama&#34;&gt;&lt;a href=&#34;panama&#34;&gt;Панама&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Авторская песня. Экзистенция и алкоголизм.&lt;/p&gt;
+
+&lt;h1 id=&#34;hugoshortcode-1-https-vk-com-mgimb&#34;&gt;&lt;a href=&#34;https://vk.com/mgimb&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;МГИМБ&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Акустический постмодернистский панк. (Когда-нибудь я сделаю нормальную страничку, а пока идите вконтач.)&lt;/p&gt;
+
+&lt;h1 id=&#34;я-сольно-https-vk-com-baraquepop&#34;&gt;&lt;a href=&#34;https://vk.com/baraquepop&#34;&gt;Я сольно&lt;/a&gt;&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>Полина</title>
@@ -663,16 +700,6 @@
       
       <guid>https://pecheny.me/blog/hi/</guid>
       <description>&lt;p&gt;Переезжаю сюда из &lt;a href=&#34;http://pecheny.livejournal.com&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;жж&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Пилотный выпуск</title>
-      <link>https://pecheny.me/dreams/tvshow/</link>
-      <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://pecheny.me/dreams/tvshow/</guid>
-      <description>&lt;p&gt;мы с Марковым решили запустить телеигру, основанную на потоке поисковых запросов: выдёргиваются случайные записи из потока, а участники игры должны на них отвечать вместо поисковика. Естественно, стоит фильтр на чернуху/порно. Запускаем в прямой эфир пилотный выпуск, Марков—ведущий. Внезапно фильтр отключается, я хватаюсь за голову и вбегаю в студию со словами «Марков, ори матом!»&lt;/p&gt;
 </description>
     </item>
     
