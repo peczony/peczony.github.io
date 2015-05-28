@@ -802,11 +802,15 @@
   </url>
   
   <url>
+    <loc>https://pecheny.me/music/fg/lu/</loc>
+  </url>
+  
+  <url>
     <loc>https://pecheny.me/music/fg/hision/</loc>
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/</loc>
+    <loc>https://pecheny.me/music/fg/set/</loc>
   </url>
   
   <url>
@@ -814,11 +818,7 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/lu/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/set/</loc>
+    <loc>https://pecheny.me/music/fg/</loc>
   </url>
   
 </urlset>
