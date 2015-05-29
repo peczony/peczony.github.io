@@ -16,6 +16,15 @@ body {
     background-color: rgb(249,249,249);
 }
 
+body {
+-moz-font-feature-settings:"calt", "liga", "clig", "kern", "onum";
+-moz-font-feature-settings:"calt=1, liga=1, clig=1, kern=1", "onum";
+-ms-font-feature-settings:"calt", "liga", "clig", "kern", "onum";
+-o-font-feature-settings:"calt", "liga", "clig", "kern", "onum";
+-webkit-font-feature-settings:"calt", "liga", "clig", "kern", "onum";
+font-feature-settings:"calt", "liga", "clig", "kern", "onum";
+}
+
 img {
     max-width: 100%;
 }
@@ -26,6 +35,7 @@ img {
     display:block;
     border-bottom: 1px solid #eee;
     margin-bottom:10px;
+    font-family: 'Lato', sans-serif;
     height:2em;
     width:100%;
 }
@@ -69,19 +79,19 @@ img {
 
 
 .posts {
-    font-family: 'Khartiya',arial,helvetica,sans-serif;
+    font-family: 'Erewhon',serif;
     list-style-type:none;
 }
 
 .posts li a {
-    color:#369;
+    color: #7e57c2;
     text-decoration:none;
 }
 
 
 .footnote {
-    font-family: 'Khartiya',arial,helvetica,sans-serif;
-    color:#888;
+    font-family: 'Erewhon',serif;
+    color: #888;
     font-size: smaller;
     margin-bottom:0;
 }
@@ -96,7 +106,7 @@ img {
 
 .footnote a:hover{
     text-decoration:underline;
-    color:#369;
+    color: #369;
 }
 
 .footer {
@@ -113,8 +123,8 @@ img {
 .post {
     z-index:9;
     display:block;
-    font-family: 'Khartiya', 'Open Sans',"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-    color:#484848;
+    font-family: 'Erewhon', serif;
+    color: #484848;
     overflow:auto;
     padding:0;
     padding-bottom:1em;
@@ -123,8 +133,12 @@ img {
     line-height:29px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
 .post h1 {
-    font-size:27px;
+    font-size:28px;
     letter-spacing:normal;
 }
 
@@ -167,8 +181,8 @@ img {
 
 #post-title h5 {
     font-weight:bold;
-    font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color:#2d2d2d;
+    font-family: 'Lato', sans-serif;
+    color: #2d2d2d;
     letter-spacing:normal;
 }
 .scaps{
@@ -295,8 +309,8 @@ img {
     overflow:hidden;
     margin-left:-1rem;
     margin-right:-1rem;
-    font-family:"Open Sans";
-    color:#ccc;
+    font-family:"Lato", sans-serif;
+    color: #ccc;
     text-align:center
 }
 
@@ -434,11 +448,12 @@ nav.pagination .summary{
 }
 
 nav#TableOfContents {
-    color: #888;
-    font-family: 'Khartiya',arial,helvetica,sans-serif;
-    margin: 1em 0;
+    color: #7e57c2;
+    font-family: 'Erewhon',serif;
+    margin: 3em 0;
     padding: 0.5em;
-    background-color: #dce5ed;
+    background-color: #d1c4e9;
+    border-radius: 5px;
     font-size: smaller;
 }
 
@@ -447,7 +462,7 @@ nav#TableOfContents a {
 }
 
 nav#TableOfContents ul {
-    margin: 0;
+    margin: 0.5em;
     list-style: none;
 }
 
