@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://pecheny.me/</loc>
-    <lastmod>2015-05-30T00:00:00+00:00</lastmod>
+    <lastmod>2015-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/karaboulkin/</loc>
+    <lastmod>2015-06-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -803,19 +808,11 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/lu/</loc>
-  </url>
-  
-  <url>
     <loc>https://pecheny.me/music/fg/set/</loc>
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/panama/</loc>
+    <loc>https://pecheny.me/</loc>
   </url>
   
   <url>
@@ -823,7 +820,15 @@
   </url>
   
   <url>
+    <loc>https://pecheny.me/music/fg/lu/</loc>
+  </url>
+  
+  <url>
     <loc>https://pecheny.me/music/fg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/panama/</loc>
   </url>
   
 </urlset>
