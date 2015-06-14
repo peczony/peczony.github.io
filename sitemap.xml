@@ -808,7 +808,7 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/set/</loc>
+    <loc>https://pecheny.me/music/fg/lu/</loc>
   </url>
   
   <url>
@@ -820,11 +820,15 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/lu/</loc>
+    <loc>https://pecheny.me/music/fg/set/</loc>
   </url>
   
   <url>
     <loc>https://pecheny.me/music/fg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/mgimb/</loc>
   </url>
   
   <url>
