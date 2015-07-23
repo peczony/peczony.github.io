@@ -2,39 +2,27 @@
   font-family: 'RM';
   font-style: normal;
   font-weight: normal;
-  src: url(http://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz__WzOtAn2bfVruHu-Zkc1M.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz_25ds880Du_gFZbUlZlsbg.woff) format('woff'), local('Roboto Mono Light'), local('RobotoMono-Light');
+  src: url(https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz__WzOtAn2bfVruHu-Zkc1M.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz_25ds880Du_gFZbUlZlsbg.woff) format('woff'), local('Roboto Mono Light'), local('RobotoMono-Light');
 }
 @font-face {
   font-family: 'RM';
   font-style: normal;
   font-weight: bold;
-  src: url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa21tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa2z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'), local('Roboto Mono Medium'), local('RobotoMono-Medium');
+  src: url(https://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa21tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa2z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'), local('Roboto Mono Medium'), local('RobotoMono-Medium');
 }
 @font-face {
   font-family: 'RM';
   font-style: italic;
   font-weight: normal;
-  src: url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKAwDGpgHHqfvceT5IvLM8_bk.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA6WIMIB6NqpGGYBL2uCJFkY.woff) format('woff'), local('Roboto Mono Light Italic'), local('RobotoMono-LightItalic');
+  src: url(https://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKAwDGpgHHqfvceT5IvLM8_bk.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA6WIMIB6NqpGGYBL2uCJFkY.woff) format('woff'), local('Roboto Mono Light Italic'), local('RobotoMono-LightItalic');
 }
 @font-face {
   font-family: 'RM';
   font-style: italic;
   font-weight: bold;
-  src: url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA3t0GIdJ9R24Mxb-iX6KhIg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA7eyNpl4hohYyJsaK6B7VO0.woff) format('woff'), local('Roboto Mono Medium Italic'), local('RobotoMono-MediumItalic');
+  src: url(https://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA3t0GIdJ9R24Mxb-iX6KhIg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA7eyNpl4hohYyJsaK6B7VO0.woff) format('woff'), local('Roboto Mono Medium Italic'), local('RobotoMono-MediumItalic');
 }
 
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa21tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa2z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Roboto Mono Italic'), local('RobotoMono-Italic'), url(http://fonts.gstatic.com/s/robotomono/v4/mE0EPT_93c7f86_WQexR3AUDkpSFyIbrJVsRdLP2tog.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/mE0EPT_93c7f86_WQexR3H3i86qbhUOH5Gp7WzWc2t8.woff) format('woff');
-}
 /*
 @font-face {
   font-family: 'R';
