@@ -13,7 +13,8 @@ abbr {
 }
 
 body {
-    background-color: rgb(249,249,249);
+    background-color: rgb(236,236,236);
+    font-family: "RM", monospace;
 }
 
 body {
@@ -33,9 +34,8 @@ img {
     top:0;
     left:0;
     display:block;
-    border-bottom: 1px solid #eee;
     margin-bottom:10px;
-    font-family: 'Lato', sans-serif;
+    font-family: "RM", monospace;
     height:2em;
     width:100%;
 }
@@ -60,12 +60,6 @@ img {
     transform: translateY(-50%);
 }
 
-.navbar a {
-    color:#333;
-    text-decoration:none;
-    font-weight:bold;
-}
-
 .brand {
     font-weight:bold;
     letter-spacing: 5px;
@@ -79,34 +73,24 @@ img {
 
 
 .posts {
-    font-family: 'Erewhon',serif;
+    font-family: 'RM', monospace;
     list-style-type:none;
 }
 
-.posts li a {
-    color: #7e57c2;
-    text-decoration:none;
+.footnote {
+    font-family: 'RM', monospace;
+    color: #888;
+    font-size: small;
+    margin:0.7em 0 0.7em 0;
 }
 
-
-.footnote {
-    font-family: 'Erewhon',serif;
-    color: #888;
-    font-size: smaller;
-    margin-bottom:0;
+.footnote-ref {
+    padding: 0 0 0 3px;
 }
 
 .summary {
     color: #555;
-}
-
-.footnote a {
-    color: #888 !important
-}
-
-.footnote a:hover{
-    text-decoration:underline;
-    color: #369;
+    font-size: smaller;
 }
 
 .footer {
@@ -123,52 +107,62 @@ img {
 .post {
     z-index:9;
     display:block;
-    font-family: 'Erewhon', serif;
-    color: #484848;
+    font-family: 'RM', monospace;
+    color: #555;
     overflow:auto;
     padding:0;
     padding-bottom:1em;
     padding-top:1em;
-    font-size:20px;
+    font-size:18px;
     line-height:29px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'RM', monospace;
+    color: #555;
+    font-size: 16px;
 }
 
-.post h1 {
-    font-size:28px;
-    letter-spacing:normal;
+#post-title h1 {
+    font-size:22px;
+    letter-spacing: 6px;
 }
 
-.post h2 {
-    font-size:26px;
-    letter-spacing:normal;
+h1 {
+    font-size:20px;
+    letter-spacing: 4px;
     font-weight: bold;
+    text-align: center;
+    margin: 1em 0;
+    text-transform: uppercase;
 }
 
-.post h3 {
-    font-size:25px;
-    font-style: italic;
+h2 {
+    font-size:20px;
+    /*font-style: italic;*/
     letter-spacing:normal;
+    font-weight: normal;
+    text-align: center;
+}
+
+h3 {
+    font-size:18px;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-align: center;
+    margin: 1em 0;
     font-weight: normal;
 }
 
-.post h4 {
-    font-size:24px;
-    letter-spacing:normal;
+h4 {
+    font-size:16px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 1em 0;
+    font-weight: normal;
 }
 
-.post h5 {
-    font-size:23px;
-    letter-spacing:normal;
-}
-
-.post h6 {
-    font-size:22px;
-    letter-spacing:normal;
-}
+/* h5 and h6 will probably never be used*/
 
 .away {
     margin-top:2em;
@@ -179,76 +173,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-top:2em;
 }
 
-#post-title h5 {
-    font-weight:bold;
-    font-family: 'Lato', sans-serif;
-    color: #2d2d2d;
-    letter-spacing:normal;
-}
 .scaps{
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     font-kerning: normal;
+    line-height: 1em;
     font-size: 0.84em;
     text-transform: uppercase;
 }
-
-@supports(font-feature-settings: 'smcp')
-{
-    .scaps {
-    font-variant: normal;
-    font-size: 1em;
-    font-feature-settings: "smcp";
-    letter-spacing: 0.1em;
-    font-kerning: normal;
-    text-transform: lowercase;
-    }
-}
-
-@supports(-moz-font-feature-settings: 'smcp')
-{
-    .scaps {
-    font-variant: normal;
-    font-size: 1em;
-    -moz-font-feature-settings: "smcp";
-    font-kerning: normal;
-    text-transform: lowercase;
-    }
-}
-
-@supports(-ms-font-feature-settings: 'smcp')
-{
-    .scaps {
-    font-variant: normal;
-    font-size: 1em;
-    -ms-font-feature-settings: "smcp";
-    font-kerning: normal;
-    text-transform: lowercase;
-    }
-}
-
-@supports(-webkit-font-feature-settings: 'smcp')
-{
-    .scaps {
-    font-variant: normal;
-    font-size: 1em;
-    text-transform: lowercase;
-    -webkit-font-feature-settings: "smcp";
-    font-kerning: normal;
-    }
-}
-
-@supports(-o-font-feature-settings: 'smcp')
-{
-    .scaps {
-    font-variant: normal;
-    font-size: 1em;
-    text-transform: lowercase;
-    -o-font-feature-settings: "smcp";
-    font-kerning: normal;
-    }
-}
-
-
 
 @media screen and (max-width:768px){
     .navbar {
@@ -309,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow:hidden;
     margin-left:-1rem;
     margin-right:-1rem;
-    font-family:"Lato", sans-serif;
+    font-family:"RM", monospace;
     color: #ccc;
     text-align:center
 }
@@ -317,7 +248,6 @@ h1, h2, h3, h4, h5, h6 {
 .pagination-item{
     display:block;
     padding:1rem;
-    border:1px solid #eee
 }
 
 .pagination-item:first-child{
@@ -340,14 +270,10 @@ a.pagination-item:hover{
 
     .pagination-item:first-child{
         margin-bottom:0;
-        border-top-left-radius:4px;
-        border-bottom-left-radius:4px
     }
 
     .pagination-item:last-child{
         margin-left:-1px;
-        border-top-right-radius:4px;
-        border-bottom-right-radius:4px
     }
 
 }
@@ -355,8 +281,8 @@ a.pagination-item:hover{
 .pagination{
     display:inline-block;
     padding-left:0;
-    margin:20px 0;
-    border-radius:4px
+    margin:20px auto;
+    font-size: 16px;
 }
 
 .pagination>li{
@@ -366,45 +292,32 @@ a.pagination-item:hover{
 .pagination>li>a,.pagination>li>span{
     position:relative;
     float:left;
-    padding:6px 12px;
+    padding:6px 6px;
     line-height:1.42857143;
     text-decoration:none;
-    color:#5e8aa6;
-    background-color:#fff;
-    border:1px solid #ddd;
     margin-left:-1px;
     margin-bottom: 10px;
 }
 
 .pagination>li:first-child>a,.pagination>li:first-child>span{
     margin-left:0;
-    border-bottom-left-radius:4px;
-    border-top-left-radius:4px
 }
 
 .pagination>li:last-child>a,.pagination>li:last-child>span{
-    border-bottom-right-radius:4px;
-    border-top-right-radius:4px
 }
 
 .pagination>li>a:hover,.pagination>li>span:hover,.pagination>li>a:focus,.pagination>li>span:focus{
-    color:#416276;
     background-color:#eee;
-    border-color:#ddd
 }
 
 .pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus{
     z-index:2;
-    color:#fff;
-    background-color:#5e8aa6;
-    border-color:#5e8aa6;
+    color:#ccc;
     cursor:default
 }
 
 .pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{
     color:#777;
-    background-color:#fff;
-    border-color:#ddd;
     cursor:not-allowed
 }
 
@@ -447,38 +360,29 @@ nav.pagination .summary{
     font-size:.8rem
 }
 
-#toc {
-    /*position: fixed;*/
-    /*margin-left: -5em;*/
-}
-
 nav#TableOfContents {
     color: #888;
-    font-family: 'Erewhon',serif;
-    margin: 3em 0;
+    font-family: 'RM', monospace;
+    margin: 0;
     padding: 0.5em;
-    background-color: #ede7f6;
-    border-radius: 5px;
+    background-color: #dfdfdf;
     font-size: smaller;
 }
 
 nav#TableOfContents a {
     text-decoration: none;
+    color: #888;
 }
 
 nav#TableOfContents ul {
-    margin: 0.5em;
-    list-style: none;
-}
-
-nav#TableOfContents ul ul {
-    margin: 0 0 0 4em;
+    margin: 0 0 0 2em;
     list-style: katakana;
 }
 
-nav#TableOfContents ul ul li {
-    padding: 0;
-    margin-top: 2px;
+nav#TableOfContents ul li {
+    padding: 0 0 0 5px;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 .bullshit {padding: 0.5em; margin: 1em 0; background-color: #e2651d; color: #8a3a0e;}
@@ -486,12 +390,12 @@ nav#TableOfContents ul ul li {
 {
     .bullshit
     {
-        color: #d9560e;
+        color: #c65410;
     }
 }
 
-.example {padding: 0.5em; margin: 1em 0; background-color: #dce5ed; color: #888;}
-.inline-example { background-color: #dce5ed; border-radius: 4px; padding: 0.1em 0.3em; color: #888; box-decoration-break: clone;}
+.example {padding: 0.5em; margin: 1em 0; background-color: #dfdfdf; color: #888;}
+.inline-example { background-color: #dfdfdf; padding: 0.1em 0.3em; color: #888; box-decoration-break: clone;}
 .black {color: #101010;}
 
 abbr[title]:after
@@ -513,3 +417,13 @@ abbr[title]:after
       content: "";
    }
 }
+
+::selection {
+    background-color: #fff;
+}
+::-moz-selection {
+    background-color: #fff;
+    padding: 7px;
+}
+
+code, kbd, pre { font-family: 'RM', monospace; }

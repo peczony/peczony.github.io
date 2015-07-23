@@ -123,9 +123,8 @@ html {
 body {
   font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-weight: 400;
-  font-family: "Erewhon", serif;
-  color: #222; }
+  font-family: "RM", monospace;
+  color: #555; }
 
 
 /* Typography
@@ -158,9 +157,38 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #7e57c2; }
+  text-decoration: none;
+  }
+
+a:link {
+  text-decoration: none;
+  color: #a49999;
+  border-color: #c1c1c1;
+  border-width: 0 0 1px 0;
+  border-style: none none solid none;
+  padding: 3px 0px 2px 0px;
+  background-color: inherit;
+  }
+
+a:visited {
+  color: #a49999;
+  border-color: #c1c1c1;
+  border-width: 0 0 1px 0;
+  border-style: none none dotted none;
+  padding: 3px 0px 2px 0px;
+  background-color: inherit;
+  }
+
 a:hover {
-  color: #5e35b1; }
+  color: #a49999;
+  text-decoration: none;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  }
+
+a em {
+  padding-bottom: 2px;
+  }
 
 
 /* Buttons
@@ -288,7 +316,7 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: square inside; }
 ol {
   list-style: decimal inside; }
 ol, ul {

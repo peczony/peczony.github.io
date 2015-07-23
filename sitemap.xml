@@ -818,10 +818,6 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/lu/</loc>
-  </url>
-  
-  <url>
     <loc>https://pecheny.me/</loc>
   </url>
   
@@ -830,19 +826,23 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/fg/set/</loc>
-  </url>
-  
-  <url>
     <loc>https://pecheny.me/music/fg/</loc>
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/panama/</loc>
+    <loc>https://pecheny.me/music/fg/lu/</loc>
   </url>
   
   <url>
     <loc>https://pecheny.me/music/mgimb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/fg/set/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/panama/</loc>
   </url>
   
 </urlset>
