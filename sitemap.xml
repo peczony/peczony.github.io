@@ -3,8 +3,23 @@
   
   <url>
     <loc>https://pecheny.me/</loc>
-    <lastmod>2015-07-04T00:00:00+00:00</lastmod>
+    <lastmod>2015-07-24T16:39:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/seenlive/</loc>
+    <lastmod>2015-07-24T16:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/muschgk/</loc>
+    <lastmod>2015-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/</loc>
+    <lastmod>2015-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,8 +33,33 @@
   </url>
   
   <url>
-    <loc>https://pecheny.me/music/</loc>
-    <lastmod>2015-06-14T00:00:00+00:00</lastmod>
+    <loc>https://pecheny.me/music/fg/lu/</loc>
+    <lastmod>2015-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/fg/hision/</loc>
+    <lastmod>2015-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/fg/set/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/fg/</loc>
+    <lastmod>2015-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/panama/</loc>
+    <lastmod>2015-06-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/mgimb/</loc>
+    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -120,6 +160,11 @@
   <url>
     <loc>https://pecheny.me/dreams/park/</loc>
     <lastmod>2015-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -815,34 +860,6 @@
   <url>
     <loc>https://pecheny.me/dreams/pupil/</loc>
     <lastmod>2010-03-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/hision/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/lu/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/mgimb/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/fg/set/</loc>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/panama/</loc>
   </url>
   
 </urlset>
