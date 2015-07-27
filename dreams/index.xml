@@ -5,8 +5,18 @@
     <link>https://pecheny.me/dreams/</link>
     <description>Recent content in Dreams on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2015 14:45:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/dreams/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Маршдаун</title>
+      <link>https://pecheny.me/dreams/marchdown/</link>
+      <pubDate>Mon, 27 Jul 2015 14:45:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/dreams/marchdown/</guid>
+      <description>&lt;p&gt;Нижнюю часть моего тела парализовало, и я был прикован в постели два месяца. За это время мне часто приходилось объяснять гостям, как ко мне добраться, и я разработал систему записи информации о координатах и инструкциях по передвижению пешком &lt;em&gt;Marchdown&lt;/em&gt;. Каждая точка или вектор в ней представлялись одним комплексным числом.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Музыкальное ЧГК</title>
@@ -177,16 +187,6 @@
       <description>&lt;p&gt;Катя Новикова попросила меня помочь ей с домашним заданием по немецкому. Нужно было выписать все текстовые элементы из немецкоязычного восьмибитного шутера а-ля doom, где противниками были антропоморфные бройлерные курицы. Я начал играть и увлёкся; только через полчаса игры понял, что я забыл про, собственно, задание.&lt;/p&gt;
 
 &lt;p&gt;Задумался о том, как удобнее получать эти текстовые элементы. Решил, что буду делать скриншоты, а потом автоматически распознавать текст. За раздумьем подошёл к окну и увидел бегущих, держась за руку, саму Катю и Аню Бобрёнкову.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Борщ</title>
-      <link>https://pecheny.me/dreams/borsch/</link>
-      <pubDate>Fri, 13 Mar 2015 09:00:00 +0300</pubDate>
-      
-      <guid>https://pecheny.me/dreams/borsch/</guid>
-      <description>&lt;p&gt;в мире торжествующего компьютеризованного будущего человек по имени антон борщенков страдает от того, что его роспись выглядит просто как «борщ» и валидаторы анкет говорят ему, что он написал в поле «роспись» обычное слово вместо росписи.&lt;/p&gt;
 </description>
     </item>
     
