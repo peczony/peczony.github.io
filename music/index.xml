@@ -803,7 +803,7 @@ _______________
 
 &lt;p&gt;&lt;a href=&#34;..&#34;&gt;← Назад&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;road:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Дорога&lt;/h2&gt;
+&lt;h2 id=&#34;road&#34;&gt;Дорога&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Em       Am      Em
 Соскочил с порога,
@@ -835,7 +835,7 @@ C      G(h)      Em
 Уходил в дорогу.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;tillnight:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;До ночи&lt;/h2&gt;
+&lt;h2 id=&#34;tillnight&#34;&gt;До ночи&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;A               D  E  A
 Встало солнце из-за гор,
@@ -912,7 +912,7 @@ Hm              E
 Я просплю до ночи.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;junkman:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Старьёвщик (Ночь нежна)&lt;/h2&gt;
+&lt;h2 id=&#34;junkman&#34;&gt;Старьёвщик (Ночь нежна)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Ночью проснулся мальчик,
 Не может заснуть и плачет,
@@ -966,7 +966,7 @@ Ref.
 Ref.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;troll:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Зимняя (песня про тролля и лошадку)&lt;/h2&gt;
+&lt;h2 id=&#34;troll&#34;&gt;Зимняя (песня про тролля и лошадку)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;D              Em/g
 На холме я построил дом,
@@ -1043,7 +1043,7 @@ Ref.
 Ref.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;отрекшаяся-песня-про-леди-и-её-гостя:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Отрекшаяся (песня про леди и её гостя)&lt;/h2&gt;
+&lt;h2 id=&#34;отрекшаяся-песня-про-леди-и-её-гостя&#34;&gt;Отрекшаяся (песня про леди и её гостя)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;F#m         D       A       E
 Мое белое платье в дырах,
@@ -1067,7 +1067,7 @@ Ref.
 И отрекшись.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;torquemada:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Песня Торквемады&lt;/h2&gt;
+&lt;h2 id=&#34;torquemada&#34;&gt;Песня Торквемады&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;D G A D
       D           G
@@ -1179,7 +1179,7 @@ A D        E
 (Ref.)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;dreamer:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Спящий&lt;/h2&gt;
+&lt;h2 id=&#34;dreamer&#34;&gt;Спящий&lt;/h2&gt;
 
 &lt;p&gt;(Я вот напрочь не помню, как уменьшенные септаккорды буковками обозначаются. Там они идут те, которые из ми-минора — по ми-бемоль и т.д., если скучно делается, то дальше по гамме вверх. Буду все эти серии обозначать как «&lt;code&gt;Eb...&lt;/code&gt;». —Хис)&lt;/p&gt;
 
@@ -1230,7 +1230,7 @@ C           D       Em         D       C
 Спящий, спокойно, спящий, не смей проснуться.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;sniper:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Снайпер&lt;/h2&gt;
+&lt;h2 id=&#34;sniper&#34;&gt;Снайпер&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Am F
 
@@ -1288,7 +1288,7 @@ Em7 F G Am
 И вообще, сказкам не положен мрачный конец.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;apples:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Те, кто любит яблоки&lt;/h2&gt;
+&lt;h2 id=&#34;apples&#34;&gt;Те, кто любит яблоки&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;A     D  E    A       F#m     E
 Те, кто любит яблоки, яблоки, яблоки,
@@ -1330,7 +1330,7 @@ F#m    A F
 Ешьте птиц и гусениц — вот и все.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;i_call:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Я звоню&lt;/h2&gt;
+&lt;h2 id=&#34;i_call&#34;&gt;Я звоню&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Em f# G       C D
 Убегу, убегу я
@@ -1395,7 +1395,7 @@ Em          Hm
 Колокольчики мои, бубенцы.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;romance:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Романс&lt;/h2&gt;
+&lt;h2 id=&#34;romance&#34;&gt;Романс&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Am       G       F Em
 Как на днях мои руки
@@ -1420,7 +1420,7 @@ Em          Hm
 А осталась теперь от нее лишь дыра.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;voltaire:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Вольтерьянец&lt;/h2&gt;
+&lt;h2 id=&#34;voltaire&#34;&gt;Вольтерьянец&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Е                  А               Е     С
 Я в чем-то талант, наверное, даже гений;
@@ -1471,7 +1471,7 @@ F#m      H
 Зато безрелигиозен.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;star:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Звездная&lt;/h2&gt;
+&lt;h2 id=&#34;star&#34;&gt;Звездная&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Солнышко мое не заходит ко мне,
 Даже ночью ее нету.
@@ -1528,7 +1528,7 @@ F#m      H
 Да и...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;bomber:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Бомбардировщик&lt;/h2&gt;
+&lt;h2 id=&#34;bomber&#34;&gt;Бомбардировщик&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Солнышко мое не заходит ко мне,
 Даже ночью ее нету.
@@ -1585,7 +1585,7 @@ F#m      H
 Да и...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;monophysite:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Монофизит&lt;/h2&gt;
+&lt;h2 id=&#34;monophysite&#34;&gt;Монофизит&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Am                 F
 Встали трупы из могил,
@@ -1632,7 +1632,7 @@ Am    G(h)       C
 В скольких лицах он един.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;mannerheim:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Маннергейм&lt;/h2&gt;
+&lt;h2 id=&#34;mannerheim&#34;&gt;Маннергейм&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Вот я и сбился с пути, не найти мне тропы обратной,
 В этих болотах почти нет пути пролетариату,
@@ -1672,7 +1672,7 @@ A
 Все так просто — вот меня и нет.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;fog:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Туман (Смерть леди Халльгерд)&lt;/h2&gt;
+&lt;h2 id=&#34;fog&#34;&gt;Туман (Смерть леди Халльгерд)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Молчат, но на меня, однако, лают,
 Как будто бы на призрака, на нежить,
@@ -1695,7 +1695,7 @@ A
 И лучше бы исчезнуть.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;credo:d28dbcb7f3b8f7f32560009e1e644bed&#34;&gt;Credo&lt;/h2&gt;
+&lt;h2 id=&#34;credo&#34;&gt;Credo&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Восемнадцать лун в красных небесах,
 Мой корабль дал течь, парус мой — тряпье,
@@ -3099,7 +3099,7 @@ In passageways
 &lt;p&gt;Альбомы:&lt;br /&gt;
 &lt;a href=&#34;#being&#34;&gt;О Смысле Бытия&lt;/a&gt; · &lt;a href=&#34;#lyr&#34;&gt;Така Вот Лирика&lt;/a&gt; · &lt;a href=&#34;#youth&#34;&gt;Год Молодёжи&lt;/a&gt; · &lt;a href=&#34;#varia&#34;&gt;Разное&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;being:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;О Смысле Бытия&lt;/h1&gt;
+&lt;h1 id=&#34;being&#34;&gt;О Смысле Бытия&lt;/h1&gt;
 
 &lt;p&gt;Дебютный альбом «О Смысле Бытия» был записан в 2003 году на квартире
 пермского знатока Александра Аюпова в присутствии веселой компании знатоков.&lt;/p&gt;
@@ -3133,7 +3133,7 @@ In passageways
 [#27] Сидишь на обочине&lt;br /&gt;
 [#28] Хорошо быть раздолбаем&lt;/p&gt;
 
-&lt;h2 id=&#34;paletot:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Без названия №2 (Пальто)&lt;/h2&gt;
+&lt;h2 id=&#34;paletot&#34;&gt;Без названия №2 (Пальто)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Весело-весело кружатся мотыльки,
 Звезды заветные встали у реки.
@@ -3168,7 +3168,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mother:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Как ёб твою мать&lt;/h2&gt;
+&lt;h2 id=&#34;mother&#34;&gt;Как ёб твою мать&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Мочу на тележку не ставьте,
 мочу на тележку не ставьте,
@@ -3201,7 +3201,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;lenin:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Ленинские рукописи (муз. В. Дашкевича и Панамы — сл. Р. Рождественского)&lt;/h2&gt;
+&lt;h2 id=&#34;lenin&#34;&gt;Ленинские рукописи (муз. В. Дашкевича и Панамы — сл. Р. Рождественского)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Вряд ли много в мире формул таких. 
 Эту я услышал и сердцем признал:
@@ -3236,7 +3236,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;guru:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Мысли великого гуру&lt;/h2&gt;
+&lt;h2 id=&#34;guru&#34;&gt;Мысли великого гуру&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Бесконечно светлые лестницы,
 Безнадежно прочные спицы,
@@ -3268,7 +3268,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;ontheotherside:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;На обратной стороне&lt;/h2&gt;
+&lt;h2 id=&#34;ontheotherside&#34;&gt;На обратной стороне&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;На обратной стороне
 что-то вдруг приснилось мне,
@@ -3288,7 +3288,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;neoclassics:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Неоклассика&lt;/h2&gt;
+&lt;h2 id=&#34;neoclassics&#34;&gt;Неоклассика&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Я придумал: пойду и повешусь,
 таким образом смерть обману я.
@@ -3298,7 +3298,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;butnome:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Но меня уже нет&lt;/h2&gt;
+&lt;h2 id=&#34;butnome&#34;&gt;Но меня уже нет&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Свет рождается здесь, затем летит вдаль, за мной,
 Там он будет лить снег моих цветных снов, словно живой.
@@ -3323,7 +3323,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cucumber:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Огурец (текст приписывается А. Добрякову)&lt;/h2&gt;
+&lt;h2 id=&#34;cucumber&#34;&gt;Огурец (текст приписывается А. Добрякову)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Когда расстилаются тучи
 и с неба сияет звезда,
@@ -3338,7 +3338,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;optimism:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Оптимизм&lt;/h2&gt;
+&lt;h2 id=&#34;optimism&#34;&gt;Оптимизм&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Смертным боем всех наваждений,
 Лёгким страхом чёрствых знамений
@@ -3398,7 +3398,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;gogol:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Памяти Гоголя&lt;/h2&gt;
+&lt;h2 id=&#34;gogol&#34;&gt;Памяти Гоголя&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Летом — с неба, зимой — из колодца
 Ждем мы снега, ждем мы солнца.
@@ -3428,7 +3428,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;voterland:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Песня о Родине&lt;/h2&gt;
+&lt;h2 id=&#34;voterland&#34;&gt;Песня о Родине&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Однажды ночью мне приснилось пламя —
 Чьи-то души горели огнем,
@@ -3463,7 +3463,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cook:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Повар&lt;/h2&gt;
+&lt;h2 id=&#34;cook&#34;&gt;Повар&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Не ссы в компот: там повар моет ноги
 и руки, и яйца.
@@ -3473,7 +3473,7 @@ In passageways
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;pani:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Прелестная пани (сл. Анакреон Клубничкин)&lt;/h2&gt;
+&lt;h2 id=&#34;pani&#34;&gt;Прелестная пани (сл. Анакреон Клубничкин)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Мне прелестная пани
 нежно ручку пожала,
@@ -3521,7 +3521,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;putin:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Путин — наш президент!&lt;/h2&gt;
+&lt;h2 id=&#34;putin&#34;&gt;Путин — наш президент!&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Если бы хуи летали,
 как летают птицы,
@@ -3537,7 +3537,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;onceandforall:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Раз и навсегда&lt;/h2&gt;
+&lt;h2 id=&#34;onceandforall&#34;&gt;Раз и навсегда&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Снег заметает следы
 не спасая от боли.
@@ -3578,7 +3578,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#being&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;regeneration:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Регенерация божьих тварей&lt;/h2&gt;
+&lt;h2 id=&#34;regeneration&#34;&gt;Регенерация божьих тварей&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Море стонов, море глаз
 Ветер в спину, солнце вниз
@@ -3631,7 +3631,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#top&#34;&gt;наверх&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;lyr:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Така Вот Лирика&lt;/h1&gt;
+&lt;h1 id=&#34;lyr&#34;&gt;Така Вот Лирика&lt;/h1&gt;
 
 &lt;p&gt;Второй альбом «Така Вот Лирика» был записан в 2005 году на квартире
 известного пермского знатока Игоря Петрова в присутствии Ильи Макарова,
@@ -3653,7 +3653,7 @@ _____
 [#13] &lt;a href=&#34;#scarlet&#34;&gt;Кумач&lt;/a&gt; (сл. Н. Асеев)&lt;br /&gt;
 [#14] Эпилог&lt;/p&gt;
 
-&lt;h2 id=&#34;dovlatov:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;С. Д. Довлатов. Краткая биографическая справка&lt;/h2&gt;
+&lt;h2 id=&#34;dovlatov&#34;&gt;С. Д. Довлатов. Краткая биографическая справка&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Жил-был такой писатель — Сергей Довлатов,
 он решил чего-нибудь написать,
@@ -3679,7 +3679,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;rays:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Тонкие нити солнечных лучей&lt;/h2&gt;
+&lt;h2 id=&#34;rays&#34;&gt;Тонкие нити солнечных лучей&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Тонкие нити солнечных лучей,
 радужный блеск заточенных мечей.
@@ -3704,7 +3704,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;shitup:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Молчи, говно!&lt;/h2&gt;
+&lt;h2 id=&#34;shitup&#34;&gt;Молчи, говно!&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;В моей библиотеке «Войны и мира» нет,
 Журналов не читаю, не выписал газет,
@@ -3735,7 +3735,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;brenno:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Всё это бренно&lt;/h2&gt;
+&lt;h2 id=&#34;brenno&#34;&gt;Всё это бренно&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Когда ты выпьешь много водки,
 когда народ с тобой един,
@@ -3767,7 +3767,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;lirika:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Лирика&lt;/h2&gt;
+&lt;h2 id=&#34;lirika&#34;&gt;Лирика&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Я буду помнить, что в море песка
 жаркий костёр раздвигал облака.
@@ -3799,7 +3799,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cookie:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Жри печеньку&lt;/h2&gt;
+&lt;h2 id=&#34;cookie&#34;&gt;Жри печеньку&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Рано утром по двору
 шёл, пугая детвору,
@@ -3844,7 +3844,7 @@ _____
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;vpizdu:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;В пизду! (сл. П. Вяземский, Панама)&lt;/h2&gt;
+&lt;h2 id=&#34;vpizdu&#34;&gt;В пизду! (сл. П. Вяземский, Панама)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Твоя подстреленная птица
 Так грустно, жалобно поёт,
@@ -3880,7 +3880,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;jaspers:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Ясперс&lt;/h2&gt;
+&lt;h2 id=&#34;jaspers&#34;&gt;Ясперс&lt;/h2&gt;
 
 &lt;!-- Пабло не умеет рисовать крокодилов,
 Казя не умеет рисовать бегемотов... --&gt;
@@ -3944,7 +3944,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#lyr&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;scarlet:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Кумач (сл. Н. Асеев)&lt;/h2&gt;
+&lt;h2 id=&#34;scarlet&#34;&gt;Кумач (сл. Н. Асеев)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Красные зори, красный восход,
 Красные речи у Красных Ворот,
@@ -3974,7 +3974,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#top&#34;&gt;наверх&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;youth:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Год Молодёжи&lt;/h1&gt;
+&lt;h1 id=&#34;youth&#34;&gt;Год Молодёжи&lt;/h1&gt;
 
 &lt;p&gt;Третий альбом «Год Молодёжи» был записан в 2010 году на Молодёжке (экое совпадение!) у Сета. Звукоинженерили Сет и Гоги, они же и Печёный были на бэк-вокале.&lt;/p&gt;
 
@@ -3996,7 +3996,7 @@ ______
 [#15] &lt;a href=&#34;#capybara&#34;&gt;Водосвинка&lt;/a&gt; (Autumn) (муз. Печёный — сл. команды «Ich Habe Große», Братья Сурикаты)&lt;br /&gt;
 [#16] &lt;a href=&#34;#field&#34;&gt;Полюшко&lt;/a&gt; (Summer) (муз. и сл. Печёный)&lt;/p&gt;
 
-&lt;h2 id=&#34;doorstep:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;На крылечке&lt;/h2&gt;
+&lt;h2 id=&#34;doorstep&#34;&gt;На крылечке&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Я сижу на крылечке,
 у меня мёрзнет жопа.
@@ -4037,7 +4037,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;hare:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Зайчик&lt;/h2&gt;
+&lt;h2 id=&#34;hare&#34;&gt;Зайчик&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;А я хочу быть зайчиком,
 скакать по травке утренней,
@@ -4069,7 +4069,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;uncle:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Немытый дядя&lt;/h2&gt;
+&lt;h2 id=&#34;uncle&#34;&gt;Немытый дядя&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Шёл домой немытый дядя,
 Нёс в руке кочан капусты.
@@ -4099,7 +4099,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mausoleum:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;В мавзолее Ленина&lt;/h2&gt;
+&lt;h2 id=&#34;mausoleum&#34;&gt;В мавзолее Ленина&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;А скажите, правда ли,
 что в мавзолее Ленина
@@ -4153,7 +4153,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;kisa:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Фаянсовая киса&lt;/h2&gt;
+&lt;h2 id=&#34;kisa&#34;&gt;Фаянсовая киса&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Фаянсовая киса
 за городом живёт.
@@ -4176,7 +4176,7 @@ ______
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;thingy:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Штучка (муз. Печёный, Панама — сл. команда «Ich Habe Große», Панама)&lt;/h2&gt;
+&lt;h2 id=&#34;thingy&#34;&gt;Штучка (муз. Печёный, Панама — сл. команда «Ich Habe Große», Панама)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt; Am          Dm
 Что это за штучка,
@@ -4237,7 +4237,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;spain:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Испания&lt;/h2&gt;
+&lt;h2 id=&#34;spain&#34;&gt;Испания&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Зачем меня вы предали, цветы слепой сирени?
 Зачем проникли в разум мой, огни фантомной боли?
@@ -4272,7 +4272,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;goat:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Коза&lt;/h2&gt;
+&lt;h2 id=&#34;goat&#34;&gt;Коза&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Пойдём ебать козу,
  Пойдём ебать козу,
@@ -4302,7 +4302,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;serbian:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Сербская (сл. Юнна Мориц)&lt;/h2&gt;
+&lt;h2 id=&#34;serbian&#34;&gt;Сербская (сл. Юнна Мориц)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Не ходите, мальчики, по чужим костям,
 Собственных костей не соберёте.
@@ -4332,7 +4332,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;izdoma:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Из дома вышел человек (сл. Даниил Хармс)&lt;/h2&gt;
+&lt;h2 id=&#34;izdoma&#34;&gt;Из дома вышел человек (сл. Даниил Хармс)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Из дома вышел человек
 С дубинкой и мешком
@@ -4361,7 +4361,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mouse:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Мышка&lt;/h2&gt;
+&lt;h2 id=&#34;mouse&#34;&gt;Мышка&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;   Dm
 Распяли в огороде мышку,
@@ -4433,7 +4433,7 @@ Gm          Dm          C           Dm
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;yearoftheyouth:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Год Молодёжи (муз. Панама, Печёный — сл. команды «Ich Habe Große», «Батарея», Панама)&lt;/h2&gt;
+&lt;h2 id=&#34;yearoftheyouth&#34;&gt;Год Молодёжи (муз. Панама, Печёный — сл. команды «Ich Habe Große», «Батарея», Панама)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt; Em              Am
 Первого января бухали,
@@ -4478,7 +4478,7 @@ Gm          Dm          C           Dm
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;polizuxa:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Масленая полизуха (муз. и сл. &lt;abbr title=&#34;но не все&#34;&gt;народные&lt;/abbr&gt;)&lt;/h2&gt;
+&lt;h2 id=&#34;polizuxa&#34;&gt;Масленая полизуха (муз. и сл. &lt;abbr title=&#34;но не все&#34;&gt;народные&lt;/abbr&gt;)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Масленая полизуха, ой,
 полизуха, люли, полизуха.
@@ -4522,7 +4522,7 @@ Gm          Dm          C           Dm
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;sticknstink:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Липни и воняй (муз. и сл. Печёный)&lt;/h2&gt;
+&lt;h2 id=&#34;sticknstink&#34;&gt;Липни и воняй (муз. и сл. Печёный)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;         Am     Dm
 В нашем доме появился
@@ -4584,7 +4584,7 @@ Am/C=01223x
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;capybara:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Водосвинка (муз. Печёный — сл. команды «Ich Habe Große», Братья Сурикаты)&lt;/h2&gt;
+&lt;h2 id=&#34;capybara&#34;&gt;Водосвинка (муз. Печёный — сл. команды «Ich Habe Große», Братья Сурикаты)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt; Dm  Gm         A7      Dm
 Водосвинки — весёлый народ,
@@ -4626,7 +4626,7 @@ Edim7=030210
 
 &lt;p&gt;&lt;a href=&#34;#youth&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;field:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Полюшко (муз. и сл. Печёный)&lt;/h2&gt;
+&lt;h2 id=&#34;field&#34;&gt;Полюшко (муз. и сл. Печёный)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Am                Am/C      Dm
 Чисто полюшко — широкое, раздольное —
@@ -4672,7 +4672,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#top&#34;&gt;наверх&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;varia:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Разное&lt;/h1&gt;
+&lt;h1 id=&#34;varia&#34;&gt;Разное&lt;/h1&gt;
 
 &lt;p&gt;«Противогаз» и «Сопельки» — записи Панамы и Дружелюбной мясорубки в 2010. «Коровушка» существует только в демо-записи. «Было очень вкусно» и легендарная песня «В селе Черновское» существуют лишь в бутлегах гитарных посиделок на фестах. О каких-либо записях «Таракана» и «Пролетария» автору этого текста неизвестно.&lt;/p&gt;
 
@@ -4684,7 +4684,7 @@ Hdim+4=032020
 [#06] &lt;a href=&#34;#chernovskoe&#34;&gt;В селе Черновское&lt;/a&gt; (Песня о малой родине)&lt;br /&gt;
 [#07] &lt;a href=&#34;#proletarian&#34;&gt;Пролетарий&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;gasmask:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Противогаз (сл. Дмитрий Кедрин)&lt;/h2&gt;
+&lt;h2 id=&#34;gasmask&#34;&gt;Противогаз (сл. Дмитрий Кедрин)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Только глянула — и сразу
 Напрямик сказала твердо:
@@ -4724,7 +4724,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;boogie:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Сопельки (сл. Шиш Брянский)&lt;/h2&gt;
+&lt;h2 id=&#34;boogie&#34;&gt;Сопельки (сл. Шиш Брянский)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Вставьте мне в сердечко звёздочку, звёздочку,
 Вместо ушек вставьте ракушки, ракушки,
@@ -4744,7 +4744,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;mmmtasty:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Было очень вкусно (сл. команда «Ich Habe Große», Панама)&lt;/h2&gt;
+&lt;h2 id=&#34;mmmtasty&#34;&gt;Было очень вкусно (сл. команда «Ich Habe Große», Панама)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Было очень вкусно,
 Было очень сладко.
@@ -4776,7 +4776,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cow:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Коровушка (муз. народная — сл. Панама, Печёный)&lt;/h2&gt;
+&lt;h2 id=&#34;cow&#34;&gt;Коровушка (муз. народная — сл. Панама, Печёный)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Уж как я мою коровушку люблю!
 Молока из её сисек надою.
@@ -4801,7 +4801,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cockroach:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Таракан (сл. Николай Олейников)&lt;/h2&gt;
+&lt;h2 id=&#34;cockroach&#34;&gt;Таракан (сл. Николай Олейников)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Таракан сидит в стакане.
 Ножку рыжую сосёт.
@@ -4860,7 +4860,7 @@ Hdim+4=032020
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;chernovskoe:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;В селе Черновское (Песня о малой родине)&lt;/h2&gt;
+&lt;h2 id=&#34;chernovskoe&#34;&gt;В селе Черновское (Песня о малой родине)&lt;/h2&gt;
 
 &lt;p&gt;В сносках — цензурированные варианты, употребляющиеся комплементарно основным.&lt;/p&gt;
 
@@ -4905,7 +4905,7 @@ ___________
 
 &lt;p&gt;&lt;a href=&#34;#varia&#34;&gt;к альбому&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;proletarian:85c21e32e4957c3e1d3d993416f5fb05&#34;&gt;Пролетарий&lt;/h2&gt;
+&lt;h2 id=&#34;proletarian&#34;&gt;Пролетарий&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;Смотрю я на небо в гранёный стакан
 И вижу Плеяды, Луну и Уран,
