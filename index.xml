@@ -5,8 +5,35 @@
     <link>https://pecheny.me/</link>
     <description>Recent content on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2016 10:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pecheny.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>
+      <link>https://pecheny.me/blog/osxfuse-sshfs/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
+      <description>&lt;p&gt;So as you may know, &lt;a href=&#34;https://osxfuse.github.io/&#34;&gt;OSXFUSE&lt;/a&gt;+&lt;a href=&#34;https://github.com/osxfuse/osxfuse/wiki/SSHFS&#34;&gt;SSHFS&lt;/a&gt; is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&lt;/p&gt;
+
+&lt;p&gt;I’ve found traces of it mentioned &lt;a href=&#34;http://superuser.com/questions/772405/why-does-directory-vanish-when-i-do-sshfs-how-to-setup-sshfs-share-on-max-osx-1&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/osxfuse/osxfuse/issues/174&#34;&gt;there&lt;/a&gt;, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.&lt;/p&gt;
+
+&lt;p&gt;Essence of the problem: you mount a remote server onto a folder, you can access it perfectly from terminal or e.g. &lt;a href=&#34;http://doublecmd.sourceforge.net/&#34;&gt;Double Commander&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, but the mountpoint folder disappears from Finder or any apps reliant on native file handling capabilities, including the aforementioned Sublime Text.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/2985831/5575697/aa6efe5e-8faa-11e4-9214-f7259d30b531.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;
+
+&lt;p&gt;@synec proposes &lt;code&gt;-o local&lt;/code&gt;, but for me it was &lt;code&gt;-o volname=folder&lt;/code&gt; which did the trick: &lt;code&gt;sshfs x.y.z.net: folder&lt;/code&gt; didn’t work, while &lt;code&gt;sshfs -o volname=folder x.y.z.net: folder&lt;/code&gt; did. Finder now sees the folder, and the icon is changed: instead of the regular folder it now shows the same icon as of an external hard disk.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;By the way, this is the best orthodox file manager for OS X I’ve found so far (though I didn’t test paid ones who don’t provide a free trial). Even if its interface is neither beautiful nor native, it does the job. The feature set of Commander One is too small, and muCommander didn’t even run.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Дьявол</title>
@@ -157,24 +184,6 @@
       
       <guid>https://pecheny.me/dreams/dnr-ii/</guid>
       <description>&lt;p&gt;Медведь выскочил на меня из кустов, когда я шёл по &lt;span class=&#34;scaps&#34;&gt;ДНР&lt;/span&gt;. Я побежал от него, и вскоре медведь потерял ко мне интерес. На ближайшей автобусной остановке я встретил Женю Михайлова. Мы увидели, как в кустах медведь сцепился с овчаркой, и решили, что лучше будет поехать на машине. Нашли в кустах мою машину и поехали. По пути Женя рассказывал, как близко поражение террористов из &lt;span class=&#34;scaps&#34;&gt;ДНР&lt;/span&gt; (что странно, учитывая, что ирл Женя за них), и смеялся над тем, что у Шимона Переса фамилия означает «сука».&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Рэп-опера</title>
-      <link>https://pecheny.me/dreams/rapopera/</link>
-      <pubDate>Tue, 08 Dec 2015 10:00:00 +0300</pubDate>
-      
-      <guid>https://pecheny.me/dreams/rapopera/</guid>
-      <description>&lt;p&gt;Отмечаю свой очередной день рождения. Я живу в большой квартире, приглашено много людей. Решаем в рамках культурной программы поставить рэп-оперу силами домашнего театра, состоящего из меня и команды «Дети из просвирки».&lt;/p&gt;
-
-&lt;p&gt;Сюжет оперы такой: рэпер просыпается, у него под боком девушка, он хотел бы продолжить вчерашнее веселье, но из-за похмелья у него не стоит и девушка разочарованная уходит. Тогда рэпер объявляет крестовый поход против похмелья. Для создания идеального средства ему нужно сходить в волшебный лес и собрать там грибов, потом ещё сплавать на корабле и так далее. Что в итоге, я не помню, но наверняка хэппи-энд.&lt;/p&gt;
-
-&lt;p&gt;«Дети из просвирки» приходят, мы начинаем готовить еду для празднования. Время — утро, мы думаем, что всё успеем.&lt;/p&gt;
-
-&lt;p&gt;Но, как всегда, дедлайны сдвигаются, и к вечеру оказывается, что мы не только ни разу не репетировали, но даже и сценарий не готов. Решаем, что будем импровизировать. Я с тяжёлыми предчувствиями иду в ванную с ноутом, чтобы успеть написать хотя бы каватину главного героя.&lt;/p&gt;
-
-&lt;p&gt;Я даже вроде придумал текст и начинаю его записывать, но тут домой возвращается Саша, заходит в ванную, сбивает меня и я всё забываю, кроме тех строчек, что уже успел записать. Я огорчаюсь, понимаю, что проёбано уже всё и просыпаюсь.&lt;/p&gt;
 </description>
     </item>
     

@@ -5,8 +5,35 @@
     <link>https://pecheny.me/blog/</link>
     <description>Recent content in Blog on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pecheny.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>
+      <link>https://pecheny.me/blog/osxfuse-sshfs/</link>
+      <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
+      <description>&lt;p&gt;So as you may know, &lt;a href=&#34;https://osxfuse.github.io/&#34;&gt;OSXFUSE&lt;/a&gt;+&lt;a href=&#34;https://github.com/osxfuse/osxfuse/wiki/SSHFS&#34;&gt;SSHFS&lt;/a&gt; is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&lt;/p&gt;
+
+&lt;p&gt;I’ve found traces of it mentioned &lt;a href=&#34;http://superuser.com/questions/772405/why-does-directory-vanish-when-i-do-sshfs-how-to-setup-sshfs-share-on-max-osx-1&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/osxfuse/osxfuse/issues/174&#34;&gt;there&lt;/a&gt;, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.&lt;/p&gt;
+
+&lt;p&gt;Essence of the problem: you mount a remote server onto a folder, you can access it perfectly from terminal or e.g. &lt;a href=&#34;http://doublecmd.sourceforge.net/&#34;&gt;Double Commander&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, but the mountpoint folder disappears from Finder or any apps reliant on native file handling capabilities, including the aforementioned Sublime Text.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/2985831/5575697/aa6efe5e-8faa-11e4-9214-f7259d30b531.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;
+
+&lt;p&gt;@synec proposes &lt;code&gt;-o local&lt;/code&gt;, but for me it was &lt;code&gt;-o volname=folder&lt;/code&gt; which did the trick: &lt;code&gt;sshfs x.y.z.net: folder&lt;/code&gt; didn’t work, while &lt;code&gt;sshfs -o volname=folder x.y.z.net: folder&lt;/code&gt; did. Finder now sees the folder, and the icon is changed: instead of the regular folder it now shows the same icon as of an external hard disk.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;By the way, this is the best orthodox file manager for OS X I’ve found so far (though I didn’t test paid ones who don’t provide a free trial). Even if its interface is neither beautiful nor native, it does the job. The feature set of Commander One is too small, and muCommander didn’t even run.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Пособие для начинающего редактора</title>
