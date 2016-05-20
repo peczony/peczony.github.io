@@ -5,8 +5,205 @@
     <link>https://pecheny.me/blog/</link>
     <description>Recent content in Blog on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 May 2016 20:02:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The (Mis)adventures of a Music Geek on OS X</title>
+      <link>https://pecheny.me/blog/osx-music/</link>
+      <pubDate>Fri, 20 May 2016 20:02:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/blog/osx-music/</guid>
+      <description>
+
+&lt;p&gt;While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.&lt;/p&gt;
+
+&lt;p&gt;Let me note from the start that we’re talking real &lt;em&gt;geekery&lt;/em&gt;: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder. For a casual user sticking with iTunes and/or cloud services would probably be the sanest choice.&lt;/p&gt;
+
+&lt;p&gt;So, here ya go——&lt;/p&gt;
+
+&lt;h1 id=&#34;requirements&#34;&gt;Requirements&lt;/h1&gt;
+
+&lt;p&gt;My requirements/wishes for a music playing system are, in descending order, the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;plays any format&lt;/li&gt;
+&lt;li&gt;scrobbles&lt;/li&gt;
+&lt;li&gt;has gapless playback (including mp3)&lt;/li&gt;
+&lt;li&gt;has folder-based music library&lt;/li&gt;
+&lt;li&gt;has music library&lt;/li&gt;
+&lt;li&gt;edits tags&lt;/li&gt;
+&lt;li&gt;converts files&lt;/li&gt;
+&lt;li&gt;foobar-like playing queue&lt;/li&gt;
+&lt;li&gt;playing queue&lt;/li&gt;
+&lt;li&gt;multiple playlists&lt;/li&gt;
+&lt;li&gt;waveform seekbar&lt;/li&gt;
+&lt;li&gt;spectrum analyzer&lt;/li&gt;
+&lt;li&gt;now playing notifications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, yes, I consider foobar2000 an ideal player—in fact, &lt;em&gt;the&lt;/em&gt; player. If you think otherwise this post is probably not for you.&lt;/p&gt;
+
+&lt;h1 id=&#34;players&#34;&gt;Players&lt;/h1&gt;
+
+&lt;p&gt;Tl;dr: I settled on mpd+ncmpcpp+puddletag+xACT+ffmpeg+sox. But for the curious:&lt;/p&gt;
+
+&lt;h2 id=&#34;vox&#34;&gt;Vox&lt;/h2&gt;
+
+&lt;p&gt;Widely advertised as the most popular alternative player for OS X, &lt;a href=&#34;http://coppertino.com/vox/mac&#34;&gt;Vox&lt;/a&gt; sports a great look, but I could hardly find anything worthy beyond that. It plays music, which is cool. I, however, couldn’t find a way to actually point it to a music library; I suspect that it feeds off iTunes’ library, but I don’t have one. And it keeps nagging the user with notifications prompting to try their paid streaming service.&lt;/p&gt;
+
+&lt;p&gt;Bottom line: still useful for click’n’play type of situation where I won’t bother firing up mpd+ncmpcpp.&lt;/p&gt;
+
+&lt;h2 id=&#34;sonora&#34;&gt;Sonora&lt;/h2&gt;
+
+&lt;p&gt;I opened &lt;a href=&#34;https://github.com/sonoramac/Sonora&#34;&gt;the app&lt;/a&gt;, it crashed saying something something last.fm something. Didn’t bother to dig further.&lt;/p&gt;
+
+&lt;h2 id=&#34;deadbeef&#34;&gt;DeaDBeeF&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://deadbeef.sourceforge.net/&#34;&gt;A very promising project&lt;/a&gt;, not in the least because it is closely modeled after foobar. The developer works on it in his spare time though, and progress is slow, if appealing. The latest and greatest features (e.g. folder browser, layout designer, waveform seekbar) are only in the Linux version, so Mac users should probably just wait patiently till the sun shines on their street. (Or &lt;a href=&#34;http://deadbeef.sourceforge.net/support.html&#34;&gt;encourage the developer financially&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;h2 id=&#34;foobar-through-wine&#34;&gt;Foobar through Wine&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hydrogenaud.io/index.php/topic,77261.125.html&#34;&gt;Scanning of folders on external NTFS HDDs fails miserably&lt;/a&gt;. Other than that, perfect. Still unusable if you don’t want to clutter the precious space on your Mac’s SSD with music.&lt;/p&gt;
+
+&lt;h2 id=&#34;clementine&#34;&gt;Clementine&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.clementine-player.org/&#34;&gt;The project&lt;/a&gt; hasn’t been updated in a long time and has an ugly look and feel; its moodboard is a meek parody of a waveform seekbar. If you’re not into ncurses though, it could very well be your player of choice — it plays music, scrobbles, and has a library. It isn’t very low on resources as well, so you could consider using something more lightweight when not plugged in.&lt;/p&gt;
+
+&lt;h2 id=&#34;cog&#34;&gt;Cog&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://cogx.org/&#34;&gt;Cog&lt;/a&gt; is probably the best choice for the not-so-geeky geeks who, like me, are fond of folder-based music organization. (I used it until i switched to cmus and then to mpd+ncmpcpp.) Be sure to select the beta channel in the settings to use the 2013 fork instead of the abandoned 2009 version. Cog’s looks are minimalistic, yet pretty. It plays music, scrobbles, has notifications. What’s else to be desired? Gapless playback is promised but not working. And given that the 2013 fork is abandoned as well, it is unlikely to get better in the near future.&lt;/p&gt;
+
+&lt;h2 id=&#34;martin&#34;&gt;Martin&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tgrbin.github.io/Martin/&#34;&gt;Martin&lt;/a&gt; is a small, but great and very promising project. It is also inspired by foobar, and has practically all the greatest features in my list: plays everything, scrobbles, has &lt;em&gt;blazingly fast&lt;/em&gt; folder-based library, dynamic playlist and sane queue management. Unfortunately, no gapless playback (although it &lt;a href=&#34;https://github.com/tgrbin/Martin/issues/11&#34;&gt;may happen in the future&lt;/a&gt;), so I don’t use it on a daily basis. Also, nobody knows what obscure bugs you can run into, because it is probably used by a dozen people on Earth.&lt;/p&gt;
+
+&lt;h2 id=&#34;cmus&#34;&gt;cmus&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cmus.github.io/&#34;&gt;Minimalism is good&lt;/a&gt;, the library is tolerable, live-filter is awesome (albeit slow). Not everything is so great though: gapless playback has frequent hiccups which makes listening not always a pleasant experience; you need to build it yourself to enable coreaudio and ffmpeg output which may be difficult for casual users; the documentation is sparse.&lt;/p&gt;
+
+&lt;h2 id=&#34;mpd-ncmpcpp-mpdas&#34;&gt;mpd+ncmpcpp (+mpdas)&lt;/h2&gt;
+
+&lt;p&gt;This is what at the moment ended up as my player of choice. It requires a good amount of sadomasochism to deal with, though. While the installation is as simple as &lt;code&gt;brew install mpd &amp;amp;&amp;amp; brew install ncmpcpp&lt;/code&gt;, you have to &lt;em&gt;create config files by hand&lt;/em&gt; to make this even run. &lt;code&gt;brew install mpdas&lt;/code&gt; and &lt;em&gt;another config file&lt;/em&gt; to make scrobbling work. A couple of hours for it to scan your massive library (scanning is much slower that e.g. Martin’s). What you get in exchange for the pain:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a cute ncurses-based UI&lt;/li&gt;
+&lt;li&gt;a library with fast search&lt;/li&gt;
+&lt;li&gt;gapless playback working perfectly&lt;/li&gt;
+&lt;li&gt;no queue :(&lt;/li&gt;
+&lt;li&gt;scrobbling&lt;/li&gt;
+&lt;li&gt;a search engine&lt;/li&gt;
+&lt;li&gt;a tag editor (though the library doesn’t update after every edit; sometimes you have to restart the update process manually)&lt;/li&gt;
+&lt;li&gt;an ascii visualizer! (though enabling it makes everything laggy)&lt;/li&gt;
+&lt;li&gt;practically &lt;em&gt;no documentation&lt;/em&gt; (yay! the joys of exploring!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not very much, in fact (for me it was gapless which nailed it). For those who are eager to try but reluctant to deal with the hassle I’ll post my config files.&lt;/p&gt;
+
+&lt;p&gt;~/.mpd/mpd.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;music_directory         &amp;quot;/Volumes/My Passport/music&amp;quot;
+playlist_directory      &amp;quot;~/.mpd/playlists&amp;quot;
+db_file                 &amp;quot;~/.mpd/mpd.db&amp;quot;
+log_file                &amp;quot;~/.mpd/mpd.log&amp;quot;
+pid_file                &amp;quot;~/.mpd/mpd.pid&amp;quot;
+state_file              &amp;quot;~/.mpd/mpdstate&amp;quot;
+auto_update             &amp;quot;yes&amp;quot;
+auto_update_depth       &amp;quot;5&amp;quot;
+follow_outside_symlinks &amp;quot;yes&amp;quot;
+follow_inside_symlinks  &amp;quot;yes&amp;quot;
+bind_to_address         &amp;quot;/users/pecheny/.mpd/socket&amp;quot;
+
+audio_output {
+  type                  &amp;quot;osx&amp;quot;
+  name                  &amp;quot;CoreAudio&amp;quot;
+  mixer_type            &amp;quot;software&amp;quot;
+}
+
+decoder {
+  plugin                &amp;quot;mp4ff&amp;quot;
+  enabled               &amp;quot;no&amp;quot;
+}
+
+bind_to_address         &amp;quot;127.0.0.1&amp;quot;
+port                    &amp;quot;6600&amp;quot;
+
+user                    &amp;quot;pecheny&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;~/.ncmpcpp/config&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mpd_music_dir = &amp;quot;/Volumes/My Passport/music&amp;quot;
+playlist_display_mode = &amp;quot;columns&amp;quot;
+user_interface = &amp;quot;alternative&amp;quot;
+allow_for_physical_item_deletion = &amp;quot;no&amp;quot;
+display_bitrate = &amp;quot;yes&amp;quot;
+show_hidden_files_in_local_browser = &amp;quot;yes&amp;quot;
+playlist_separate_albums = &amp;quot;yes&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://timothy.sh/article/install-mpd-ncmpcpp-on-osx-yosemite&#34;&gt;This post&lt;/a&gt; has more in-depth description of the installation and running process. Also, &lt;a href=&#34;http://pkgbuild.com/~jelle/ncmpcpp/&#34;&gt;this cheat sheet&lt;/a&gt; is indispensable.&lt;/p&gt;
+
+&lt;h1 id=&#34;taggers&#34;&gt;Taggers&lt;/h1&gt;
+
+&lt;h2 id=&#34;mp3tag-through-wine&#34;&gt;Mp3tag through Wine&lt;/h2&gt;
+
+&lt;p&gt;The author of (the awesome) Mp3tag was kind enough to provide &lt;a href=&#34;http://www.mp3tag.de/en/mac-osx.html&#34;&gt;Wine builds&lt;/a&gt; on his page. It works just like on Windows, except it doesn’t have native OS integration, and that’s why I use it only for something complex which puddletag won’t handle&lt;/p&gt;
+
+&lt;h2 id=&#34;puddletag&#34;&gt;puddletag&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.puddletag.net/&#34;&gt;puddletag&lt;/a&gt; is my go-to tagger now; you are one &lt;code&gt;brew install puddletag &amp;amp;&amp;amp; puddletag&lt;/code&gt; away from tagging your files. The UI is a bit confusing though; for example, it took me long to figure out how to fetch tags from Musicbrainz (it’s &lt;em&gt;Window → Tag sources&lt;/em&gt;, by the way.) The table layout is awesome, and, even if a bit laggy and unstable, it is enjoyable to work with.&lt;/p&gt;
+
+&lt;h1 id=&#34;converters&#34;&gt;Converters&lt;/h1&gt;
+
+&lt;p&gt;Things are sad in this realm of OS X; nothing remotely as comfortable as Foobar is to be seen. I mostly use &lt;a href=&#34;http://sox.sourceforge.net/&#34;&gt;sox&lt;/a&gt; or &lt;a href=&#34;https://ffmpeg.org/download.html&#34;&gt;ffmpeg&lt;/a&gt; in the terminal, which isn’t exactly user-friendly or convenient. &lt;a href=&#34;http://sbooth.org/Max/&#34;&gt;Max&lt;/a&gt; is tolerable. &lt;a href=&#34;http://xact.scottcbrown.org/&#34;&gt;xACT&lt;/a&gt; is useful for splitting large files by cuesheet. Alas, nothing more to be said here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Подготовка раздаток в Inkscape</title>
+      <link>https://pecheny.me/blog/handouts-inkscape/</link>
+      <pubDate>Fri, 20 May 2016 18:26:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/blog/handouts-inkscape/</guid>
+      <description>&lt;p&gt;Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.&lt;/p&gt;
+
+&lt;p&gt;Для этого мы воспользуемся свободной и бесплатной программой &lt;a href=&#34;https://inkscape.org/en/&#34;&gt;Inkscape&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.&lt;/p&gt;
+
+&lt;p&gt;Итак, пусть у нас есть картинка, которую мы хотим раздать — вот она:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.thatericalper.com/wp-content/uploads/2014/07/rick-astley.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Запускаем Inkscape, перед нами пустой лист A4. Заходим в меню &lt;em&gt;File&lt;/em&gt;, кликаем &lt;em&gt;Import&lt;/em&gt;, загружаем картинку.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/uegQD4C.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Прикиньте, какого минимального размера должна быть раздатка, чтобы нужные вам детали было видно. Для этого полезно воспользоваться меню &lt;em&gt;View → Zoom → 1:1&lt;/em&gt; и приложить к экрану настоящий лист A4 — через него будет просвечивать ваша раздатка. Включите инструмент «Стрелка», если ещё не, кликните по картинке, зажмите &lt;em&gt;Ctrl&lt;/em&gt; (чтобы уменьшение сохраняло масштаб) и уменьшите её до нужного размера.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/QtZt1EM.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь выберите пункт меню &lt;em&gt;Edit → Clone → Create Tiled Clones&lt;/em&gt; и выберите справа вкладку &lt;em&gt;Shift&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgur.com/9qggoQU&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Чтобы получилась ровная сетка, у вас должны быть нулевыми значения &lt;em&gt;Shift X per row&lt;/em&gt; и &lt;em&gt;Shift Y per column&lt;/em&gt;, и ненулевыми, соответственно, значения &lt;em&gt;Shift Y per row&lt;/em&gt; и &lt;em&gt;Shift X per column&lt;/em&gt;. Подберите подходящие значения этих параметров так, чтобы организатору было удобно резать, и выберите нужное количество столбцов и строк (&lt;em&gt;Rows, columns&lt;/em&gt;), чтобы заполнить лист. У вас получится что-то в этом роде:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/YduGH4H.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь осталось только удалить изначальную картинку (она при клонировании остаётся на месте, и получается две картинки одна над другой) и сохранить как пдф (&lt;em&gt;File → Save As&amp;hellip; → PDF&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Полезно сохранить файл под таким именем, чтобы понятно было, на сколько команд рассчитан этот лист. Для этого нужно перемножить ваши строки и столбцы и разделить на три. В моём случае выходит шесть, называем файл &lt;code&gt;rickastley_6teams.pdf&lt;/code&gt; и сохраняем. Готово, вы восхитительны!&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Вообще говоря, это наверняка можно с приемлемым качеством делать автоматически, но я пока с этой задачей не справился — буду держать в курсе.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>

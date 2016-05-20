@@ -5,8 +5,53 @@
     <link>https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/</link>
     <description>Recent content in Чгк on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 May 2016 18:26:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Подготовка раздаток в Inkscape</title>
+      <link>https://pecheny.me/blog/handouts-inkscape/</link>
+      <pubDate>Fri, 20 May 2016 18:26:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/blog/handouts-inkscape/</guid>
+      <description>&lt;p&gt;Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.&lt;/p&gt;
+
+&lt;p&gt;Для этого мы воспользуемся свободной и бесплатной программой &lt;a href=&#34;https://inkscape.org/en/&#34;&gt;Inkscape&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.&lt;/p&gt;
+
+&lt;p&gt;Итак, пусть у нас есть картинка, которую мы хотим раздать — вот она:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.thatericalper.com/wp-content/uploads/2014/07/rick-astley.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Запускаем Inkscape, перед нами пустой лист A4. Заходим в меню &lt;em&gt;File&lt;/em&gt;, кликаем &lt;em&gt;Import&lt;/em&gt;, загружаем картинку.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/uegQD4C.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Прикиньте, какого минимального размера должна быть раздатка, чтобы нужные вам детали было видно. Для этого полезно воспользоваться меню &lt;em&gt;View → Zoom → 1:1&lt;/em&gt; и приложить к экрану настоящий лист A4 — через него будет просвечивать ваша раздатка. Включите инструмент «Стрелка», если ещё не, кликните по картинке, зажмите &lt;em&gt;Ctrl&lt;/em&gt; (чтобы уменьшение сохраняло масштаб) и уменьшите её до нужного размера.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/QtZt1EM.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь выберите пункт меню &lt;em&gt;Edit → Clone → Create Tiled Clones&lt;/em&gt; и выберите справа вкладку &lt;em&gt;Shift&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://imgur.com/9qggoQU&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Чтобы получилась ровная сетка, у вас должны быть нулевыми значения &lt;em&gt;Shift X per row&lt;/em&gt; и &lt;em&gt;Shift Y per column&lt;/em&gt;, и ненулевыми, соответственно, значения &lt;em&gt;Shift Y per row&lt;/em&gt; и &lt;em&gt;Shift X per column&lt;/em&gt;. Подберите подходящие значения этих параметров так, чтобы организатору было удобно резать, и выберите нужное количество столбцов и строк (&lt;em&gt;Rows, columns&lt;/em&gt;), чтобы заполнить лист. У вас получится что-то в этом роде:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/YduGH4H.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь осталось только удалить изначальную картинку (она при клонировании остаётся на месте, и получается две картинки одна над другой) и сохранить как пдф (&lt;em&gt;File → Save As&amp;hellip; → PDF&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Полезно сохранить файл под таким именем, чтобы понятно было, на сколько команд рассчитан этот лист. Для этого нужно перемножить ваши строки и столбцы и разделить на три. В моём случае выходит шесть, называем файл &lt;code&gt;rickastley_6teams.pdf&lt;/code&gt; и сохраняем. Готово, вы восхитительны!&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Вообще говоря, это наверняка можно с приемлемым качеством делать автоматически, но я пока с этой задачей не справился — буду держать в курсе.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Пособие для начинающего редактора</title>
