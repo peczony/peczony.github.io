@@ -1,0 +1,228 @@
+<html lang="ru">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>My First Alfred Workflow</title>
+  <meta name="description" content="My First Alfred Workflow">
+  <meta name="author" content="Александр Печеный">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="https://pecheny.me/img/newcat.png">
+
+  
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/custom.css">
+</head>
+<body>
+
+<header id="menu">
+  <div class="container">
+	<span class="logo">ПЕЧЕНЫЙ</span>
+	<a>&#9776;</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+	<div class="row">
+	  <div class="eight columns offset-by-two">
+		<ul class="">
+		  
+		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/music">музыка</a>  <a href="https://pecheny.me/music/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/dreams">сны</a>  <a href="https://pecheny.me/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> <a href="https://pecheny.me/blog">блог</a>  <a href="https://pecheny.me/blog/index.xml"><i class="fa fa-rss"></i></a></li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+
+<div class="container post-wrapper">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	  <div id="post-title">
+		<p class="footnote">
+		  <time>2016-08-25</time>
+		  
+		  
+		  |
+		  
+		  
+
+		  
+		  categories: <a href="https://pecheny.me/categories/coding">coding</a> 
+		  
+
+		  
+
+		</p>
+		<h1>My First Alfred Workflow</h1>
+	  </div>
+	  
+	  <div class="post">
+		
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Some days ago I laid my hands on <a href="//www.alfredapp.com">Alfred</a>. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.</p>
+
+<h1 id="the-problem">The Problem</h1>
+
+<p>Alfred is known for its <a href="//1password.com">1Password</a> integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used <a href="//http://keepass.info/">KeePass</a> and, having transitioned to <span class="scaps">OS X</span>, continue to use it in the form of <a href="//github.com/mstarke/MacPass">MacPass</a> and have no reason to abandon it for a proprietary solution.</p>
+
+<p>Naturally I decided that it would be great to create a workflow implementing <strong>KeePass integration</strong>.</p>
+
+<h1 id="the-details">The Details</h1>
+
+<p>MacPass doesn’t provide any <span class="scaps">CLI API</span>, so I turned to external libraries. The situation was further complicated by the fact that I use KeePass v4 format (kdbx) that is supported way less widely. At the moment of writing there is <a href="https://github.com/phpwutz/libkeepass">only one Python library</a> claiming to support kdbx; it hasn’t been updated in two years and looks rather unpolished, so I continued my search and finally found <a href="//sourceforge.net/projects/kpcli/">kpcli</a>, an active project written in Perl.</p>
+
+<p>The obvious downside of it is being written in Perl, which I’m unfamiliar with. <a href="//www.australsounds.com/2014/10/installingkpcli.html">This article</a> was somewhat helpful, but didn’t list all of the required packages, so for your convenience I list them all here:</p>
+
+<pre><code>sudo cpan Capture::Tiny
+sudo cpan Clipboard
+sudo cpan Clone
+sudo cpan Crypt::Rijndael
+sudo cpan File::KeePass
+sudo cpan Sort::Naturally
+sudo cpan Term::ReadLine::Gnu
+sudo cpan Term::ShellUI
+sudo cpan XML::Parser
+</code></pre>
+
+<p>I tried to test kpcli manually, but encountered a problem that is more fully described in <a href="https://sourceforge.net/p/kpcli/bugs/16/">a bug</a> filed against kpcli. The gist of it is that <code>File::KeePass</code> does not deal well with <span class="scaps">XML</span>-based KeePass keyfiles. The solution was to create a temporary file containing decoded binary data from the <span class="scaps">XML</span> keyfile.</p>
+
+<p>Yet another problem was that kpcli is fully interactive and does not expose any <span class="scaps">API</span>, so I had to emulate user input. That’s where <a href="//pexpect.readthedocs.io/en/stable/">pexpect</a> came in handy.</p>
+
+<h1 id="the-solution">The Solution</h1>
+
+<p>Long story short, I was able to compile a workflow.</p>
+
+<p><img src="//i.imgur.com/hL8wqwW.png" alt="" /></p>
+
+<p>See it in action:</p>
+
+<p><img src="//i.imgur.com/PQdTXe4.gif" alt="" /></p>
+
+<p><em>(The screencast is from an earlier version, that’s why it is mp/macpass instead of kp/keepass. Also here the password is pasted — this behaviour was later ditched for autotype to achieve better security. I was too lazy to shoot another take.)</em></p>
+
+<p>The workflow accepts a keyword with the desired KeePass entry as argument. The argument is then passed to the python script, which interacts with kpcli and prints out the password. The password is then passed to an applescript which autotypes it into the foremost app.</p>
+
+<p>I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #75715e">#!/usr/bin/env python</span>
+<span style="color: #75715e"># -*- coding: utf-8 -*-</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">__future__</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">unicode_literals</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">__future__</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">division</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">__future__</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_function</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">os</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">argparse</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">pexpect</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">base64</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">bs4</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">BeautifulSoup</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_pass</span><span style="color: #f8f8f2">(before):</span>
+    <span style="color: #e6db74">&quot;&quot;&quot;Kpcli `show` function outputs all fields, not only password.</span>
+<span style="color: #e6db74">    We need to extract the password from its output.</span>
+<span style="color: #e6db74">    The password is printed in red letters over red background</span>
+<span style="color: #e6db74">    so as only to be seen when selected -- we must remove coloring</span>
+<span style="color: #e6db74">    commands surrounding the password.&quot;&quot;&quot;</span>
+    <span style="color: #f8f8f2">spl</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">before</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">decode(</span><span style="color: #e6db74">&#39;utf8&#39;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\r\n</span><span style="color: #e6db74">&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">c</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[x</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">split()</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">spl]</span>
+    <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">len(c):</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">c[i]</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">c[i][</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;Pass:&#39;</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #66d9ef">break</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">i</span> <span style="color: #f92672">+=</span> <span style="color: #ae81ff">1</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">c[i][</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">][</span><span style="color: #ae81ff">8</span><span style="color: #f8f8f2">:][:</span><span style="color: #f92672">-</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">]</span>  <span style="color: #75715e"># remove coloring commands surrounding</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_real_key</span><span style="color: #f8f8f2">(keyfile):</span>
+    <span style="color: #e6db74">&quot;&quot;&quot;Kdbx key is an xml file. The key itself is base64-encoded binary</span>
+<span style="color: #e6db74">    data stored inside an aptly named &lt;data&gt; tag.&quot;&quot;&quot;</span>
+    <span style="color: #f8f8f2">soup</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">BeautifulSoup(open(keyfile,</span> <span style="color: #e6db74">&#39;rb&#39;</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">read(),</span> <span style="color: #e6db74">&#39;html.parser&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">base64</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">b64decode(soup</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">find_all(</span><span style="color: #e6db74">&#39;data&#39;</span><span style="color: #f8f8f2">)[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">get_text())</span>
+
+
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #f8f8f2">parser</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">argparse</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">ArgumentParser()</span>
+    <span style="color: #f8f8f2">parser</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">add_argument(</span><span style="color: #e6db74">&#39;passname&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">args</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">parser</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">parse_args()</span>
+    <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">chdir(os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">path</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dirname(os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">path</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">abspath(__file__)))</span>
+
+    <span style="color: #f8f8f2">master_password</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">base64</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">b64decode(b</span><span style="color: #e6db74">&#39;cGFzc3dvcmQ=&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #e6db74">&quot;&quot;&quot;Password is base64-obfuscated just in case someone accidentally</span>
+<span style="color: #e6db74">    looks at the screen and memorizes it. Of course it is highly insecure</span>
+<span style="color: #e6db74">    and you should only store it if you really have to. You can have the script</span>
+<span style="color: #e6db74">    ask user for password every time even though in that case</span>
+<span style="color: #e6db74">    the whole purpose of automating password management kinda defies itself.&quot;&quot;&quot;</span>
+
+    <span style="color: #f8f8f2">key</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;/path/to/your/key&#39;</span>
+    <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">open(</span><span style="color: #e6db74">&#39;realkey&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;wb&#39;</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">f:</span>  <span style="color: #75715e"># disable binary data extraction if</span>
+        <span style="color: #f8f8f2">f</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">write(get_real_key(key))</span>    <span style="color: #75715e"># not needed</span>
+
+    <span style="color: #f8f8f2">child</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">pexpect</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">spawn(</span>
+        <span style="color: #e6db74">&#39;perl path/to/kpcli-3.1.pl &#39;</span>
+        <span style="color: #e6db74">&#39;-kdb path/to/your/kdb(x) &#39;</span>
+        <span style="color: #e6db74">&#39;-key realkey&#39;</span><span style="color: #f8f8f2">,</span>  <span style="color: #75715e"># omit if not needed</span>
+        <span style="color: #f8f8f2">timeout</span><span style="color: #f92672">=</span><span style="color: #ae81ff">3</span>
+    <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">expect(</span><span style="color: #e6db74">&#39;Please provide the master password: &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sendline(master_password)</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">expect(</span><span style="color: #e6db74">&#39;kpcli-3.1:/&gt; &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sendline(</span><span style="color: #e6db74">&#39;show kp/{}&#39;</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">format(args</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">passname))</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">expect(</span><span style="color: #e6db74">&#39;kpcli-3.1:/&gt; &#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(get_pass(child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">before),</span> <span style="color: #f8f8f2">end</span><span style="color: #f92672">=</span><span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">child</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">close()</span>
+    <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">remove(</span><span style="color: #e6db74">&#39;realkey&#39;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">__name__</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&quot;__main__&quot;</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">main()</span>
+</pre></div>
+
+
+<p>You can get the workflow <a href="https://dl.dropboxusercontent.com/u/24653887/keepass.alfredworkflow">here</a>. It doesn’t have an icon because fuck it. Enjoy!</p>
+
+
+
+<a href="https://pecheny.me/blog/rules-strelok/" class="scaps">предыдущий пост</a>
+
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<script src="https://pecheny.me/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://pecheny.me/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#menu").click(function(){
+    $(".brand").text("HOME");
+    $(".navbar ul li").removeClass("cate");
+    $(".navbar").toggle();
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".navbar").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
