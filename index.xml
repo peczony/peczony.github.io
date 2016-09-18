@@ -5,8 +5,28 @@
     <link>https://pecheny.me/</link>
     <description>Recent content on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 25 Aug 2016 13:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 16 Sep 2016 10:00:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Том Йорк</title>
+      <link>https://pecheny.me/dreams/thomyorke/</link>
+      <pubDate>Fri, 16 Sep 2016 10:00:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/dreams/thomyorke/</guid>
+      <description>&lt;p&gt;Вскоре после нового альбома Радиохед Йорк выпустил сольник. Я всё ещё работаю в школе, дал ученикам контрольную, а сам сел слушать. По стилистике похоже на &lt;span class=&#34;scaps&#34;&gt;AMSP&lt;/span&gt;, но всё под одну гитару. Удивило, что одна песня — с русским названием, даже записано кириллическими буквами — и про дотку. Сам Йорк поёт на русском без акцента. Всё это подозрительно, но качество записи не похоже на пародию, и голос Йорка неотличим от настоящего. Стал гуглить — на всех сайтах указан тот же треклист, с русской песней.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Учитель</title>
+      <link>https://pecheny.me/dreams/teacher/</link>
+      <pubDate>Mon, 12 Sep 2016 10:00:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/dreams/teacher/</guid>
+      <description>&lt;p&gt;Я работаю учителем в школе. Вместе с коллегами пошёл играть городское ориентирование. Один из &lt;span class=&#34;scaps&#34;&gt;КП&lt;/span&gt; — в спальном районе между гаражами. Пришли туда. На гаражах граффити — портреты в полный рост меня, коллег и других учителей нашей школы. Вдруг граффити начали двигаться и поворачиваться к нам. Я испугался и проснулся.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>My First Alfred Workflow</title>
@@ -63,7 +83,7 @@ sudo cpan XML::Parser
 
 &lt;p&gt;I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;#!/usr/bin/env python&lt;/span&gt;
 &lt;span style=&#34;color: #75715e&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__future__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;unicode_literals&lt;/span&gt;
 &lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__future__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;division&lt;/span&gt;
@@ -487,28 +507,6 @@ playlist_separate_albums = &amp;quot;yes&amp;quot;
       
       <guid>https://pecheny.me/dreams/shabad/</guid>
       <description>&lt;p&gt;Пошли толпой в гости к Оле Шабад. Туда пришёл В. и сказал, что квартира ему не очень нравится, тут же вызвал рабочих, которые в гостиной поставили мраморную ванну. «Вот теперь заебись» ― сказал он. Оля в это время делала блины и разглаживала их утюгом, гордясь тем, какие они получаются тонкие.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>-ТАР-</title>
-      <link>https://pecheny.me/dreams/tar/</link>
-      <pubDate>Wed, 17 Feb 2016 10:00:00 +0300</pubDate>
-      
-      <guid>https://pecheny.me/dreams/tar/</guid>
-      <description>&lt;p&gt;Читаю статью Бобрёнковой на лукэтми. Она рассказывает, как в экспедиции обнаружила редкий показатель упущенной возможности (кондиционалис прошедшего). Он звучит как &lt;em&gt;-тар-&lt;/em&gt; и происходит от слова &lt;em&gt;тар&lt;/em&gt;, означавшего утренний паром. Если тебе нужно было по делам, а ты не успел на паром, считай, день потрачен.&lt;/p&gt;
-
-&lt;p&gt;Пример (информант―экспедиционеру): &lt;em&gt;вы остановились в школе, а могли бы жить&lt;/em&gt; (жить-&lt;strong&gt;тар&lt;/strong&gt;) &lt;em&gt;у меня&lt;/em&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Йога</title>
-      <link>https://pecheny.me/dreams/yoga/</link>
-      <pubDate>Fri, 12 Feb 2016 10:00:00 +0300</pubDate>
-      
-      <guid>https://pecheny.me/dreams/yoga/</guid>
-      <description>&lt;p&gt;У Шиншиновой депрессия, она решила лечиться йогой и отвела меня в центр йоги. Пока они занимались, я зашёл в соседнюю комнату и увидел там огромное количество буханок хлеба, банок плавленого сыра и других продуктов. Спросил у инструктора, зачем им столько еды, он предложил мне надрезать хлеб и посмотреть. Оказалось, что внутри хлеба были запрещённые продукты в пакетиках, которые контрабандой провезли через белорусскую границу. Основные доходы центр получал от продажи запрещёнки, а собственно йогой занимались для души. Остатки еды после разрезания йоги возлагали к могилам на ближайшем кладбище, где их подъедали бомжи. На прощанье йог подарил мне мышку-тренажёр типа пауэрбола: нельзя было воспользоваться мышкой, пока не раскрутишь пауэрбол внутри неё.&lt;/p&gt;
 </description>
     </item>
     
