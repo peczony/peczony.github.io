@@ -2,104 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/</loc>
-    <lastmod>2016-05-04T20:56:20+03:00</lastmod>
+    <loc>//pecheny.me/studchr/</loc>
+    <lastmod>2016-09-24T20:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/post/somenews/</loc>
-    <lastmod>2016-05-04T20:56:20+03:00</lastmod>
+    <loc>//pecheny.me/studchr/post/official/</loc>
+    <lastmod>2016-09-24T20:00:00+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/post/reglament2016/</loc>
-    <lastmod>2016-05-04T20:40:09+03:00</lastmod>
+    <loc>//pecheny.me/studchr/post/reglament2016/</loc>
+    <lastmod>2016-09-24T19:50:09+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/halloffame/</loc>
-    <lastmod>2016-05-04T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/halloffame/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2016/</loc>
-    <lastmod>2016-04-23T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2001/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2015/</loc>
-    <lastmod>2015-04-18T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2002/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2014/</loc>
-    <lastmod>2014-04-19T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2003/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2013/</loc>
-    <lastmod>2013-04-20T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2004/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2012/</loc>
-    <lastmod>2012-04-21T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2005/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2011/</loc>
-    <lastmod>2011-04-16T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2006/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2010/</loc>
-    <lastmod>2010-04-17T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2007/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2009/</loc>
-    <lastmod>2009-04-18T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2008/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2008/</loc>
-    <lastmod>2008-04-19T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2009/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2007/</loc>
-    <lastmod>2007-04-21T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2010/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2006/</loc>
-    <lastmod>2006-04-22T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2011/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2005/</loc>
-    <lastmod>2005-04-23T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2012/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2004/</loc>
-    <lastmod>2004-05-15T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2013/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2003/</loc>
-    <lastmod>2003-10-24T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2014/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2002/</loc>
-    <lastmod>2002-07-13T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2015/</loc>
   </url>
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/results/2001/</loc>
-    <lastmod>2001-04-22T00:00:00+00:00</lastmod>
+    <loc>//pecheny.me/studchr/results/2016/</loc>
   </url>
   
 </urlset>

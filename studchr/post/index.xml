@@ -2,30 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on СтудЧР</title>
-    <link>http://replace-this-with-your-hugo-site.com/post/</link>
+    <link>//pecheny.me/studchr/post/</link>
     <description>Recent content in Posts on СтудЧР</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 04 May 2016 20:56:20 +0300</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Sep 2016 20:00:00 +0300</lastBuildDate>
+    <atom:link href="//pecheny.me/studchr/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Ещё новость</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/somenews/</link>
-      <pubDate>Wed, 04 May 2016 20:56:20 +0300</pubDate>
+      <title>Официальные ресурсы Оргкомитета СЧР</title>
+      <link>//pecheny.me/studchr/post/official/</link>
+      <pubDate>Sat, 24 Sep 2016 20:00:00 +0300</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/somenews/</guid>
-      <description>&lt;p&gt;Ещё какая-нибудь новость.&lt;/p&gt;
+      <guid>//pecheny.me/studchr/post/official/</guid>
+      <description>&lt;p&gt;Вконтакте: &lt;a href=&#34;//vk.com/chgk_student&#34;&gt;vk.com/chgk_student&lt;/a&gt;&lt;br /&gt;
+ЖЖ: &lt;a href=&#34;//chgk_student.livejournal.com&#34;&gt;chgk_student.livejournal.com&lt;/a&gt;&lt;br /&gt;
+Твиттер: &lt;a href=&#34;//twitter.com/chgk_student&#34;&gt;twitter.com/chgk_student&lt;/a&gt;&lt;br /&gt;
+Фейсбук: &lt;a href=&#34;//facebook.com/chgk_student&#34;&gt;facebook.com/chgk_student&lt;/a&gt;&lt;br /&gt;
+Электронная почта: &lt;a href=&#34;mailto:ovsch.koord@gmail.com&#34;&gt;ovsch.koord@gmail.com&lt;/a&gt;&lt;br /&gt;
+ЖЖ ОВСЧ: &lt;a href=&#34;//ovsch.livejournal.com&#34;&gt;ovsch.livejournal.com&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Положение о СтудЧР 2016–2017</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/reglament2016/</link>
-      <pubDate>Wed, 04 May 2016 20:40:09 +0300</pubDate>
+      <link>//pecheny.me/studchr/post/reglament2016/</link>
+      <pubDate>Sat, 24 Sep 2016 19:50:09 +0300</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/reglament2016/</guid>
-      <description>&lt;p&gt;Опубликовано положение о СтудЧР 2016–2017. Вот его полный текст: бла бла бла&lt;/p&gt;
+      <guid>//pecheny.me/studchr/post/reglament2016/</guid>
+      <description>&lt;p&gt;Опубликовано положение о СтудЧР 2016–2017. Его можно почитать &lt;a href=&#34;https://drive.google.com/file/d/0B2kVw_1FGXKvMnJWSXk2Wnh6WnM/view&#34;&gt;здесь&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
