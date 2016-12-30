@@ -428,7 +428,7 @@ abbr[title]:after
     padding: 7px;
 }
 
-code, kbd, pre { font-family: 'Lato', monospace; }
+code, kbd, pre { font-family: monospace; }
 
 .highlight {
     padding: 1px 10px;
