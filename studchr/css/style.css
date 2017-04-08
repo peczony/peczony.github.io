@@ -1367,9 +1367,15 @@ a.post-thumbnail:hover {
 }
 
 .entry-content td,
-.comment-content td {
+.comment-content td,
+.entry-content th {
 	padding: 8px;
 	text-align: center;
+}
+
+.entry-content td.right_aligned,
+.entry-content th.right_aligned {
+	text-align: right;
 }
 
 .entry-content .edit-link {
