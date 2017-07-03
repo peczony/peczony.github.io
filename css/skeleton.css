@@ -51,7 +51,7 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 85%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -67,7 +67,7 @@
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; }
+  .eight.columns                  { width: 90%/*65.3333333333%*/; }
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 91.3333333333%; }
@@ -82,7 +82,7 @@
   .offset-by-one.column,
   .offset-by-one.columns          { margin-left: 8.66666666667%; }
   .offset-by-two.column,
-  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-two.columns          { margin-left: auto/*17.3333333333%*/; margin-right: auto; }
   .offset-by-three.column,
   .offset-by-three.columns        { margin-left: 26%;            }
   .offset-by-four.column,
@@ -121,9 +121,9 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 24px; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-family: "Lato", monospace;
+  font-family: "Vollkorn", serif;
   color: #555; }
 
 
@@ -151,40 +151,39 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   text-decoration: none;
-  }
-
-a:link {
+  color: #5fa8d3;
+  position: relative;
+  padding-bottom: 0px;
   text-decoration: none;
-  color: #a49999;
-  border-color: #c1c1c1;
-  border-width: 0 0 1px 0;
-  border-style: none none solid none;
-  padding: 3px 0px 2px 0px;
-  background-color: inherit;
-  }
+}
 
-a:visited {
-  color: #a49999;
-  border-color: #c1c1c1;
-  border-width: 0 0 1px 0;
-  border-style: none none dotted none;
-  padding: 3px 0px 2px 0px;
-  background-color: inherit;
-  }
+a::after{
+  content:'';
+  position:absolute;
+  width: 100%;
+  height: 0;
+  left:0;
+  bottom: 1px;
+  border-bottom: 4px solid #5fa8d3;
+}
+
+/*.navbar a::after{
+  border-bottom: 0;
+}*/
 
 a:hover {
-  color: #a49999;
+  color: #5fa8d3;
   text-decoration: none;
-  background-color: #e5e5e5;
-  border-color: #e5e5e5;
-  }
+  background-color: #eae7d5;
+}
 
 a em {
   padding-bottom: 2px;
