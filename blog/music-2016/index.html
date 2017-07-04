@@ -37,7 +37,7 @@
 	  <div class="eight columns offset-by-two">
 		<ul class="">
 		  
-		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand brand-rss"><i class="fa fa-rss"></i></a></li>
 		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/music">музыка</a>  <a href="https://pecheny.me/music/index.xml"><i class="fa fa-rss"></i></a></li>
 		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/friendsdreams">сны друзей</a>  <a href="https://pecheny.me/friendsdreams/index.xml"><i class="fa fa-rss"></i></a></li>
 		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/dreams">сны</a>  <a href="https://pecheny.me/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
@@ -212,7 +212,8 @@
     $("time.timeago").timeago();
   })
   $("#menu").click(function(){
-    $(".brand").text("HOME");
+    $(".brand").text("ПЕЧЕНЫЙ");
+    $(".brand-rss").text("<i class="fa fa-rss"></i>");
     $(".navbar ul li").removeClass("cate");
     $(".navbar").toggle();
   });
