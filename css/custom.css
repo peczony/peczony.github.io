@@ -178,14 +178,16 @@ h5 {
     margin-top:2em;
 }
 
+.logo { letter-spacing: 0.2em; }
+
 .scaps{
     /*letter-spacing: 0.13em;
     font-kerning: normal;
     font-size: 0.84em;
     text-transform: uppercase;*/
     letter-spacing: 0.05em;
-    text-transform: lowercase;
-    font-variant: small-caps;
+    /*text-transform: lowercase;*/
+    font-variant: all-small-caps;
 }
 
 @media screen and (max-width:768px){
