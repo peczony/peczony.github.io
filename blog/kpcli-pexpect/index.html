@@ -164,7 +164,7 @@ sudo cpan XML::Parser
     <span style="color: #f8f8f2">args</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">parser</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">parse_args()</span>
     <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">chdir(os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">path</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">dirname(os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">path</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">abspath(__file__)))</span>
 
-    <span style="color: #f8f8f2">master_password</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">base64</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">b64decode(b</span><span style="color: #e6db74">&#39;cGFzc3dvcmQ=&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">master_password</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">base64</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">b64decode(</span><span style="color: #e6db74">b&#39;cGFzc3dvcmQ=&#39;</span><span style="color: #f8f8f2">)</span>
     <span style="color: #e6db74">&quot;&quot;&quot;Password is base64-obfuscated just in case someone accidentally</span>
 <span style="color: #e6db74">    looks at the screen and memorizes it. Of course it is highly insecure</span>
 <span style="color: #e6db74">    and you should only store it if you really have to. You can have the script</span>
