@@ -77,9 +77,9 @@
 
 <p>I’ve found traces of it mentioned <a href="http://superuser.com/questions/772405/why-does-directory-vanish-when-i-do-sshfs-how-to-setup-sshfs-share-on-max-osx-1">here</a> and <a href="https://github.com/osxfuse/osxfuse/issues/174">there</a>, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</p>
 
-<p>Essence of the problem: you mount a remote server onto a folder, you can access it perfectly from terminal or e.g. <a href="http://doublecmd.sourceforge.net/">Double Commander</a><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, but the mountpoint folder disappears from Finder or any apps reliant on native file handling capabilities, including the aforementioned Sublime Text.</p>
+<p>Essence of the problem: you mount a remote server onto a folder, you can access it perfectly from terminal or e.g. <a href="http://doublecmd.sourceforge.net/">Double Commander</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>, but the mountpoint folder disappears from Finder or any apps reliant on native file handling capabilities, including the aforementioned Sublime Text.</p>
 
-<center><img src="https://cloud.githubusercontent.com/assets/2985831/5575697/aa6efe5e-8faa-11e4-9214-f7259d30b531.png" alt="" /></center>
+<p><center><img src="https://cloud.githubusercontent.com/assets/2985831/5575697/aa6efe5e-8faa-11e4-9214-f7259d30b531.png" alt="" /></center></p>
 
 <p>@synec proposes <code>-o local</code>, but for me it was <code>-o volname=folder</code> which did the trick: <code>sshfs x.y.z.net: folder</code> didn’t work, while <code>sshfs -o volname=folder x.y.z.net: folder</code> did. Finder now sees the folder, and the icon is changed: instead of the regular folder it now shows the same icon as of an external hard disk.</p>
 <div class="footnotes">

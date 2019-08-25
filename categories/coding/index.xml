@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coding on ПЕЧЕНЫЙ</title>
+    <title>coding on ПЕЧЕНЫЙ</title>
     <link>https://pecheny.me/categories/coding/</link>
-    <description>Recent content in Coding on ПЕЧЕНЫЙ</description>
+    <description>Recent content in coding on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 25 Aug 2016 13:00:00 +0300</lastBuildDate>
-    <atom:link href="https://pecheny.me/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://pecheny.me/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>My First Alfred Workflow</title>
@@ -14,130 +16,8 @@
       <pubDate>Thu, 25 Aug 2016 13:00:00 +0300</pubDate>
       
       <guid>https://pecheny.me/blog/kpcli-pexpect/</guid>
-      <description>
-
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Some days ago I laid my hands on &lt;a href=&#34;//www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt;. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;
-
-&lt;p&gt;Alfred is known for its &lt;a href=&#34;//1password.com&#34;&gt;1Password&lt;/a&gt; integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used &lt;a href=&#34;//http://keepass.info/&#34;&gt;KeePass&lt;/a&gt; and, having transitioned to &lt;span class=&#34;scaps&#34;&gt;OS X&lt;/span&gt;, continue to use it in the form of &lt;a href=&#34;//github.com/mstarke/MacPass&#34;&gt;MacPass&lt;/a&gt; and have no reason to abandon it for a proprietary solution.&lt;/p&gt;
-
-&lt;p&gt;Naturally I decided that it would be great to create a workflow implementing &lt;strong&gt;KeePass integration&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-details&#34;&gt;The Details&lt;/h1&gt;
-
-&lt;p&gt;MacPass doesn’t provide any &lt;span class=&#34;scaps&#34;&gt;CLI API&lt;/span&gt;, so I turned to external libraries. The situation was further complicated by the fact that I use KeePass v4 format (kdbx) that is supported way less widely. At the moment of writing there is &lt;a href=&#34;https://github.com/phpwutz/libkeepass&#34;&gt;only one Python library&lt;/a&gt; claiming to support kdbx; it hasn’t been updated in two years and looks rather unpolished, so I continued my search and finally found &lt;a href=&#34;//sourceforge.net/projects/kpcli/&#34;&gt;kpcli&lt;/a&gt;, an active project written in Perl.&lt;/p&gt;
-
-&lt;p&gt;The obvious downside of it is being written in Perl, which I’m unfamiliar with. &lt;a href=&#34;//www.australsounds.com/2014/10/installingkpcli.html&#34;&gt;This article&lt;/a&gt; was somewhat helpful, but didn’t list all of the required packages, so for your convenience I list them all here:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo cpan Capture::Tiny
-sudo cpan Clipboard
-sudo cpan Clone
-sudo cpan Crypt::Rijndael
-sudo cpan File::KeePass
-sudo cpan Sort::Naturally
-sudo cpan Term::ReadLine::Gnu
-sudo cpan Term::ShellUI
-sudo cpan XML::Parser
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I tried to test kpcli manually, but encountered a problem that is more fully described in &lt;a href=&#34;https://sourceforge.net/p/kpcli/bugs/16/&#34;&gt;a bug&lt;/a&gt; filed against kpcli. The gist of it is that &lt;code&gt;File::KeePass&lt;/code&gt; does not deal well with &lt;span class=&#34;scaps&#34;&gt;XML&lt;/span&gt;-based KeePass keyfiles. The solution was to create a temporary file containing decoded binary data from the &lt;span class=&#34;scaps&#34;&gt;XML&lt;/span&gt; keyfile.&lt;/p&gt;
-
-&lt;p&gt;Yet another problem was that kpcli is fully interactive and does not expose any &lt;span class=&#34;scaps&#34;&gt;API&lt;/span&gt;, so I had to emulate user input. That’s where &lt;a href=&#34;//pexpect.readthedocs.io/en/stable/&#34;&gt;pexpect&lt;/a&gt; came in handy.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-solution&#34;&gt;The Solution&lt;/h1&gt;
-
-&lt;p&gt;Long story short, I was able to compile a workflow.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//i.imgur.com/hL8wqwW.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;See it in action:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;//i.imgur.com/PQdTXe4.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(The screencast is from an earlier version, that’s why it is mp/macpass instead of kp/keepass. Also here the password is pasted — this behaviour was later ditched for autotype to achieve better security. I was too lazy to shoot another take.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The workflow accepts a keyword with the desired KeePass entry as argument. The argument is then passed to the python script, which interacts with kpcli and prints out the password. The password is then passed to an applescript which autotypes it into the foremost app.&lt;/p&gt;
-
-&lt;p&gt;I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;#!/usr/bin/env python&lt;/span&gt;
-&lt;span style=&#34;color: #75715e&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__future__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;unicode_literals&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__future__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;division&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__future__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;print_function&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;os&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;argparse&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;pexpect&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;base64&lt;/span&gt;
-&lt;span style=&#34;color: #f92672&#34;&gt;from&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;bs4&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;BeautifulSoup&lt;/span&gt;
-
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;get_pass&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(before):&lt;/span&gt;
-    &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&amp;quot;&amp;quot;Kpcli `show` function outputs all fields, not only password.&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    We need to extract the password from its output.&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    The password is printed in red letters over red background&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    so as only to be seen when selected -- we must remove coloring&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    commands surrounding the password.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;spl&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;before&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;decode(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;\r\n&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;[x&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;split()&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;spl]&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;
-    &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;len(c):&lt;/span&gt;
-        &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;c[i]&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;c[i][&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;Pass:&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-            &lt;span style=&#34;color: #66d9ef&#34;&gt;break&lt;/span&gt;
-        &lt;span style=&#34;color: #66d9ef&#34;&gt;else&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-            &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;
-    &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;c[i][&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;][&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:][:&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;]&lt;/span&gt;  &lt;span style=&#34;color: #75715e&#34;&gt;# remove coloring commands surrounding&lt;/span&gt;
-
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;get_real_key&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(keyfile):&lt;/span&gt;
-    &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&amp;quot;&amp;quot;Kdbx key is an xml file. The key itself is base64-encoded binary&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    data stored inside an aptly named &amp;lt;data&amp;gt; tag.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;soup&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;BeautifulSoup(open(keyfile,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;rb&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;read(),&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;base64&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;b64decode(soup&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;find_all(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)[&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;get_text())&lt;/span&gt;
-
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;():&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;parser&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;argparse&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;ArgumentParser()&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;parser&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;add_argument(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;passname&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;args&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;parser&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;parse_args()&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;chdir(os&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;dirname(os&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;path&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;abspath(__file__)))&lt;/span&gt;
-
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;master_password&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;base64&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;b64decode(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;b&amp;#39;cGFzc3dvcmQ=&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&amp;quot;&amp;quot;Password is base64-obfuscated just in case someone accidentally&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    looks at the screen and memorizes it. Of course it is highly insecure&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    and you should only store it if you really have to. You can have the script&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    ask user for password every time even though in that case&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    the whole purpose of automating password management kinda defies itself.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;/path/to/your/key&amp;#39;&lt;/span&gt;
-    &lt;span style=&#34;color: #66d9ef&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;open(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;realkey&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;f:&lt;/span&gt;  &lt;span style=&#34;color: #75715e&#34;&gt;# disable binary data extraction if&lt;/span&gt;
-        &lt;span style=&#34;color: #f8f8f2&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;write(get_real_key(key))&lt;/span&gt;    &lt;span style=&#34;color: #75715e&#34;&gt;# not needed&lt;/span&gt;
-
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;pexpect&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;spawn(&lt;/span&gt;
-        &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;perl path/to/kpcli-3.1.pl &amp;#39;&lt;/span&gt;
-        &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-kdb path/to/your/kdb(x) &amp;#39;&lt;/span&gt;
-        &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;-key realkey&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt;  &lt;span style=&#34;color: #75715e&#34;&gt;# omit if not needed&lt;/span&gt;
-        &lt;span style=&#34;color: #f8f8f2&#34;&gt;timeout&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;3&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;expect(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;Please provide the master password: &amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sendline(master_password)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;expect(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;kpcli-3.1:/&amp;gt; &amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;sendline(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;show kp/{}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;format(args&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;passname))&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;expect(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;kpcli-3.1:/&amp;gt; &amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #66d9ef&#34;&gt;print&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(get_pass(child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;before),&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;end&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;child&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;close()&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;os&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;remove(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;realkey&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
-
-&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;__name__&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt;
-    &lt;span style=&#34;color: #f8f8f2&#34;&gt;main()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You can get the workflow &lt;a href=&#34;https://dl.dropboxusercontent.com/u/24653887/keepass.alfredworkflow&#34;&gt;here&lt;/a&gt;. It doesn’t have an icon because fuck it. Enjoy!&lt;/p&gt;
-</description>
+      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.
+The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
     </item>
     
     <item>
@@ -146,25 +26,8 @@ sudo cpan XML::Parser
       <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
-      <description>&lt;p&gt;So as you may know, &lt;a href=&#34;https://osxfuse.github.io/&#34;&gt;OSXFUSE&lt;/a&gt;+&lt;a href=&#34;https://github.com/osxfuse/osxfuse/wiki/SSHFS&#34;&gt;SSHFS&lt;/a&gt; is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&lt;/p&gt;
-
-&lt;p&gt;I’ve found traces of it mentioned &lt;a href=&#34;http://superuser.com/questions/772405/why-does-directory-vanish-when-i-do-sshfs-how-to-setup-sshfs-share-on-max-osx-1&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/osxfuse/osxfuse/issues/174&#34;&gt;there&lt;/a&gt;, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.&lt;/p&gt;
-
-&lt;p&gt;Essence of the problem: you mount a remote server onto a folder, you can access it perfectly from terminal or e.g. &lt;a href=&#34;http://doublecmd.sourceforge.net/&#34;&gt;Double Commander&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, but the mountpoint folder disappears from Finder or any apps reliant on native file handling capabilities, including the aforementioned Sublime Text.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/2985831/5575697/aa6efe5e-8faa-11e4-9214-f7259d30b531.png&#34; alt=&#34;&#34; /&gt;&lt;/center&gt;
-
-&lt;p&gt;@synec proposes &lt;code&gt;-o local&lt;/code&gt;, but for me it was &lt;code&gt;-o volname=folder&lt;/code&gt; which did the trick: &lt;code&gt;sshfs x.y.z.net: folder&lt;/code&gt; didn’t work, while &lt;code&gt;sshfs -o volname=folder x.y.z.net: folder&lt;/code&gt; did. Finder now sees the folder, and the icon is changed: instead of the regular folder it now shows the same icon as of an external hard disk.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;By the way, this is the best orthodox file manager for OS X I’ve found so far (though I didn’t test paid ones who don’t provide a free trial). Even if its interface is neither beautiful nor native, it does the job. The feature set of Commander One is too small, and muCommander didn’t even run.
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
+I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
     </item>
     
   </channel>

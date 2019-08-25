@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Misc on ПЕЧЕНЫЙ</title>
+    <title>misc on ПЕЧЕНЫЙ</title>
     <link>https://pecheny.me/categories/misc/</link>
-    <description>Recent content in Misc on ПЕЧЕНЫЙ</description>
+    <description>Recent content in misc on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 17 Feb 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://pecheny.me/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://pecheny.me/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Привет</title>
@@ -14,8 +16,7 @@
       <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://pecheny.me/blog/hi/</guid>
-      <description>&lt;p&gt;Переезжаю сюда из &lt;a href=&#34;http://pecheny.livejournal.com&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;жж&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Переезжаю сюда из жж.</description>
     </item>
     
   </channel>
