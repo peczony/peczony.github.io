@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on ПЕЧЕНЫЙ</title>
+    <link>https://pecheny.me/categories/</link>
+    <description>Recent content in Categories on ПЕЧЕНЫЙ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Dec 2016 01:57:00 +0300</lastBuildDate>
+    
+	<atom:link href="https://pecheny.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>music</title>
+      <link>https://pecheny.me/categories/music/</link>
+      <pubDate>Fri, 30 Dec 2016 01:57:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/categories/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://pecheny.me/categories/coding/</link>
+      <pubDate>Thu, 25 Aug 2016 13:00:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/categories/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>чгк</title>
+      <link>https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/</link>
+      <pubDate>Wed, 20 Jul 2016 23:22:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>дизайн</title>
+      <link>https://pecheny.me/categories/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD/</link>
+      <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://pecheny.me/categories/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>misc</title>
+      <link>https://pecheny.me/categories/misc/</link>
+      <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://pecheny.me/categories/misc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
