@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pecheny.me/music/</loc>
-    <lastmod>2019-08-24T23:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/seenlive/</loc>
-    <lastmod>2019-08-24T23:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://pecheny.me/dreams/</loc>
-    <lastmod>2019-08-06T10:00:00+03:00</lastmod>
+    <lastmod>2019-09-02T11:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/vyshkafest-2/</loc>
+    <lastmod>2019-09-02T11:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/granddad/</loc>
+    <lastmod>2019-09-02T10:00:00+03:00</lastmod>
   </url>
   
   <url>
@@ -615,6 +615,11 @@
   <url>
     <loc>https://pecheny.me/dreams/street/</loc>
     <lastmod>2015-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/music/</loc>
+    <lastmod>2015-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
