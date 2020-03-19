@@ -1,10 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pecheny.me/music/seenlive/</loc>
+    <lastmod>2020-03-20T00:13:00+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pecheny.me/dreams/</loc>
-    <lastmod>2019-10-30T10:00:00+03:00</lastmod>
+    <lastmod>2020-02-14T10:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/expertise/</loc>
+    <lastmod>2020-02-14T10:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/terrorists/</loc>
+    <lastmod>2019-11-22T10:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/joyce/</loc>
+    <lastmod>2019-11-19T10:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/joyce/</loc>
+    <lastmod>2019-11-17T11:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/packet-critic/</loc>
+    <lastmod>2019-11-17T10:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pecheny.me/dreams/abstract-hip-hop/</loc>
+    <lastmod>2019-11-09T10:00:00+03:00</lastmod>
   </url>
   
   <url>
@@ -40,16 +75,6 @@
   <url>
     <loc>https://pecheny.me/dreams/virtuspro/</loc>
     <lastmod>2019-09-22T10:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/</loc>
-    <lastmod>2019-09-18T20:13:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/music/seenlive/</loc>
-    <lastmod>2019-09-18T20:13:00+00:00</lastmod>
   </url>
   
   <url>
@@ -170,11 +195,6 @@
   <url>
     <loc>https://pecheny.me/dreams/ultraviolence/</loc>
     <lastmod>2018-09-25T10:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pecheny.me/okx/</loc>
-    <lastmod>2018-09-10T14:14:00+00:00</lastmod>
   </url>
   
   <url>

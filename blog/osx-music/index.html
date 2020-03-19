@@ -16,7 +16,7 @@
 
   
   
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
   <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
   <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
@@ -72,41 +72,29 @@
 		<h1>The (Mis)adventures of a Music Geek on OS X</h1>
 	  </div>
 	  <div id="toc" class="well col-md-4 col-sm-6"><nav id="TableOfContents">
-<ul>
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#players">Players</a>
-<ul>
-<li><a href="#vox">Vox</a></li>
-<li><a href="#sonora">Sonora</a></li>
-<li><a href="#deadbeef">DeaDBeeF</a></li>
-<li><a href="#foobar-through-wine">Foobar through Wine</a></li>
-<li><a href="#clementine">Clementine</a></li>
-<li><a href="#cog">Cog</a></li>
-<li><a href="#martin">Martin</a></li>
-<li><a href="#cmus">cmus</a></li>
-<li><a href="#mpd-ncmpcpp-mpdas">mpd+ncmpcpp (+mpdas)</a></li>
-</ul></li>
-<li><a href="#taggers">Taggers</a>
-<ul>
-<li><a href="#mp3tag-through-wine">Mp3tag through Wine</a></li>
-<li><a href="#puddletag">puddletag</a></li>
-</ul></li>
-<li><a href="#converters">Converters</a></li>
-</ul>
+  <ul>
+    <li><a href="#vox">Vox</a></li>
+    <li><a href="#sonora">Sonora</a></li>
+    <li><a href="#deadbeef">DeaDBeeF</a></li>
+    <li><a href="#foobar-through-wine">Foobar through Wine</a></li>
+    <li><a href="#clementine">Clementine</a></li>
+    <li><a href="#cog">Cog</a></li>
+    <li><a href="#martin">Martin</a></li>
+    <li><a href="#cmus">cmus</a></li>
+    <li><a href="#mpdncmpcpp-mpdas">mpd+ncmpcpp (+mpdas)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mp3tag-through-wine">Mp3tag through Wine</a></li>
+    <li><a href="#puddletag">puddletag</a></li>
+  </ul>
 </nav></div>
 	  <div class="post">
-		
-
-<p>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.</p>
-
+		<p>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.</p>
 <p>Let me note from the start that we’re talking real <em>geekery</em>: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder. For a casual user sticking with iTunes and/or cloud services would probably be the sanest choice.</p>
-
 <p>So, here ya go——</p>
-
 <h1 id="requirements">Requirements</h1>
-
 <p>My requirements/wishes for a music playing system are, in descending order, the following:</p>
-
 <ul>
 <li>plays any format</li>
 <li>scrobbles</li>
@@ -122,51 +110,28 @@
 <li>spectrum analyzer</li>
 <li>now playing notifications</li>
 </ul>
-
 <p>So, yes, I consider foobar2000 an ideal player—in fact, <em>the</em> player. If you think otherwise this post is probably not for you.</p>
-
 <h1 id="players">Players</h1>
-
 <p>Tl;dr: I settled on mpd+ncmpcpp+puddletag+xACT+ffmpeg+sox. But for the curious:</p>
-
 <h2 id="vox">Vox</h2>
-
 <p>Widely advertised as the most popular alternative player for OS X, <a href="http://coppertino.com/vox/mac">Vox</a> sports a great look, but I could hardly find anything worthy beyond that. It plays music, which is cool. I, however, couldn’t find a way to actually point it to a music library; I suspect that it feeds off iTunes’ library, but I don’t have one. And it keeps nagging the user with notifications prompting to try their paid streaming service.</p>
-
 <p>Bottom line: still useful for click’n’play type of situation where I won’t bother firing up mpd+ncmpcpp.</p>
-
 <h2 id="sonora">Sonora</h2>
-
 <p>I opened <a href="https://github.com/sonoramac/Sonora">the app</a>, it crashed saying something something last.fm something. Didn’t bother to dig further.</p>
-
 <h2 id="deadbeef">DeaDBeeF</h2>
-
 <p><a href="http://deadbeef.sourceforge.net/">A very promising project</a>, not in the least because it is closely modeled after foobar. The developer works on it in his spare time though, and progress is slow, if appealing. The latest and greatest features (e.g. folder browser, layout designer, waveform seekbar) are only in the Linux version, so Mac users should probably just wait patiently till the sun shines on their street. (Or <a href="http://deadbeef.sourceforge.net/support.html">encourage the developer financially</a>.)</p>
-
 <h2 id="foobar-through-wine">Foobar through Wine</h2>
-
 <p><a href="https://hydrogenaud.io/index.php/topic,77261.125.html">Scanning of folders on external NTFS HDDs fails miserably</a>. Other than that, perfect. Still unusable if you don’t want to clutter the precious space on your Mac’s SSD with music.</p>
-
 <h2 id="clementine">Clementine</h2>
-
 <p><a href="https://www.clementine-player.org/">The project</a> hasn’t been updated in a long time and has an ugly look and feel; its moodboard is a meek parody of a waveform seekbar. If you’re not into ncurses though, it could very well be your player of choice — it plays music, scrobbles, and has a library. It isn’t very low on resources as well, so you could consider using something more lightweight when not plugged in.</p>
-
 <h2 id="cog">Cog</h2>
-
 <p><a href="http://cogx.org/">Cog</a> is probably the best choice for the not-so-geeky geeks who, like me, are fond of folder-based music organization. (I used it until i switched to cmus and then to mpd+ncmpcpp.) Be sure to select the beta channel in the settings to use the 2013 fork instead of the abandoned 2009 version. Cog’s looks are minimalistic, yet pretty. It plays music, scrobbles, has notifications. What’s else to be desired? Gapless playback is promised but not working. And given that the 2013 fork is abandoned as well, it is unlikely to get better in the near future.</p>
-
 <h2 id="martin">Martin</h2>
-
 <p><a href="http://tgrbin.github.io/Martin/">Martin</a> is a small, but great and very promising project. It is also inspired by foobar, and has practically all the greatest features in my list: plays everything, scrobbles, has <em>blazingly fast</em> folder-based library, dynamic playlist and sane queue management. Unfortunately, no gapless playback (although it <a href="https://github.com/tgrbin/Martin/issues/11">may happen in the future</a>), so I don’t use it on a daily basis. Also, nobody knows what obscure bugs you can run into, because it is probably used by a dozen people on Earth.</p>
-
 <h2 id="cmus">cmus</h2>
-
 <p><a href="https://cmus.github.io/">Minimalism is good</a>, the library is tolerable, live-filter is awesome (albeit slow). Not everything is so great though: gapless playback has frequent hiccups which makes listening not always a pleasant experience; you need to build it yourself to enable coreaudio and ffmpeg output which may be difficult for casual users; the documentation is sparse.</p>
-
-<h2 id="mpd-ncmpcpp-mpdas">mpd+ncmpcpp (+mpdas)</h2>
-
+<h2 id="mpdncmpcpp-mpdas">mpd+ncmpcpp (+mpdas)</h2>
 <p>This is what at the moment ended up as my player of choice. It requires a good amount of sadomasochism to deal with, though. While the installation is as simple as <code>brew install mpd &amp;&amp; brew install ncmpcpp</code>, you have to <em>create config files by hand</em> to make this even run. <code>brew install mpdas</code> and <em>another config file</em> to make scrobbling work. A couple of hours for it to scan your massive library (scanning is much slower that e.g. Martin’s). What you get in exchange for the pain:</p>
-
 <ul>
 <li>a cute ncurses-based UI</li>
 <li>a library with fast search</li>
@@ -178,11 +143,8 @@
 <li>an ascii visualizer! (though enabling it makes everything laggy)</li>
 <li>practically <em>no documentation</em> (yay! the joys of exploring!)</li>
 </ul>
-
 <p>Not very much, in fact (for me it was gapless which nailed it). For those who are eager to try but reluctant to deal with the hassle I’ll post my config files.</p>
-
 <p>~/.mpd/mpd.conf</p>
-
 <pre><code>music_directory         &quot;/Volumes/My Passport/music&quot;
 playlist_directory      &quot;~/.mpd/playlists&quot;
 db_file                 &quot;~/.mpd/mpd.db&quot;
@@ -210,10 +172,7 @@ bind_to_address         &quot;127.0.0.1&quot;
 port                    &quot;6600&quot;
 
 user                    &quot;pecheny&quot;
-</code></pre>
-
-<p>~/.ncmpcpp/config</p>
-
+</code></pre><p>~/.ncmpcpp/config</p>
 <pre><code>mpd_music_dir = &quot;/Volumes/My Passport/music&quot;
 playlist_display_mode = &quot;columns&quot;
 user_interface = &quot;alternative&quot;
@@ -221,22 +180,13 @@ allow_for_physical_item_deletion = &quot;no&quot;
 display_bitrate = &quot;yes&quot;
 show_hidden_files_in_local_browser = &quot;yes&quot;
 playlist_separate_albums = &quot;yes&quot;
-</code></pre>
-
-<p><a href="https://timothy.sh/article/install-mpd-ncmpcpp-on-osx-yosemite">This post</a> has more in-depth description of the installation and running process. Also, <a href="http://pkgbuild.com/~jelle/ncmpcpp/">this cheat sheet</a> is indispensable.</p>
-
+</code></pre><p><a href="https://timothy.sh/article/install-mpd-ncmpcpp-on-osx-yosemite">This post</a> has more in-depth description of the installation and running process. Also, <a href="http://pkgbuild.com/~jelle/ncmpcpp/">this cheat sheet</a> is indispensable.</p>
 <h1 id="taggers">Taggers</h1>
-
 <h2 id="mp3tag-through-wine">Mp3tag through Wine</h2>
-
 <p>The author of (the awesome) Mp3tag was kind enough to provide <a href="http://www.mp3tag.de/en/mac-osx.html">Wine builds</a> on his page. It works just like on Windows, except it doesn’t have native OS integration, and that’s why I use it only for something complex which puddletag won’t handle</p>
-
 <h2 id="puddletag">puddletag</h2>
-
 <p><a href="http://docs.puddletag.net/">puddletag</a> is my go-to tagger now; you are one <code>brew install puddletag &amp;&amp; puddletag</code> away from tagging your files. The UI is a bit confusing though; for example, it took me long to figure out how to fetch tags from Musicbrainz (it’s <em>Window → Tag sources</em>, by the way.) The table layout is awesome, and, even if a bit laggy and unstable, it is enjoyable to work with.</p>
-
 <h1 id="converters">Converters</h1>
-
 <p>Things are sad in this realm of OS X; nothing remotely as comfortable as Foobar is to be seen. I mostly use <a href="http://sox.sourceforge.net/">sox</a> or <a href="https://ffmpeg.org/download.html">ffmpeg</a> in the terminal, which isn’t exactly user-friendly or convenient. <a href="http://sbooth.org/Max/">Max</a> is tolerable. <a href="http://xact.scottcbrown.org/">xACT</a> is useful for splitting large files by cuesheet. Alas, nothing more to be said here.</p>
 
 

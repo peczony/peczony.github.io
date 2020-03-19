@@ -16,7 +16,7 @@
 
   
   
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
   <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
   <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
@@ -73,24 +73,14 @@
 	  </div>
 	  
 	  <div class="post">
-		
-
-<h1 id="introduction">Introduction</h1>
-
+		<h1 id="introduction">Introduction</h1>
 <p>Some days ago I laid my hands on <a href="//www.alfredapp.com">Alfred</a>. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.</p>
-
 <h1 id="the-problem">The Problem</h1>
-
 <p>Alfred is known for its <a href="//1password.com">1Password</a> integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used <a href="//http://keepass.info/">KeePass</a> and, having transitioned to <span class="scaps">OS X</span>, continue to use it in the form of <a href="//github.com/mstarke/MacPass">MacPass</a> and have no reason to abandon it for a proprietary solution.</p>
-
 <p>Naturally I decided that it would be great to create a workflow implementing <strong>KeePass integration</strong>.</p>
-
 <h1 id="the-details">The Details</h1>
-
 <p>MacPass doesn’t provide any <span class="scaps">CLI API</span>, so I turned to external libraries. The situation was further complicated by the fact that I use KeePass v4 format (kdbx) that is supported way less widely. At the moment of writing there is <a href="https://github.com/phpwutz/libkeepass">only one Python library</a> claiming to support kdbx; it hasn’t been updated in two years and looks rather unpolished, so I continued my search and finally found <a href="//sourceforge.net/projects/kpcli/">kpcli</a>, an active project written in Perl.</p>
-
 <p>The obvious downside of it is being written in Perl, which I’m unfamiliar with. <a href="//www.australsounds.com/2014/10/installingkpcli.html">This article</a> was somewhat helpful, but didn’t list all of the required packages, so for your convenience I list them all here:</p>
-
 <pre><code>sudo cpan Capture::Tiny
 sudo cpan Clipboard
 sudo cpan Clone
@@ -100,28 +90,16 @@ sudo cpan Sort::Naturally
 sudo cpan Term::ReadLine::Gnu
 sudo cpan Term::ShellUI
 sudo cpan XML::Parser
-</code></pre>
-
-<p>I tried to test kpcli manually, but encountered a problem that is more fully described in <a href="https://sourceforge.net/p/kpcli/bugs/16/">a bug</a> filed against kpcli. The gist of it is that <code>File::KeePass</code> does not deal well with <span class="scaps">XML</span>-based KeePass keyfiles. The solution was to create a temporary file containing decoded binary data from the <span class="scaps">XML</span> keyfile.</p>
-
+</code></pre><p>I tried to test kpcli manually, but encountered a problem that is more fully described in <a href="https://sourceforge.net/p/kpcli/bugs/16/">a bug</a> filed against kpcli. The gist of it is that <code>File::KeePass</code> does not deal well with <span class="scaps">XML</span>-based KeePass keyfiles. The solution was to create a temporary file containing decoded binary data from the <span class="scaps">XML</span> keyfile.</p>
 <p>Yet another problem was that kpcli is fully interactive and does not expose any <span class="scaps">API</span>, so I had to emulate user input. That’s where <a href="//pexpect.readthedocs.io/en/stable/">pexpect</a> came in handy.</p>
-
 <h1 id="the-solution">The Solution</h1>
-
 <p>Long story short, I was able to compile a workflow.</p>
-
-<p><img src="//i.imgur.com/hL8wqwW.png" alt="" /></p>
-
+<p><img src="//i.imgur.com/hL8wqwW.png" alt=""></p>
 <p>See it in action:</p>
-
-<p><img src="//i.imgur.com/PQdTXe4.gif" alt="" /></p>
-
+<p><img src="//i.imgur.com/PQdTXe4.gif" alt=""></p>
 <p><em>(The screencast is from an earlier version, that’s why it is mp/macpass instead of kp/keepass. Also here the password is pasted — this behaviour was later ditched for autotype to achieve better security. I was too lazy to shoot another take.)</em></p>
-
 <p>The workflow accepts a keyword with the desired KeePass entry as argument. The argument is then passed to the python script, which interacts with kpcli and prints out the password. The password is then passed to an applescript which autotypes it into the foremost app.</p>
-
 <p>I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python</span>
 <span style="color:#75715e"># -*- coding: utf-8 -*-</span>
 <span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> unicode_literals
@@ -192,7 +170,6 @@ sudo cpan XML::Parser
 
 <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
     main()</code></pre></div>
-
 <p>You can get the workflow <a href="https://dl.dropboxusercontent.com/u/24653887/keepass.alfredworkflow">here</a>. It doesn’t have an icon because fuck it. Enjoy!</p>
 
 
