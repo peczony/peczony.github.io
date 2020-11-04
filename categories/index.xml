@@ -5,11 +5,7 @@
     <link>https://pecheny.me/categories/</link>
     <description>Recent content in Categories on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 30 Dec 2016 01:57:00 +0300</lastBuildDate>
-    
-	<atom:link href="https://pecheny.me/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 30 Dec 2016 01:57:00 +0300</lastBuildDate><atom:link href="https://pecheny.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>music</title>
       <link>https://pecheny.me/categories/music/</link>
