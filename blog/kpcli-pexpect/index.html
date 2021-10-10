@@ -26,8 +26,8 @@
 The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pecheny.me/blog/kpcli-pexpect/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2016-08-25T13:00:00&#43;03:00" />
-<meta property="article:modified_time" content="2016-08-25T13:00:00&#43;03:00" /><meta property="og:site_name" content="П Е Ч Е Н Ы Й" />
+<meta property="article:published_time" content="2016-08-25T13:00:00+03:00" />
+<meta property="article:modified_time" content="2016-08-25T13:00:00+03:00" /><meta property="og:site_name" content="П Е Ч Е Н Ы Й" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -95,7 +95,7 @@ The Problem Alfred is known for its 1Password integration. Unfortunately, that i
 <h1 id="the-details">The Details</h1>
 <p>MacPass doesn’t provide any <span class="scaps">CLI API</span>, so I turned to external libraries. The situation was further complicated by the fact that I use KeePass v4 format (kdbx) that is supported way less widely. At the moment of writing there is <a href="https://github.com/phpwutz/libkeepass">only one Python library</a> claiming to support kdbx; it hasn’t been updated in two years and looks rather unpolished, so I continued my search and finally found <a href="//sourceforge.net/projects/kpcli/">kpcli</a>, an active project written in Perl.</p>
 <p>The obvious downside of it is being written in Perl, which I’m unfamiliar with. <a href="//www.australsounds.com/2014/10/installingkpcli.html">This article</a> was somewhat helpful, but didn’t list all of the required packages, so for your convenience I list them all here:</p>
-<pre><code>sudo cpan Capture::Tiny
+<pre tabindex="0"><code>sudo cpan Capture::Tiny
 sudo cpan Clipboard
 sudo cpan Clone
 sudo cpan Crypt::Rijndael
@@ -114,7 +114,7 @@ sudo cpan XML::Parser
 <p><em>(The screencast is from an earlier version, that’s why it is mp/macpass instead of kp/keepass. Also here the password is pasted — this behaviour was later ditched for autotype to achieve better security. I was too lazy to shoot another take.)</em></p>
 <p>The workflow accepts a keyword with the desired KeePass entry as argument. The argument is then passed to the python script, which interacts with kpcli and prints out the password. The password is then passed to an applescript which autotypes it into the foremost app.</p>
 <p>I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python</span>
 <span style="color:#75715e"># -*- coding: utf-8 -*-</span>
 <span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> unicode_literals
 <span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division
@@ -176,9 +176,9 @@ sudo cpan XML::Parser
     child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;Please provide the master password: &#39;</span>)
     child<span style="color:#f92672">.</span>sendline(master_password)
     child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
-    child<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">&#39;show kp/{}&#39;</span><span style="color:#f92672">.</span>format(args<span style="color:#f92672">.</span>passname))
+    child<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">&#39;show kp/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(args<span style="color:#f92672">.</span>passname))
     child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
-    <span style="color:#66d9ef">print</span>(get_pass(child<span style="color:#f92672">.</span>before), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+    print(get_pass(child<span style="color:#f92672">.</span>before), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
     child<span style="color:#f92672">.</span>close()
     os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;realkey&#39;</span>)
 

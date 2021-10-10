@@ -1,0 +1,143 @@
+<html lang="ru">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <meta name="description" content="">
+  <meta name="author" content="Александр Печеный">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="https://pecheny.me/img/newcat.png">
+
+  
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/custom.css">
+  <meta property="og:title" content="Blog" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pecheny.me/blog/" /><meta property="og:site_name" content="П Е Ч Е Н Ы Й" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blog"/>
+<meta name="twitter:description" content=""/>
+
+</head>
+<body>
+<div class="grand-wrapper">
+
+<header id="menu">
+  <div class="container">
+	<span class="logo">ПЕЧЕНЫЙ</span>
+	<a>&#9776;</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+	<div class="row">
+	  <div class="eight columns offset-by-two">
+		<ul class="">
+		  
+		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand brand-rss"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/music">музыка</a>  <a href="https://pecheny.me/music/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/friendsdreams">сны друзей</a>  <a href="https://pecheny.me/friendsdreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/dreams">сны</a>  <a href="https://pecheny.me/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> <a href="https://pecheny.me/blog">блог</a>  <a href="https://pecheny.me/blog/index.xml"><i class="fa fa-rss"></i></a></li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+
+<div class="container away">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	<div id="post-title"><h1>Блог</h1></div>
+	  <ul class="posts">
+		
+		
+		
+		<li>
+		  <a href="https://pecheny.me/blog/hi/">Привет</a>
+
+		  <p class="footnote">
+			submitted <time datetime="2015-02-17T00:00:00Z" class="post-list timeago">2015-02-17T00:00:00Z</time>
+
+			
+			to
+			
+
+			
+
+			
+			categories: [ <a href="https://pecheny.me/categories/misc">misc</a> ]
+			
+
+			
+
+		  </p>
+		  <p class="footnote summary">Переезжаю сюда из жж.</p>
+		</li>
+		
+		
+	  </ul>
+	  
+<nav class="pagination">
+    
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="https://pecheny.me/blog/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://pecheny.me/blog/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://pecheny.me/blog/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a href="#" aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
+</nav>
+
+	</div>
+  </div>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<script src="https://pecheny.me/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://pecheny.me/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#menu").click(function(){
+    $(".navbar ul li").removeClass("cate");
+    $(".navbar").toggle();
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".navbar").removeAttr("style");
+    }
+  });
+</script>
+
+</div>
+</body>
+</html>

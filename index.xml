@@ -7,6 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://pecheny.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Рекомендации шрифтов</title>
+      <link>https://pecheny.me/blog/fonts/</link>
+      <pubDate>Sun, 10 Oct 2021 22:10:00 +0300</pubDate>
+      
+      <guid>https://pecheny.me/blog/fonts/</guid>
+      <description>У меня есть обсессия — раз в пару месяцев ходить на Fontsquirrel и Google Fonts и проверять, что новенького появилось.
+Решил, что хочу зафиксировать рекомендации, чтобы сердце немного успокоилось, да и вдруг кому-нибудь будет полезно. Буду периодически обновлять.
+Мои критерии простые — красивый, с кириллицей, хорошо читается, не бесит, знак ударения (Combining Acute Accent U+0301) нормально работает с кириллическими буквами.
+С засечками Source Serif Pro — нейтральный, приятный.
+Bona Nova — крутой олдстайл, но подойдёт не для всех текстов, его красота слишком притягивает глаз.</description>
+    </item>
+    
+    <item>
       <title>Террористы на афтепати</title>
       <link>https://pecheny.me/dreams/afterparty-terrorists/</link>
       <pubDate>Fri, 03 Sep 2021 10:00:00 +0300</pubDate>
