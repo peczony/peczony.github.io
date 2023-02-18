@@ -1,0 +1,319 @@
+<html lang="ru">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>trueDL — новый алгоритм расчёта сложности турниров</title>
+  <meta name="description" content="">
+  <meta name="author" content="Александр Печеный">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="https://pecheny.me/img/newcat.png">
+
+  
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
+  <link rel="stylesheet" href="https://pecheny.me/css/custom.css">
+  <meta property="og:title" content="trueDL — новый алгоритм расчёта сложности турниров" />
+<meta property="og:description" content="Как сейчас считается DL Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:
+DL = R * M / N / 500 R — рейтинг команды, M — количество невзятых вопросов, N — количество вопросов в турнире.
+И в M, и в N не учитываются снятые вопросы.
+Почему DL работает плохо DL не учитывает инфляцию рейтинга В 2017 году у команды с первого места рейтинг был 11182, c сотого — 4855." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pecheny.me/blog/truedl/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-18T21:00:00+04:00" />
+<meta property="article:modified_time" content="2023-02-18T21:00:00+04:00" /><meta property="og:site_name" content="П Е Ч Е Н Ы Й" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="trueDL — новый алгоритм расчёта сложности турниров"/>
+<meta name="twitter:description" content="Как сейчас считается DL Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:
+DL = R * M / N / 500 R — рейтинг команды, M — количество невзятых вопросов, N — количество вопросов в турнире.
+И в M, и в N не учитываются снятые вопросы.
+Почему DL работает плохо DL не учитывает инфляцию рейтинга В 2017 году у команды с первого места рейтинг был 11182, c сотого — 4855."/>
+
+</head>
+<body>
+<div class="grand-wrapper">
+
+<header id="menu">
+  <div class="container">
+	<span class="logo">ПЕЧЕНЫЙ</span>
+	<a>&#9776;</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+	<div class="row">
+	  <div class="eight columns offset-by-two">
+		<ul class="">
+		  
+		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand brand-rss"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/music">музыка</a>  <a href="https://pecheny.me/music/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/friendsdreams">сны друзей</a>  <a href="https://pecheny.me/friendsdreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/dreams">сны</a>  <a href="https://pecheny.me/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> <a href="https://pecheny.me/blog">блог</a>  <a href="https://pecheny.me/blog/index.xml"><i class="fa fa-rss"></i></a></li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+
+<div class="container post-wrapper">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	  <div id="post-title">
+		<p class="footnote">
+		  <time>2023-02-18</time>
+		  
+		  
+		  |
+		  
+		  
+
+		  
+		  categories: <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> 
+		  
+
+		  
+
+		</p>
+		<h1>trueDL — новый алгоритм расчёта сложности турниров</h1>
+	  </div>
+	  <div id="toc" class="well col-md-4 col-sm-6"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#как-сейчас-считается-dl">Как сейчас считается DL</a></li>
+    <li><a href="#почему-dl-работает-плохо">Почему DL работает плохо</a>
+      <ol>
+        <li><a href="#dlнеучитывает-инфляцию-рейтинга">DL не учитывает инфляцию рейтинга</a></li>
+        <li><a href="#непонятно-что-значит-dl">Непонятно, что значит DL</a></li>
+      </ol>
+    </li>
+    <li><a href="#как-truedl-решает-эти-проблемы">Как trueDL решает эти проблемы</a>
+      <ol>
+        <li><a href="#независит-отинфляции">Не зависит от инфляции</a></li>
+        <li><a href="#имеет-физический-смысл">Имеет физический смысл</a></li>
+      </ol>
+    </li>
+    <li><a href="#как-считается-truedl">Как считается trueDL</a>
+      <ol>
+        <li><a href="#коэффициенты-для-формулы">Коэффициенты для формулы</a></li>
+        <li><a href="#формула-truedl">Формула trueDL</a></li>
+      </ol>
+    </li>
+    <li><a href="#примеры-расчёта-truedl">Примеры расчёта trueDL</a></li>
+    <li><a href="#немного-статистики">Немного статистики</a>
+      <ol>
+        <li><a href="#самые-cложные-турниры-поtruedl">Самые cложные турниры по trueDL</a></li>
+        <li><a href="#самые-простые-турниры-поtruedl">Самые простые турниры по trueDL</a></li>
+        <li><a href="#ожидаемое-количество-взятых-для-турнира-сtruedl40">Ожидаемое количество взятых для турнира с trueDL 4.0</a></li>
+        <li><a href="#ожидаемое-количество-взятых-для-турнира-сtruedl70">Ожидаемое количество взятых для турнира с trueDL 7.0</a></li>
+      </ol>
+    </li>
+    <li><a href="#калькуляторы-сложности">Калькуляторы сложности</a>
+      <ol>
+        <li><a href="#поtruedl">По trueDL</a></li>
+        <li><a href="#потекущему-dl">По текущему DL</a></li>
+      </ol>
+    </li>
+    <li><a href="#код-иданные">Код и данные</a></li>
+  </ol>
+</nav></div>
+	  <div class="post">
+		<h1 id="как-сейчас-считается-dl">Как сейчас считается DL</h1>
+<p>Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:</p>
+<pre tabindex="0"><code>DL = R * M / N / 500
+</code></pre><p><code>R</code> — рейтинг команды,
+<code>M</code> — количество невзятых вопросов,
+<code>N</code> — количество вопросов в турнире.</p>
+<p>И в <code>M</code>, и в <code>N</code> не учитываются снятые вопросы.</p>
+<h1 id="почему-dl-работает-плохо">Почему DL работает плохо</h1>
+<h2 id="dlнеучитывает-инфляцию-рейтинга">DL не учитывает инфляцию рейтинга</h2>
+<p><a href="https://rating.chgk.info/teams?releaseId=1288">В 2017 году</a> у команды с первого места рейтинг был 11182, c сотого — 4855.</p>
+<p><a href="https://rating.chgk.info/teams?releaseId=1599">В 2023 году</a> у команды с первого места рейтинг 12151, а c сотого — 8017. При этом не кажется, что за прошедшие годы команды стали играть значительно лучше, но DL со временем ползёт вверх. То, что несколько лет назад было 4.0, сегодня уже 5.0.</p>
+<p>В качестве примера посмотрим <a href="https://rating.chgk.info/teams/45556">на команду «Рабочее название»</a>. В 2017 году команда сыграла «<a href="https://rating.chgk.info/tournament/4674">Ивантеллект Pale Ale</a>» и взяла 25/36. DL был равен 5.42:</p>
+<pre tabindex="0"><code>8876 × 11 / 36 / 500 = 5.42
+</code></pre><p>В 2023 году команда сыграла «<a href="https://rating.chgk.info/tournament/8692">Синхрон Моносова</a>» и взяла 26/36. DL был равен 5.68:</p>
+<pre tabindex="0"><code>10229 × 10 / 36 / 500 = 5.68
+</code></pre><p>Несмотря на это, мы понимаем, что если бы сегодняшние команды сыграли Ивантеллект 2017 года, то скорее всего турнир оказался бы сложнее синхрона Моносова, а не проще.</p>
+<h2 id="непонятно-что-значит-dl">Непонятно, что значит DL</h2>
+<p>Если нам покажут DL 5.0 и спросят, что мы можем сказать про этот турнир, мы не сможем сказать ничего кроме того, что турнир «средней сложности».</p>
+<h1 id="как-truedl-решает-эти-проблемы">Как trueDL решает эти проблемы</h1>
+<h2 id="независит-отинфляции">Не зависит от инфляции</h2>
+<p>TrueDL привязан не к абсолютным цифрам командного рейтинга, а к месту команды в рейтинге.</p>
+<h2 id="имеет-физический-смысл">Имеет физический смысл</h2>
+<p>TrueDL=5.0 у синхрона из 36 вопросов означает: команда с 251–500 мест рейтинга возьмёт на этом турнире половину вопросов, а команда из топ-10 — 29 вопросов.</p>
+<h1 id="как-считается-truedl">Как считается trueDL</h1>
+<h2 id="коэффициенты-для-формулы">Коэффициенты для формулы</h2>
+<p>Я предположил, что если мы привяжемся не к абсолютным цифрам рейтинга, а к месту команды в рейтинге, то от года к году мы можем наблюдать относительную стабильность. То есть: команда с 500 места рейтинга будет в среднем всегда брать, например, в два раза меньше вопросов, чем команда с первого места.</p>
+<p>Чтобы проверить гипотезу, я разделил все команды на несколько групп: команды с 1–10 мест рейтинга, 11–25, 26–50, 51–100, 101–250, 251–500 и так далее. После этого я посчитал, сколько команды брали относительно друг друга в тех турнирах, где участвовали команды из разных групп.</p>
+<p>Допустим, у нас есть турнир, в котором участвовали команды с 1–10 мест рейтинга и команды с 251–500 мест. Первые команды в среднем брали 26 вопросов, а вторые — 13.</p>
+<p>Получается, на этом турнире командам с 251–500 мест соответствует цифра 0.5: 13 / 26 = 0.5.</p>
+<p>Если так же усреднить данные по всем турнирам, получится вот что:</p>
+<figure>
+<img src="https://pecheny.me/truedl_ratios.png" width="95%">
+<figcaption><a href="https://pecheny.me/truedl_ratios.html">Интерактивная версия</a> (3.6 Мб)</figcaption>
+</figure>
+<p>Команд из топ-10 на этом графике нет, потому что им всегда соответствует единица.</p>
+<p>Видно, что несмотря на некоторые колебания, начиная с 2017 года показатели относительно стабильны. Вот что получится, если их усреднить:</p>
+<pre tabindex="0"><code>1–10 — 1.0
+11–25 — 0.94
+26–50 — 0.89
+51–100 — 0.82
+101–250 — 0.72
+251–500 — 0.62
+501–1000 — 0.5
+1001–2000 — 0.37
+2001–3000 — 0.27
+3001–5000 — 0.19
+</code></pre><p>То есть, если команды с 1–10 мест в среднем возьмут 30 вопросов в турнире, то команды с 11–25 мест — 30 × 0.94 = 28.2, команды с 26–50 мест — 30 × 0.89 = 26.7 и так далее. Команды с 501–1000 мест в среднем берут вопросов почти ровно в два раза меньше, чем команды из топ-10.</p>
+<p>Чтобы итоговые значения trueDL выглядели привычно, возьмём за единицу коэффициент команды с 251–500 мест:</p>
+<pre tabindex="0"><code>1–10 — 1.61
+11–25 — 1.52
+26–50 — 1.43
+51–100 — 1.32
+101–250 — 1.16
+251–500 — 1.0
+501–1000 — 0.81
+1001–2000 — 0.6
+2001–3000 — 0.43
+3001–5000 — 0.31
+</code></pre><h2 id="формула-truedl">Формула trueDL</h2>
+<p>Теперь мы можем вывести формулу, по которой считается trueDL:</p>
+<pre tabindex="0"><code>trueDL = (1 — min(Q / C, N) / N) × 10
+</code></pre><p><code>Q</code> — вопросы, взятые командой,
+<code>C</code> — коэффициент из таблички выше,
+<code>N</code> — общее количество вопросов на турнире (исключая снятые).</p>
+<h1 id="примеры-расчёта-truedl">Примеры расчёта trueDL</h1>
+<p>Возьмём команду с 251–500 мест рейтинга. Если она взяла 18/36 вопросов, её командный trueDL будет 5.0, если 24 — 3.3, если взяла всё, trueDL будет 0, если не взяла ничего — 10.</p>
+<p>Для сравнения, если команда из топ-10 взяла 18/36 вопросов, её trueDL будет 6.89:</p>
+<pre tabindex="0"><code>(1 — (18 / 1.61) / 36) × 10 = 6.89
+</code></pre><p>Если команда взяла 24 — её trueDL 5.85:</p>
+<pre tabindex="0"><code>(1 — (24 / 1.61) / 36) × 10 = 5.85
+</code></pre><p>Если взяла 36, то trueDL будет 3.78:</p>
+<pre tabindex="0"><code>(1 — (36 / 1.61) / 36) × 10 = 3.78
+</code></pre><p>Если не взяла ничего — trueDL 10, как и у команды с 251–500 мест.</p>
+<p>TrueDL турнира, как и текущий DL, равен среднему арифметическому командных trueDL.</p>
+<h1 id="немного-статистики">Немного статистики</h1>
+<h2 id="самые-cложные-турниры-поtruedl">Самые cложные турниры по trueDL</h2>
+<p>Тут и далее — только турниры, где корректно введены данные и где сыграло больше 50 команд. Подробные данные можно посмотреть <a href="https://docs.google.com/spreadsheets/d/1YkWXop1huWe2tiS_6EsB6EKpcY12hTh7uui1_XU4KxU/edit">в таблице</a>, ссылка на которую также есть в приложении.</p>
+<ol>
+<li><a href="https://rating.chgk.info/tournament/4664">Часы Судного Дня: Полночь</a> — trueDL 9.2</li>
+<li><a href="https://rating.chgk.info/tournament/3915">Посох Аарона</a> — 9.0</li>
+<li><a href="https://rating.chgk.info/tournament/4426">Посох Аарона II</a> — 9.0</li>
+<li><a href="https://rating.chgk.info/tournament/4693">Посошок Арончика</a> — 8.9</li>
+<li><a href="https://rating.chgk.info/tournament/4781">Занавес неведения</a> — 8.8</li>
+<li><a href="https://rating.chgk.info/tournament/4029">Мстители: Монос Аарона</a> — 8.6</li>
+<li><a href="https://rating.chgk.info/tournament/4011">Вавилонский колодец</a> — 8.5</li>
+<li><a href="https://rating.chgk.info/tournament/4425">Знание — Сила IV</a> — 8.5</li>
+<li><a href="https://rating.chgk.info/tournament/4401">Кубок Киберразумистов 2077</a> — 8.3</li>
+<li><a href="https://rating.chgk.info/tournament/5928">Угрюмый Ёрш</a> — 8.3</li>
+<li><a href="https://rating.chgk.info/tournament/">VERSUS: Немец vs. Шагал</a></li>
+</ol>
+<p><a href="https://rating.chgk.info/tournament/4721">Мемориал Дмитрия Коноваленко — 2018</a> — cамый сложный очник, 7.8.</p>
+<h2 id="самые-простые-турниры-поtruedl">Самые простые турниры по trueDL</h2>
+<p>Тут без сюрпризов.</p>
+<ol>
+<li><a href="https://rating.chgk.info/tournament/5697">Школьный Синхрон-lite. Выпуск 3.1</a> — trueDL 0.2</li>
+<li><a href="https://rating.chgk.info/tournament/5698">(а)Синхрон-lite. Лига старта. Эпизод VII</a> — 0.2</li>
+<li><a href="https://rating.chgk.info/tournament/5702">(а)Синхрон-lite. Лига старта. Эпизод IX</a> — 0.2</li>
+<li><a href="https://rating.chgk.info/tournament/5707">Школьный Синхрон-lite. Выпуск 3.6</a> — 0.2</li>
+<li><a href="https://rating.chgk.info/tournament/6698">Школьная лига. VI тур.</a> — 0.2</li>
+<li><a href="https://rating.chgk.info/tournament/5005">(а)Синхрон-lite. Лига старта. Эпизод I</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5644">Школьный чемпионат России</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5701">Школьный Синхрон-lite. Выпуск 3.3</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5704">(а)Синхрон-lite. Лига старта. Эпизод X</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5705">Школьный Синхрон-lite. Выпуск 3.5</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5708">(а)Синхрон-lite. Лига старта. Эпизод XII</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/5936">Школьная лига. I тур.</a> — 0.3</li>
+<li><a href="https://rating.chgk.info/tournament/8323">Лига вузов Европы. Пролог. Кубок первокурсников</a> — 0.3</li>
+</ol>
+<p><a href="https://rating.chgk.info/tournament/5644">Школьный чемпионат России — 2019</a> — cамый простой очник на турнирном сайте, 0.3.<br>
+<a href="https://rating.chgk.info/tournament/4945">День физика — 2018</a>, 0.7 — самый простой нешкольный очник.</p>
+<h2 id="ожидаемое-количество-взятых-для-турнира-сtruedl40">Ожидаемое количество взятых для турнира с trueDL 4.0</h2>
+<pre tabindex="0"><code>1–10 35
+11–25 33
+26–50 31
+51–100 29
+101–250 25
+251–500 22
+501–1000 17
+1001–2000 13
+2001–3000 9
+3001–5000 7
+</code></pre><h2 id="ожидаемое-количество-взятых-для-турнира-сtruedl70">Ожидаемое количество взятых для турнира с trueDL 7.0</h2>
+<pre tabindex="0"><code>1–10 17
+11–25 16
+26–50 15
+51–100 14
+101–250 13
+251–500 11
+501–1000 9
+1001–2000 6
+2001–3000 5
+3001–5000 3
+</code></pre><h1 id="калькуляторы-сложности">Калькуляторы сложности</h1>
+<h2 id="поtruedl">По trueDL</h2>
+<p><label for="pos">Позиция вашей команды в рейтинге</label>
+<input id="pos" value="10">
+<label for="questions">Количество вопросов в турнире</label>
+<input id="questions" value="36">
+<label for="difficulty">Сложность турнира</label>
+<input id="difficulty" value="5.0"></p>
+<p>Ожидаемое количество взятых: <span id="result"></span></p>
+<h2 id="потекущему-dl">По текущему DL</h2>
+<p><label for="old_rating">Рейтинг вашей команды</label>
+<input id="old_rating" value="10000">
+<label for="old_questions">Количество вопросов в турнире</label>
+<input id="old_questions" value="36">
+<label for="old_difficulty">Сложность турнира</label>
+<input id="old_difficulty" value="5.0"></p>
+<p>Ожидаемое количество взятых: <span id="old_result"></span></p>
+<h1 id="код-иданные">Код и данные</h1>
+<ol>
+<li>Код лежит на гитлабе: <a href="https://gitlab.com/peczony/truedl">https://gitlab.com/peczony/truedl</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1YkWXop1huWe2tiS_6EsB6EKpcY12hTh7uui1_XU4KxU/edit">Гугл-табличка с trueDL для всех турниров</a>.</li>
+<li><a href="https://drive.google.com/file/d/1X3t8TEcyb4d5Cf6SUmrtHzSrR7Nn7OCb/view">Данные на гугл-диске (260 Мб)</a></li>
+</ol>
+<p>Основная часть данных выкачана по АПИ (персональные данные удалены), исторические данные о рейтинге любезно предоставлены командой турнирного сайта.</p>
+<script src="https://pecheny.me/truedl.js"></script>
+
+
+<a href="https://pecheny.me/blog/kvrm-jury/" class="scaps">предыдущий пост</a>
+
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+<script src="https://pecheny.me/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://pecheny.me/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#menu").click(function(){
+    $(".navbar ul li").removeClass("cate");
+    $(".navbar").toggle();
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".navbar").removeAttr("style");
+    }
+  });
+</script>
+
+</div>
+</body>
+</html>

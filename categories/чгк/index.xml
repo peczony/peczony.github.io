@@ -5,7 +5,30 @@
     <link>https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/</link>
     <description>Recent content in чгк on ПЕЧЕНЫЙ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Jul 2016 23:22:00 +0300</lastBuildDate><atom:link href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 21:00:00 +0400</lastBuildDate><atom:link href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>trueDL — новый алгоритм расчёта сложности турниров</title>
+      <link>https://pecheny.me/blog/truedl/</link>
+      <pubDate>Sat, 18 Feb 2023 21:00:00 +0400</pubDate>
+      
+      <guid>https://pecheny.me/blog/truedl/</guid>
+      <description>Как сейчас считается DL Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:
+DL = R * M / N / 500 R — рейтинг команды, M — количество невзятых вопросов, N — количество вопросов в турнире.
+И в M, и в N не учитываются снятые вопросы.
+Почему DL работает плохо DL не учитывает инфляцию рейтинга В 2017 году у команды с первого места рейтинг был 11182, c сотого — 4855.</description>
+    </item>
+    
+    <item>
+      <title>Старые и новые правила судейства основной дисциплины</title>
+      <link>https://pecheny.me/blog/kvrm-jury/</link>
+      <pubDate>Sat, 22 Oct 2022 10:10:00 +0400</pubDate>
+      
+      <guid>https://pecheny.me/blog/kvrm-jury/</guid>
+      <description>29 октября вступили в силу Правила КВРМ1 МАИИ, принятые на Общем собрании МАИИ. В этих правилах есть несколько сущностных изменений по отношению к применявшемуся ранее Кодексу МАК. В этом тексте я опишу свою трактовку тех изменений, которые касаются судейства, а также предложу поправки к Правилам.
+Более подробно про изменения в Правилах можно прочитать в сравнительной таблице и интервью Романа Немучинского, а также разборе Максима Сидорова.
+Краткое содержание Судейство по Кодексу МАК:</description>
+    </item>
+    
     <item>
       <title>Правила игры «Хамовнический стрелок»</title>
       <link>https://pecheny.me/blog/rules-strelok/</link>
