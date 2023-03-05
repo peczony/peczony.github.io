@@ -1,26 +1,19 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-
-  
   <meta charset="utf-8">
   <title>Blog</title>
   <meta name="description" content="">
   <meta name="author" content="Александр Печеный">
-
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="icon" 
-      type="image/png" 
-      href="https://pecheny.me/img/newcat.png">
-
-  
-  
+  <link rel="icon" type="image/png" href="https://pecheny.me/newcat.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://pecheny.me/css/fonts.css">
-  <link rel="stylesheet" href="https://pecheny.me/css/normalize.css">
-  <link rel="stylesheet" href="https://pecheny.me/css/skeleton.css">
-  <link rel="stylesheet" href="https://pecheny.me/css/custom.css">
+  <link rel="stylesheet" href="https://pecheny.mecustom.css">
   <meta property="og:title" content="Blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -33,301 +26,292 @@
 
 </head>
 <body>
-<div class="grand-wrapper">
+<div id="main-wrapper">
+<article>
 
-<header id="menu">
-  <div class="container">
-	<span class="logo">ПЕЧЕНЫЙ</span>
-	<a>&#9776;</a>
-  </div>
-</header>
 
 <nav class="navbar">
-  <div class="container">
-	<div class="row">
-	  <div class="eight columns offset-by-two">
-		<ul class="">
-		  
-		  <li class="u-pull-left"> <a href="https://pecheny.me" class="brand" style="font-weight:bold;font-size:normal"> ПЕЧЕНЫЙ</a> <a href="https://pecheny.me/index.xml" class="brand brand-rss"><i class="fa fa-rss"></i></a></li>
-		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/music">музыка</a>  <a href="https://pecheny.me/music/index.xml"><i class="fa fa-rss"></i></a></li>
-		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/friendsdreams">сны друзей</a>  <a href="https://pecheny.me/friendsdreams/index.xml"><i class="fa fa-rss"></i></a></li>
-		  <li class="u-pull-right cate"> · <a href="https://pecheny.me/dreams">сны</a>  <a href="https://pecheny.me/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
-		  <li class="u-pull-right cate"> <a href="https://pecheny.me/blog">блог</a>  <a href="https://pecheny.me/blog/index.xml"><i class="fa fa-rss"></i></a></li>
-		</ul>
-	  </div>
-	</div>
-  </div>
+	<ul>
+		
+		<li><a href="https://pecheny.me" class="brand"><img src="https://pecheny.me/newcat.png" class="iimg lower">&nbsp;главная</a></li>
+		<li><a href="https://pecheny.me/blog">блог</a></li>
+		<li><a href="https://pecheny.me/music">музыка</a></li>
+		<li><a href="https://pecheny.me/dreams">сны</a></li>
+		<li><a href="https://pecheny.me/friendsdreams">сны&nbsp;друзей</a></li>
+	</ul>
 </nav>
 
 
-<div class="container away">
-  <div class="row">
-	<div class="eight columns offset-by-two">
-	<div id="post-title"><h1>Блог</h1></div>
-	  <ul class="posts">
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/truedl/">trueDL — новый алгоритм расчёта сложности турниров</a>
 
-		  <p class="footnote">
-			submitted <time datetime="2023-02-18T21:00:00&#43;04:00" class="post-list timeago">2023-02-18T21:00:00&#43;04:00</time>
+<h1 id="title">Blog</h1>
+<p></p>
+<ul class="posts">
 
-			
-			to
-			
 
-			
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
-			
 
-			
 
-		  </p>
-		  <p class="footnote summary">Как сейчас считается DL Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:
+<li>
+	<b><a href="https://pecheny.me/blog/truedl/">trueDL — новый алгоритм расчёта сложности турниров</a></b>
+
+	<p class="footnote">
+	submitted 2023-02-18 21:00</time>
+
+	
+	to
+	
+
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">Как сейчас считается DL Сейчас DL турнира — среднее арифметическое командных DL. Командный DL рассчитывается по такой формуле:
 DL = R * M / N / 500 R — рейтинг команды, M — количество невзятых вопросов, N — количество вопросов в турнире.
 И в M, и в N не учитываются снятые вопросы.
 Почему DL работает плохо DL не учитывает инфляцию рейтинга В 2017 году у команды с первого места рейтинг был 11182, c сотого — 4855. <a href="https://pecheny.me/blog/truedl/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/kvrm-jury/">Старые и новые правила судейства основной дисциплины</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2022-10-22T10:10:00&#43;04:00" class="post-list timeago">2022-10-22T10:10:00&#43;04:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/kvrm-jury/">Старые и новые правила судейства основной дисциплины</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
-			
+	<p class="footnote">
+	submitted 2022-10-22 10:10</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">29 октября вступили в силу Правила КВРМ1 МАИИ, принятые на Общем собрании МАИИ. В этих правилах есть несколько сущностных изменений по отношению к применявшемуся ранее Кодексу МАК. В этом тексте я опишу свою трактовку тех изменений, которые касаются судейства, а также предложу поправки к Правилам.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">29 октября вступили в силу Правила КВРМ1 МАИИ, принятые на Общем собрании МАИИ. В этих правилах есть несколько сущностных изменений по отношению к применявшемуся ранее Кодексу МАК. В этом тексте я опишу свою трактовку тех изменений, которые касаются судейства, а также предложу поправки к Правилам.
 Более подробно про изменения в Правилах можно прочитать в сравнительной таблице и интервью Романа Немучинского, а также разборе Максима Сидорова.
 Краткое содержание Судейство по Кодексу МАК: <a href="https://pecheny.me/blog/kvrm-jury/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/fonts/">Рекомендации шрифтов</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2021-10-10T22:10:00&#43;03:00" class="post-list timeago">2021-10-10T22:10:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/fonts/">Рекомендации шрифтов</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%88%D1%80%D0%B8%D1%84%D1%82%D1%8B">шрифты</a> ]
-			
+	<p class="footnote">
+	submitted 2021-10-10 22:10</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">У меня есть обсессия — раз в пару месяцев ходить на Fontsquirrel и Google Fonts и проверять, что новенького появилось.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%88%D1%80%D0%B8%D1%84%D1%82%D1%8B">шрифты</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">У меня есть обсессия — раз в пару месяцев ходить на Fontsquirrel и Google Fonts и проверять, что новенького появилось.
 Решил, что хочу зафиксировать рекомендации, чтобы сердце немного успокоилось, да и вдруг кому-нибудь будет полезно. Буду периодически обновлять.
 Мои критерии простые — красивый, бесплатный/опенсорс, с кириллицей, хорошо читается, не бесит, знак ударения (Combining Acute Accent U+0301) нормально работает с кириллическими буквами.
 С засечками Source Serif Pro — нейтральный, приятный.
 Bona Nova — крутой олдстайл, но подойдёт не для всех текстов, его красота слишком притягивает глаз. <a href="https://pecheny.me/blog/fonts/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/music-2016/">Музыка в 2016</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-12-30T01:57:00&#43;03:00" class="post-list timeago">2016-12-30T01:57:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/music-2016/">Музыка в 2016</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/music">music</a> ]
-			
+	<p class="footnote">
+	submitted 2016-12-30 01:57</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/music">music</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.
 Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать. <a href="https://pecheny.me/blog/music-2016/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/kpcli-pexpect/">My First Alfred Workflow</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-08-25T13:00:00&#43;03:00" class="post-list timeago">2016-08-25T13:00:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/kpcli-pexpect/">My First Alfred Workflow</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/coding">coding</a> ]
-			
+	<p class="footnote">
+	submitted 2016-08-25 13:00</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/coding">coding</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.
 The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution. <a href="https://pecheny.me/blog/kpcli-pexpect/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/rules-strelok/">Правила игры «Хамовнический стрелок»</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-07-20T23:22:00&#43;03:00" class="post-list timeago">2016-07-20T23:22:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/rules-strelok/">Правила игры «Хамовнический стрелок»</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
-			
+	<p class="footnote">
+	submitted 2016-07-20 23:22</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">Версия правил от 20 марта 2020
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">Версия правил от 20 марта 2020
 В бое «Хамовнического стрелка» принимают участие две команды, в каждой не более шести игроков. Игроки каждой команды до начала боя распределяют между собой номера от 1 до 6 и сообщают это распределение ведущему. Игрок с кнопкой в руках считается капитаном.
 Если в составе команды менее 6 игроков, то последние номера представляют собой «виртуальных игроков» — они не могут нажимать и отвечать, но считаются игроками и тоже должны покинуть стол по общим правилам для победы противника (в том числе могут остаться последними игроками за столом). <a href="https://pecheny.me/blog/rules-strelok/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/rules-teamsi/">Правила командной «Своей игры»</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-07-20T23:21:00&#43;03:00" class="post-list timeago">2016-07-20T23:21:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/rules-teamsi/">Правила командной «Своей игры»</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
-			
+	<p class="footnote">
+	submitted 2016-07-20 23:21</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">Игра проводится в письменной форме.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">Игра проводится в письменной форме.
 Игра состоит из нескольких тем по 5 вопросов. Каждый вопрос имеет стоимость 10, 20, 30, 40 или 50 очков.
 Ведущий сообщает командам количество и названия тем перед началом соревнования, затем по очереди читает темы, объявляя стоимость вопросов.
 Команды сдают все ответы на одном бланке после того, как ведущий закончил читать вопросы. Затем ведущий объявляет правильные ответы.
 За правильный ответ команда получает количество очков, равное стоимости вопроса. <a href="https://pecheny.me/blog/rules-teamsi/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/osx-music/">The (Mis)adventures of a Music Geek on OS X</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-05-20T20:02:00&#43;03:00" class="post-list timeago">2016-05-20T20:02:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/osx-music/">The (Mis)adventures of a Music Geek on OS X</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/music">music</a> ]
-			
+	<p class="footnote">
+	submitted 2016-05-20 20:02</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/music">music</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.
 Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder. <a href="https://pecheny.me/blog/osx-music/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/handouts-inkscape/">Подготовка раздаток в Inkscape</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-05-20T18:26:00&#43;03:00" class="post-list timeago">2016-05-20T18:26:00&#43;03:00</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/handouts-inkscape/">Подготовка раздаток в Inkscape</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
-			
+	<p class="footnote">
+	submitted 2016-05-20 18:26</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/%D1%87%D0%B3%D0%BA">чгк</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.
 Для этого мы воспользуемся свободной и бесплатной программой Inkscape1. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь. <a href="https://pecheny.me/blog/handouts-inkscape/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-		
-		<li>
-		  <a href="https://pecheny.me/blog/osxfuse-sshfs/">Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</a>
+</li>
 
-		  <p class="footnote">
-			submitted <time datetime="2016-03-22T00:00:00Z" class="post-list timeago">2016-03-22T00:00:00Z</time>
 
-			
-			to
-			
 
-			
+<li>
+	<b><a href="https://pecheny.me/blog/osxfuse-sshfs/">Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</a></b>
 
-			
-			categories: [ <a href="https://pecheny.me/categories/coding">coding</a> ]
-			
+	<p class="footnote">
+	submitted 2016-03-22 00:00</time>
 
-			
+	
+	to
+	
 
-		  </p>
-		  <p class="footnote summary">So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
+	
+
+	
+	categories: [ <a href="https://pecheny.me/categories/coding">coding</a> ]
+	
+
+	
+
+	</p>
+	<p class="footnote summary">So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
 I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me. <a href="https://pecheny.me/blog/osxfuse-sshfs/" style="font-weight: bold;">· · ·</a></p>
-		</li>
-		
-		
-	  </ul>
+</li>
+
+
+
+</ul>
 	  
 <nav class="pagination">
     
@@ -353,27 +337,9 @@ I’ve found traces of it mentioned here and there, but there were either no sol
     </ul>
 </nav>
 
-	</div>
-  </div>
-</div>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-<script src="https://pecheny.me/js/jquery.min.js" type="text/javascript"></script>
-<script src="https://pecheny.me/js/jquery.timeago.js" type="text/javascript"></script>
-<script type="text/javascript">
-  $(function(){
-    $("time.timeago").timeago();
-  })
-  $("#menu").click(function(){
-    $(".navbar ul li").removeClass("cate");
-    $(".navbar").toggle();
-  });
-  $(window).resize(function(){
-    if(window.innerWidth > 768) {
-      $(".navbar").removeAttr("style");
-    }
-  });
-</script>
 
+</article>
 </div>
 </body>
 </html>
+

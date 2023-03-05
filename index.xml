@@ -683,7 +683,7 @@ DaKooka</description>
       <pubDate>Mon, 10 Sep 2018 14:14:00 +0000</pubDate>
       
       <guid>https://pecheny.me/okx/2018/</guid>
-      <description>body { background: url(//pecheny.me/img/okx2018bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; } .container { padding: 0 1% 0 2%; color: #fff; background-color: rgba(0, 0, 0, 0.6); }  В 2018 году фестиваль прошёл 24–25 ноября в офисе Яндекса.
+      <description>html { background: url(//pecheny.me/img/okx2018bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; --color: #fff; } article { padding: 6px 24px; background-color: rgba(0, 0, 0, 0.6); }  В 2018 году фестиваль прошёл 24–25 ноября в офисе Яндекса.
 Краткие результаты:
 Медиапентагон:
 🥉 Шаг в Нику, да? (Тюмень) 30
