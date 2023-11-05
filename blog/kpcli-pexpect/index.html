@@ -85,76 +85,76 @@ sudo cpan XML::Parser
 <p><em>(The screencast is from an earlier version, that’s why it is mp/macpass instead of kp/keepass. Also here the password is pasted — this behaviour was later ditched for autotype to achieve better security. I was too lazy to shoot another take.)</em></p>
 <p>The workflow accepts a keyword with the desired KeePass entry as argument. The argument is then passed to the python script, which interacts with kpcli and prints out the password. The password is then passed to an applescript which autotypes it into the foremost app.</p>
 <p>I’ll present the script here in full in order to expose all my Python greatness (lul). Also you will need to make adjustments in order for it to actually work, so you better read the source. Voilà!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python</span>
-<span style="color:#75715e"># -*- coding: utf-8 -*-</span>
-<span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> unicode_literals
-<span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division
-<span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> print_function
-<span style="color:#f92672">import</span> os
-<span style="color:#f92672">import</span> argparse
-<span style="color:#f92672">import</span> pexpect
-<span style="color:#f92672">import</span> base64
-<span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_pass</span>(before):
-    <span style="color:#e6db74">&#34;&#34;&#34;Kpcli `show` function outputs all fields, not only password.
-</span><span style="color:#e6db74">    We need to extract the password from its output.
-</span><span style="color:#e6db74">    The password is printed in red letters over red background
-</span><span style="color:#e6db74">    so as only to be seen when selected -- we must remove coloring
-</span><span style="color:#e6db74">    commands surrounding the password.&#34;&#34;&#34;</span>
-    spl <span style="color:#f92672">=</span> before<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf8&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#39;</span>)
-    c <span style="color:#f92672">=</span> [x<span style="color:#f92672">.</span>split() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> spl]
-    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(c):
-        <span style="color:#66d9ef">if</span> c[i] <span style="color:#f92672">and</span> c[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Pass:&#39;</span>:
-            <span style="color:#66d9ef">break</span>
-        <span style="color:#66d9ef">else</span>:
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">return</span> c[i][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">8</span>:][:<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>]  <span style="color:#75715e"># remove coloring commands surrounding</span>
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_real_key</span>(keyfile):
-    <span style="color:#e6db74">&#34;&#34;&#34;Kdbx key is an xml file. The key itself is base64-encoded binary
-</span><span style="color:#e6db74">    data stored inside an aptly named &lt;data&gt; tag.&#34;&#34;&#34;</span>
-    soup <span style="color:#f92672">=</span> BeautifulSoup(open(keyfile, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read(), <span style="color:#e6db74">&#39;html.parser&#39;</span>)
-    <span style="color:#66d9ef">return</span> base64<span style="color:#f92672">.</span>b64decode(soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;data&#39;</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>get_text())
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
-    parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
-    parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;passname&#39;</span>)
-    args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
-    os<span style="color:#f92672">.</span>chdir(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)))
-
-    master_password <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64decode(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;cGFzc3dvcmQ=&#39;</span>)
-    <span style="color:#e6db74">&#34;&#34;&#34;Password is base64-obfuscated just in case someone accidentally
-</span><span style="color:#e6db74">    looks at the screen and memorizes it. Of course it is highly insecure
-</span><span style="color:#e6db74">    and you should only store it if you really have to. You can have the script
-</span><span style="color:#e6db74">    ask user for password every time even though in that case
-</span><span style="color:#e6db74">    the whole purpose of automating password management kinda defies itself.&#34;&#34;&#34;</span>
-
-    key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/path/to/your/key&#39;</span>
-    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;realkey&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:  <span style="color:#75715e"># disable binary data extraction if</span>
-        f<span style="color:#f92672">.</span>write(get_real_key(key))    <span style="color:#75715e"># not needed</span>
-
-    child <span style="color:#f92672">=</span> pexpect<span style="color:#f92672">.</span>spawn(
-        <span style="color:#e6db74">&#39;perl path/to/kpcli-3.1.pl &#39;</span>
-        <span style="color:#e6db74">&#39;-kdb path/to/your/kdb(x) &#39;</span>
-        <span style="color:#e6db74">&#39;-key realkey&#39;</span>,  <span style="color:#75715e"># omit if not needed</span>
-        timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
-    )
-    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;Please provide the master password: &#39;</span>)
-    child<span style="color:#f92672">.</span>sendline(master_password)
-    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
-    child<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">&#39;show kp/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(args<span style="color:#f92672">.</span>passname))
-    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
-    print(get_pass(child<span style="color:#f92672">.</span>before), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
-    child<span style="color:#f92672">.</span>close()
-    os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;realkey&#39;</span>)
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    main()</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -*- coding: utf-8 -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> unicode_literals
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> print_function
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> argparse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pexpect
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> base64
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_pass</span>(before):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Kpcli `show` function outputs all fields, not only password.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    We need to extract the password from its output.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    The password is printed in red letters over red background
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    so as only to be seen when selected -- we must remove coloring
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    commands surrounding the password.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    spl <span style="color:#f92672">=</span> before<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf8&#39;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\r\n</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    c <span style="color:#f92672">=</span> [x<span style="color:#f92672">.</span>split() <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> spl]
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(c):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> c[i] <span style="color:#f92672">and</span> c[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Pass:&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> c[i][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">8</span>:][:<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>]  <span style="color:#75715e"># remove coloring commands surrounding</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_real_key</span>(keyfile):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Kdbx key is an xml file. The key itself is base64-encoded binary
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    data stored inside an aptly named &lt;data&gt; tag.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    soup <span style="color:#f92672">=</span> BeautifulSoup(open(keyfile, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read(), <span style="color:#e6db74">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> base64<span style="color:#f92672">.</span>b64decode(soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;data&#39;</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>get_text())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser()
+</span></span><span style="display:flex;"><span>    parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;passname&#39;</span>)
+</span></span><span style="display:flex;"><span>    args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>chdir(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    master_password <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>b64decode(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;cGFzc3dvcmQ=&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Password is base64-obfuscated just in case someone accidentally
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    looks at the screen and memorizes it. Of course it is highly insecure
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    and you should only store it if you really have to. You can have the script
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ask user for password every time even though in that case
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    the whole purpose of automating password management kinda defies itself.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/path/to/your/key&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;realkey&#39;</span>, <span style="color:#e6db74">&#39;wb&#39;</span>) <span style="color:#66d9ef">as</span> f:  <span style="color:#75715e"># disable binary data extraction if</span>
+</span></span><span style="display:flex;"><span>        f<span style="color:#f92672">.</span>write(get_real_key(key))    <span style="color:#75715e"># not needed</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    child <span style="color:#f92672">=</span> pexpect<span style="color:#f92672">.</span>spawn(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;perl path/to/kpcli-3.1.pl &#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;-kdb path/to/your/kdb(x) &#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;-key realkey&#39;</span>,  <span style="color:#75715e"># omit if not needed</span>
+</span></span><span style="display:flex;"><span>        timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;Please provide the master password: &#39;</span>)
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>sendline(master_password)
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">&#39;show kp/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(args<span style="color:#f92672">.</span>passname))
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>expect(<span style="color:#e6db74">&#39;kpcli-3.1:/&gt; &#39;</span>)
+</span></span><span style="display:flex;"><span>    print(get_pass(child<span style="color:#f92672">.</span>before), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    os<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;realkey&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()</span></span></code></pre></div>
 <p>You can get the workflow <a href="https://drive.google.com/open?id=14ArdaQWC0rdOaOghRFN2sguf0dSOWCW2">here</a>. It doesn’t have an icon because fuck it. Enjoy!</p>
 
 </div>

@@ -5,15 +5,15 @@
     <link>https://pecheny.me/categories/misc/</link>
     <description>Recent content in misc on Alexander Pecheny</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 17 Feb 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://pecheny.me/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pecheny.me/categories/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Привет</title>
       <link>https://pecheny.me/blog/hi/</link>
       <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://pecheny.me/blog/hi/</guid>
       <description>Переезжаю сюда из жж.</description>
     </item>
-    
   </channel>
 </rss>
