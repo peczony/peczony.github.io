@@ -1,9 +1,0 @@
-diff a/dreams/page/2/index.html b/dreams/page/2/index.html	(rejected hunks)
-@@ -58,6 +58,7 @@
- 		
- 		
- 		<li>
-+		  <a href="https://pecheny.me/dreams/rompol/">Навигация</a>
- 
- 		  <p class="footnote">
- 			submitted <time datetime="2015-07-04T00:00:00Z" class="post-list timeago">2015-07-04T00:00:00Z</time>
