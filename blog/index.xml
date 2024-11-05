@@ -4,7 +4,7 @@
     <title>Blog on Alexander Pecheny</title>
     <link>https://pecheny.me/blog/</link>
     <description>Recent content in Blog on Alexander Pecheny</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Oct 2023 23:52:00 +0400</lastBuildDate>
     <atom:link href="https://pecheny.me/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -41,78 +41,63 @@
       <link>https://pecheny.me/blog/music-2016/</link>
       <pubDate>Fri, 30 Dec 2016 01:57:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/music-2016/</guid>
-      <description>В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.
-Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.</description>
+      <description>В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.&#xA;Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.</description>
     </item>
     <item>
       <title>My First Alfred Workflow</title>
       <link>https://pecheny.me/blog/kpcli-pexpect/</link>
       <pubDate>Thu, 25 Aug 2016 13:00:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/kpcli-pexpect/</guid>
-      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.
-The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
+      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.&#xA;The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
     </item>
     <item>
       <title>Правила игры «Хамовнический стрелок»</title>
       <link>https://pecheny.me/blog/rules-strelok/</link>
       <pubDate>Wed, 20 Jul 2016 23:22:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/rules-strelok/</guid>
-      <description>Версия правил от 20 марта 2020
-В бое «Хамовнического стрелка» принимают участие две команды, в каждой не более шести игроков. Игроки каждой команды до начала боя распределяют между собой номера от 1 до 6 и сообщают это распределение ведущему. Игрок с кнопкой в руках считается капитаном.
-Если в составе команды менее 6 игроков, то последние номера представляют собой «виртуальных игроков» — они не могут нажимать и отвечать, но считаются игроками и тоже должны покинуть стол по общим правилам для победы противника (в том числе могут остаться последними игроками за столом).</description>
+      <description>Версия правил от 20 марта 2020&#xA;В бое «Хамовнического стрелка» принимают участие две команды, в каждой не более шести игроков. Игроки каждой команды до начала боя распределяют между собой номера от 1 до 6 и сообщают это распределение ведущему. Игрок с кнопкой в руках считается капитаном.&#xA;Если в составе команды менее 6 игроков, то последние номера представляют собой «виртуальных игроков» — они не могут нажимать и отвечать, но считаются игроками и тоже должны покинуть стол по общим правилам для победы противника (в том числе могут остаться последними игроками за столом).</description>
     </item>
     <item>
       <title>Правила командной «Своей игры»</title>
       <link>https://pecheny.me/blog/rules-teamsi/</link>
       <pubDate>Wed, 20 Jul 2016 23:21:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/rules-teamsi/</guid>
-      <description>Игра проводится в письменной форме.
-Игра состоит из нескольких тем по 5 вопросов. Каждый вопрос имеет стоимость 10, 20, 30, 40 или 50 очков.
-Ведущий сообщает командам количество и названия тем перед началом соревнования, затем по очереди читает темы, объявляя стоимость вопросов.
-Команды сдают все ответы на одном бланке после того, как ведущий закончил читать вопросы. Затем ведущий объявляет правильные ответы.
-За правильный ответ команда получает количество очков, равное стоимости вопроса.</description>
+      <description>Игра проводится в письменной форме.&#xA;Игра состоит из нескольких тем по 5 вопросов. Каждый вопрос имеет стоимость 10, 20, 30, 40 или 50 очков.&#xA;Ведущий сообщает командам количество и названия тем перед началом соревнования, затем по очереди читает темы, объявляя стоимость вопросов.&#xA;Команды сдают все ответы на одном бланке после того, как ведущий закончил читать вопросы. Затем ведущий объявляет правильные ответы.&#xA;За правильный ответ команда получает количество очков, равное стоимости вопроса.</description>
     </item>
     <item>
       <title>The (Mis)adventures of a Music Geek on OS X</title>
       <link>https://pecheny.me/blog/osx-music/</link>
       <pubDate>Fri, 20 May 2016 20:02:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/osx-music/</guid>
-      <description>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.
-Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder.</description>
+      <description>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.&#xA;Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder.</description>
     </item>
     <item>
       <title>Подготовка раздаток в Inkscape</title>
       <link>https://pecheny.me/blog/handouts-inkscape/</link>
       <pubDate>Fri, 20 May 2016 18:26:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/handouts-inkscape/</guid>
-      <description>Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.
-Для этого мы воспользуемся свободной и бесплатной программой Inkscape1. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.</description>
+      <description>Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.&#xA;Для этого мы воспользуемся свободной и бесплатной программой Inkscape1. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.</description>
     </item>
     <item>
       <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>
       <link>https://pecheny.me/blog/osxfuse-sshfs/</link>
       <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
-      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
-I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
+      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&#xA;I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
     </item>
     <item>
       <title>Пособие для начинающего редактора</title>
       <link>https://pecheny.me/blog/editors/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/editors/</guid>
-      <description>currentmusic: casting opinions at people who need them
-Версия 1.0.0. Текст будет исправляться и дополняться. Присылайте ваши комментарии, правки и пул-реквесты. Особенно если вам кажется, что где-то не хватает примера. Особенно если вы можете этот пример привести.Благодарю за помощь Александра Маркова, Александра Тобенгауза и всех, кто читал черновики и высказывал замечания.Смена поколений привела к омоложению состава редакторов. Я написал этот текст для своих молодых коллег, надеясь помочь им повысить качество пакетов.</description>
+      <description>currentmusic: casting opinions at people who need them&#xA;Версия 1.0.0. Текст будет исправляться и дополняться. Присылайте ваши комментарии, правки и пул-реквесты. Особенно если вам кажется, что где-то не хватает примера. Особенно если вы можете этот пример привести.&#xD;Благодарю за помощь Александра Маркова, Александра Тобенгауза и всех, кто читал черновики и высказывал замечания.&#xD;Смена поколений привела к омоложению состава редакторов. Я написал этот текст для своих молодых коллег, надеясь помочь им повысить качество пакетов.</description>
     </item>
     <item>
       <title>Сменить сову</title>
       <link>https://pecheny.me/blog/changetheowl/</link>
       <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/changetheowl/</guid>
-      <description>Дисклеймер: рисунки в посте лишь иллюстрируют идею. Для реального использования необходим человек с прямыми руками, который нарисует нормальный логотип, используя их как эскизы.
-Будучи единожды выбрана символом игры, сова теперь реплицирована в любых местах и формах—серьги, футболки, амулеты и чего только эти чгкшники не носят. Реплицирована зачастую весьма убого. Притом что сова—прекрасное благородное животное, без которого теледомик много потерял.
-Сова в мейнстриме. Сменить сову!
-Подумаем над другими вариантами логотипа. За что можно зацепиться в названии?</description>
+      <description>Дисклеймер: рисунки в посте лишь иллюстрируют идею. Для реального использования необходим человек с прямыми руками, который нарисует нормальный логотип, используя их как эскизы.&#xA;Будучи единожды выбрана символом игры, сова теперь реплицирована в любых местах и формах—серьги, футболки, амулеты и чего только эти чгкшники не носят. Реплицирована зачастую весьма убого. Притом что сова—прекрасное благородное животное, без которого теледомик много потерял.&#xA;Сова в мейнстриме. Сменить сову!&#xA;Подумаем над другими вариантами логотипа. За что можно зацепиться в названии?</description>
     </item>
     <item>
       <title>Привет</title>

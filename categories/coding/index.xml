@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>coding on Alexander Pecheny</title>
+    <title>Coding on Alexander Pecheny</title>
     <link>https://pecheny.me/categories/coding/</link>
-    <description>Recent content in coding on Alexander Pecheny</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Coding on Alexander Pecheny</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 25 Aug 2016 13:00:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/categories/coding/index.xml" rel="self" type="application/rss+xml" />
@@ -13,16 +13,14 @@
       <link>https://pecheny.me/blog/kpcli-pexpect/</link>
       <pubDate>Thu, 25 Aug 2016 13:00:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/kpcli-pexpect/</guid>
-      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.
-The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
+      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.&#xA;The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
     </item>
     <item>
       <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>
       <link>https://pecheny.me/blog/osxfuse-sshfs/</link>
       <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
-      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
-I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
+      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&#xA;I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
     </item>
   </channel>
 </rss>

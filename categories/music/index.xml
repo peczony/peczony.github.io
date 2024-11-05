@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>music on Alexander Pecheny</title>
+    <title>Music on Alexander Pecheny</title>
     <link>https://pecheny.me/categories/music/</link>
-    <description>Recent content in music on Alexander Pecheny</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Music on Alexander Pecheny</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 30 Dec 2016 01:57:00 +0300</lastBuildDate>
     <atom:link href="https://pecheny.me/categories/music/index.xml" rel="self" type="application/rss+xml" />
@@ -13,16 +13,14 @@
       <link>https://pecheny.me/blog/music-2016/</link>
       <pubDate>Fri, 30 Dec 2016 01:57:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/music-2016/</guid>
-      <description>В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.
-Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.</description>
+      <description>В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.&#xA;Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.</description>
     </item>
     <item>
       <title>The (Mis)adventures of a Music Geek on OS X</title>
       <link>https://pecheny.me/blog/osx-music/</link>
       <pubDate>Fri, 20 May 2016 20:02:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/osx-music/</guid>
-      <description>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.
-Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder.</description>
+      <description>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.&#xA;Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder.</description>
     </item>
   </channel>
 </rss>
