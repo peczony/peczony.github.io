@@ -41,70 +41,70 @@
       <link>https://pecheny.me/blog/music-2016/</link>
       <pubDate>Fri, 30 Dec 2016 01:57:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/music-2016/</guid>
-      <description>В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.&#xA;Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой рейтёмьюзик. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.</description>
+      <description>&lt;p&gt;В 2016-м я слушал необычно для себя мало музыки. Частично в этом виню переезд на мак, после которого слушать музыку стало сильно менее удобно. Каждые пару недель захожу на сайт фубара и проверяю, нет ли новостей про версию для мака.&lt;/p&gt;&#xA;&lt;p&gt;Из того, что слушал, больше русского, но всё равно есть что вам порекомендовать. Оценки и места расставлять не буду, кому интересно, можете сходить на мой &lt;a href=&#34;//rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.ed/2016&#34;&gt;рейтёмьюзик&lt;/a&gt;. Все заголовки кликабельны, по клику вы попадаете куда-то, где альбом можно послушать.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Alfred Workflow</title>
       <link>https://pecheny.me/blog/kpcli-pexpect/</link>
       <pubDate>Thu, 25 Aug 2016 13:00:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/kpcli-pexpect/</guid>
-      <description>Introduction Some days ago I laid my hands on Alfred. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.&#xA;The Problem Alfred is known for its 1Password integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used KeePass and, having transitioned to OS X, continue to use it in the form of MacPass and have no reason to abandon it for a proprietary solution.</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;Some days ago I laid my hands on &lt;a href=&#34;//www.alfredapp.com&#34;&gt;Alfred&lt;/a&gt;. It is a beautiful piece of software, albeit I find its features (especially those related to workflows) rather limited. Maybe it is due to lack of knowledge. Anyway, I decided to play around with workflows and come up with something useful. It didn’t take long to find a goal.&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-problem&#34;&gt;The Problem&lt;/h1&gt;&#xA;&lt;p&gt;Alfred is known for its &lt;a href=&#34;//1password.com&#34;&gt;1Password&lt;/a&gt; integration. Unfortunately, that is the only password management solution supported, while I, since my Windows and Linux days, have used &lt;a href=&#34;//http://keepass.info/&#34;&gt;KeePass&lt;/a&gt; and, having transitioned to &lt;span class=&#34;scaps&#34;&gt;OS X&lt;/span&gt;, continue to use it in the form of &lt;a href=&#34;//github.com/mstarke/MacPass&#34;&gt;MacPass&lt;/a&gt; and have no reason to abandon it for a proprietary solution.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Правила игры «Хамовнический стрелок»</title>
       <link>https://pecheny.me/blog/rules-strelok/</link>
       <pubDate>Wed, 20 Jul 2016 23:22:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/rules-strelok/</guid>
-      <description>Версия правил от 20 марта 2020&#xA;В бое «Хамовнического стрелка» принимают участие две команды, в каждой не более шести игроков. Игроки каждой команды до начала боя распределяют между собой номера от 1 до 6 и сообщают это распределение ведущему. Игрок с кнопкой в руках считается капитаном.&#xA;Если в составе команды менее 6 игроков, то последние номера представляют собой «виртуальных игроков» — они не могут нажимать и отвечать, но считаются игроками и тоже должны покинуть стол по общим правилам для победы противника (в том числе могут остаться последними игроками за столом).</description>
+      <description>&lt;p&gt;&lt;em&gt;Версия правил от 20 марта 2020&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;В бое «Хамовнического стрелка» принимают участие две команды, в каждой не более шести игроков.&#xA;Игроки каждой команды до начала боя распределяют между собой номера от 1 до 6 и сообщают это распределение ведущему. Игрок с кнопкой в руках считается капитаном.&lt;/p&gt;&#xA;&lt;p&gt;Если в составе команды менее 6 игроков, то последние номера представляют собой «виртуальных игроков» — они не могут нажимать и отвечать, но считаются игроками и тоже должны покинуть стол по общим правилам для победы противника (в том числе могут остаться последними игроками за столом).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Правила командной «Своей игры»</title>
       <link>https://pecheny.me/blog/rules-teamsi/</link>
       <pubDate>Wed, 20 Jul 2016 23:21:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/rules-teamsi/</guid>
-      <description>Игра проводится в письменной форме.&#xA;Игра состоит из нескольких тем по 5 вопросов. Каждый вопрос имеет стоимость 10, 20, 30, 40 или 50 очков.&#xA;Ведущий сообщает командам количество и названия тем перед началом соревнования, затем по очереди читает темы, объявляя стоимость вопросов.&#xA;Команды сдают все ответы на одном бланке после того, как ведущий закончил читать вопросы. Затем ведущий объявляет правильные ответы.&#xA;За правильный ответ команда получает количество очков, равное стоимости вопроса.</description>
+      <description>&lt;p&gt;Игра проводится в письменной форме.&lt;/p&gt;&#xA;&lt;p&gt;Игра состоит из нескольких тем по 5 вопросов. Каждый вопрос имеет стоимость 10, 20, 30, 40 или 50 очков.&lt;/p&gt;&#xA;&lt;p&gt;Ведущий сообщает командам количество и названия тем перед началом соревнования, затем по очереди читает темы, объявляя стоимость вопросов.&lt;/p&gt;&#xA;&lt;p&gt;Команды сдают все ответы на одном бланке после того, как ведущий закончил читать вопросы. Затем ведущий объявляет правильные ответы.&lt;/p&gt;&#xA;&lt;p&gt;За правильный ответ команда получает количество очков, равное стоимости вопроса. За неправильный ответ команда теряет количество очков, равное стоимости вопроса. При отсутствии ответа на вопрос команда не получает и не теряет очков. Количество очков команды может быть отрицательным.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The (Mis)adventures of a Music Geek on OS X</title>
       <link>https://pecheny.me/blog/osx-music/</link>
       <pubDate>Fri, 20 May 2016 20:02:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/osx-music/</guid>
-      <description>While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.&#xA;Let me note from the start that we’re talking real geekery: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder.</description>
+      <description>&lt;p&gt;While OS X surely has its great qualities, a music geek hopping off Windows will find themself in a wasteland without Foobar and Mp3tag. I’ve tried practically all music players out there and decided to summarize my findings in case it would be useful for somebody.&lt;/p&gt;&#xA;&lt;p&gt;Let me note from the start that we’re talking real &lt;em&gt;geekery&lt;/em&gt;: hundreds of gigabytes of music on an external HDD, thoroughly tagged and organized by folder. For a casual user sticking with iTunes and/or cloud services would probably be the sanest choice.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Подготовка раздаток в Inkscape</title>
       <link>https://pecheny.me/blog/handouts-inkscape/</link>
       <pubDate>Fri, 20 May 2016 18:26:00 +0300</pubDate>
       <guid>https://pecheny.me/blog/handouts-inkscape/</guid>
-      <description>Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.&#xA;Для этого мы воспользуемся свободной и бесплатной программой Inkscape1. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.</description>
+      <description>&lt;p&gt;Хороший тон для редактора — стараться облегчить организатору турнира его нелёгкий труд. Одно из мест, где это без особых усилий можно сделать — печать раздаток. Сегодня я расскажу, как передать в распоряжение организатора не голую картинку, а пдфку формата A4 с размноженной на энное количество команд картинкой.&lt;/p&gt;&#xA;&lt;p&gt;Для этого мы воспользуемся свободной и бесплатной программой &lt;a href=&#34;https://inkscape.org/en/&#34;&gt;Inkscape&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Под Windows и Linux установка тривиальна, пользователям Мака придётся поставить XQuartz, но я рассчитываю, что вы справитесь.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Solution for ‘disappearing folder’ problem in OSXFUSE&#43;SSHFS</title>
       <link>https://pecheny.me/blog/osxfuse-sshfs/</link>
       <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/osxfuse-sshfs/</guid>
-      <description>So as you may know, OSXFUSE+SSHFS is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&#xA;I’ve found traces of it mentioned here and there, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.</description>
+      <description>&lt;p&gt;So as you may know, &lt;a href=&#34;https://osxfuse.github.io/&#34;&gt;OSXFUSE&lt;/a&gt;+&lt;a href=&#34;https://github.com/osxfuse/osxfuse/wiki/SSHFS&#34;&gt;SSHFS&lt;/a&gt; is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.&lt;/p&gt;&#xA;&lt;p&gt;I’ve found traces of it mentioned &lt;a href=&#34;http://superuser.com/questions/772405/why-does-directory-vanish-when-i-do-sshfs-how-to-setup-sshfs-share-on-max-osx-1&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/osxfuse/osxfuse/issues/174&#34;&gt;there&lt;/a&gt;, but there were either no solutions or incorrect ones. So I decided to post the one which worked for me.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Пособие для начинающего редактора</title>
       <link>https://pecheny.me/blog/editors/</link>
       <pubDate>Tue, 07 Apr 2015 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/editors/</guid>
-      <description>currentmusic: casting opinions at people who need them&#xA;Версия 1.0.1. Текст будет исправляться и дополняться. Присылайте ваши комментарии, правки и пул-реквесты. Особенно если вам кажется, что где-то не хватает примера. Особенно если вы можете этот пример привести.&#xD;Благодарю за помощь Александра Маркова, Александра Тобенгауза и всех, кто читал черновики и высказывал замечания.&#xD;Смена поколений привела к омоложению состава редакторов. Я написал этот текст для своих молодых коллег, надеясь помочь им повысить качество пакетов.</description>
+      <description>&lt;p&gt;&lt;em&gt;currentmusic&lt;/em&gt;: casting opinions at people who need them&lt;/p&gt;&#xA;&lt;div class=&#34;example&#34;&gt;Версия 1.0.1. Текст будет исправляться и дополняться. Присылайте ваши комментарии, правки и &lt;a href=&#34;https://github.com/peczony/peczony.github.io&#34;&gt;пул-реквесты&lt;/a&gt;. Особенно если вам кажется, что где-то не хватает примера. Особенно если вы можете этот пример привести.&lt;/div&gt;&#xD;&#xA;&lt;div class=&#34;example&#34;&gt;Благодарю за помощь Александра Маркова, Александра Тобенгауза и всех, кто читал черновики и высказывал замечания.&lt;/div&gt;&#xD;&#xA;&lt;p&gt;Смена поколений привела к омоложению состава редакторов. Я написал этот текст для своих молодых коллег, надеясь помочь им повысить качество пакетов.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Сменить сову</title>
       <link>https://pecheny.me/blog/changetheowl/</link>
       <pubDate>Fri, 27 Feb 2015 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/changetheowl/</guid>
-      <description>Дисклеймер: рисунки в посте лишь иллюстрируют идею. Для реального использования необходим человек с прямыми руками, который нарисует нормальный логотип, используя их как эскизы.&#xA;Будучи единожды выбрана символом игры, сова теперь реплицирована в любых местах и формах—серьги, футболки, амулеты и чего только эти чгкшники не носят. Реплицирована зачастую весьма убого. Притом что сова—прекрасное благородное животное, без которого теледомик много потерял.&#xA;Сова в мейнстриме. Сменить сову!&#xA;Подумаем над другими вариантами логотипа. За что можно зацепиться в названии?</description>
+      <description>&lt;p&gt;&lt;i&gt;Дисклеймер: рисунки в посте лишь иллюстрируют идею. Для реального использования необходим человек с прямыми руками, который нарисует нормальный логотип, используя их как эскизы.&lt;/i&gt;&lt;/p&gt;&#xA;&lt;p&gt;Будучи единожды выбрана символом игры, сова теперь реплицирована в любых местах и формах—серьги, футболки, амулеты и чего только эти чгкшники не носят. Реплицирована зачастую весьма убого. Притом что сова—прекрасное благородное животное, без которого теледомик много потерял.&lt;/p&gt;&#xA;&lt;p&gt;Сова в мейнстриме. Сменить сову!&lt;/p&gt;&#xA;&lt;p&gt;Подумаем над другими вариантами логотипа. За что можно зацепиться в названии? «Что? Где? Когда?», кричащие вопросительные знаки. И шесть человек за столом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Привет</title>
       <link>https://pecheny.me/blog/hi/</link>
       <pubDate>Tue, 17 Feb 2015 00:00:00 +0000</pubDate>
       <guid>https://pecheny.me/blog/hi/</guid>
-      <description>Переезжаю сюда из жж.</description>
+      <description>&lt;p&gt;Переезжаю сюда из &lt;a href=&#34;http://pecheny.livejournal.com&#34;&gt;&lt;span class=&#34;scaps&#34;&gt;жж&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
