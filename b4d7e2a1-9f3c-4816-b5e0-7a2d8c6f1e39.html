@@ -74,21 +74,15 @@
     <div id="app"></div>
     <script>
         var tg = window.Telegram && window.Telegram.WebApp;
-        if (!tg || !tg.initData) {
+        var params = new URLSearchParams(window.location.search);
+        var categories = (params.get('c') || '').split('|').filter(Boolean);
+        var currencies = (params.get('cur') || '').split('|').filter(Boolean);
+
+        if (!categories.length || !currencies.length) {
             document.body.style.display = 'none';
         } else {
-            tg.ready();
-            tg.expand();
-
-            var params = new URLSearchParams(window.location.search);
-            var categories = (params.get('c') || '').split('|').filter(Boolean);
-            var currencies = (params.get('cur') || '').split('|').filter(Boolean);
-
-            if (!categories.length || !currencies.length) {
-                document.body.style.display = 'none';
-            } else {
-                buildApp(categories, currencies);
-            }
+            if (tg) { tg.ready(); tg.expand(); }
+            buildApp(categories, currencies);
         }
 
         function buildApp(categories, currencies) {
